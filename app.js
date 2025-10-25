@@ -68,12 +68,12 @@ const server = app.listen(PORT, () => {
 });
 
 // Graceful shutdown
-process.on('SIGTERM', () => {
-  logger.info('SIGTERM received, shutting down gracefully');
-  server.close(() => {
-    logger.info('Server closed');
-    process.exit(0);
-  });
-});
+// process.on('SIGTERM', () => {
+//   logger.info('SIGTERM received, shutting down gracefully');
+//   server.close(() => {
+//     logger.info('Server closed');
+//     process.exit(0);
+//   });
+// });
 
 export default app;
