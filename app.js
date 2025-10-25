@@ -23,6 +23,9 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 app.use(limiter);
 
+app.get('/health', (req, res) => {
+  res.send('✅ Auth Service is running');
+});
 // API Routes - V1
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/verification', verificationRoutes);
