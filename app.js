@@ -49,8 +49,16 @@ process.on('unhandledRejection', (reason, promise) => {
 });
 
 // Start server
-const server = app.listen(config.PORT, () => {
-  logger.info(`✅ Auth Service running on port ${config.PORT}`, {
+// const server = app.listen(config.PORT, () => {
+//   logger.info(`✅ Auth Service running on port ${config.PORT}`, {
+//     environment: config.NODE_ENV,
+//     database: `${config.DB.user}@${config.DB.host}:${config.DB.port}/${config.DB.database}`,
+//   });
+// });
+const PORT = process.env.PORT || config.PORT || 3001;
+
+const server = app.listen(PORT, () => {
+  logger.info(`✅ Auth Service running on port ${PORT}`, {
     environment: config.NODE_ENV,
     database: `${config.DB.user}@${config.DB.host}:${config.DB.port}/${config.DB.database}`,
   });

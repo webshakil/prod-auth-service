@@ -1769,3 +1769,9 @@
 {"timestamp":"2025-10-25T07:52:49.070Z","level":"INFO","message":"Tokens created","userId":1,"sessionId":"6a35313c0cca96c157da566541d381603f93e314747d7c30f690ce1012ec6bb6"}
 {"timestamp":"2025-10-25T07:52:51.527Z","level":"INFO","message":"Database connected successfully","host":"dpg-d2q7ac6mcj7s73adm7kg-a.oregon-postgres.render.com","database":"vottery","user":"vottery_user"}
 {"timestamp":"2025-10-25T07:52:52.960Z","level":"INFO","message":"Authentication completed successfully","userId":1,"sessionId":"6a35313c0cca96c157da566541d381603f93e314747d7c30f690ce1012ec6bb6","isFirstTime":false}
+{"timestamp":"2025-10-25T08:55:30.017Z","level":"INFO","message":"✅ Auth Service running on port 3001","environment":"development","database":"vottery_user@dpg-d2q7ac6mcj7s73adm7kg-a.oregon-postgres.render.com:5432/vottery"}
+{"timestamp":"2025-10-25T08:55:32.297Z","level":"INFO","message":"Database connected successfully","host":"dpg-d2q7ac6mcj7s73adm7kg-a.oregon-postgres.render.com","database":"vottery","user":"vottery_user"}
+{"timestamp":"2025-10-25T08:55:32.415Z","level":"INFO","message":"✅ Database connection test successful"}
+{"timestamp":"2025-10-25T08:56:26.838Z","level":"INFO","message":"✅ Auth Service running on port 3001","environment":"development","database":"vottery_user@dpg-d2q7ac6mcj7s73adm7kg-a.oregon-postgres.render.com:5432/vottery"}
+{"timestamp":"2025-10-25T08:56:29.232Z","level":"INFO","message":"Database connected successfully","host":"dpg-d2q7ac6mcj7s73adm7kg-a.oregon-postgres.render.com","database":"vottery","user":"vottery_user"}
+{"timestamp":"2025-10-25T08:56:29.378Z","level":"INFO","message":"✅ Database connection test successful"}
