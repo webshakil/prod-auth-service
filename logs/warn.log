@@ -1,0 +1,560 @@
+{"timestamp":"2025-10-16T16:10:09.959Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-16T16:10:26.659Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-16T16:10:26.691Z","level":"WARN","message":"Twilio credentials not configured. SMS sending will be skipped."}
+{"timestamp":"2025-10-16T16:10:58.777Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-16T16:10:58.806Z","level":"WARN","message":"Twilio credentials not configured. SMS sending will be skipped."}
+{"timestamp":"2025-10-16T16:11:29.371Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-16T16:11:29.400Z","level":"WARN","message":"Twilio credentials not configured. SMS sending will be skipped."}
+{"timestamp":"2025-10-16T16:11:53.845Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-16T16:11:53.883Z","level":"WARN","message":"Twilio credentials not configured. SMS sending will be skipped."}
+{"timestamp":"2025-10-16T16:15:16.402Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-16T16:16:16.794Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-16T16:16:39.467Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-16T16:16:57.882Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-16T16:18:39.797Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-16T16:18:42.562Z","level":"WARN","message":"Slow query detected","duration":"1871ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-16T16:19:20.451Z","level":"WARN","message":"Slow query detected","duration":"1717ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-16T16:55:16.905Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-16T16:55:19.787Z","level":"WARN","message":"Slow query detected","duration":"2025ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-16T16:55:58.495Z","level":"WARN","message":"Slow query detected","duration":"2154ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-16T16:56:16.007Z","level":"WARN","message":"Slow query detected","duration":"1846ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-10-16T16:57:49.088Z","level":"WARN","message":"Slow query detected","duration":"1869ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-16T16:57:52.466Z","level":"WARN","message":"SendGrid not configured, email skipped"}
+{"timestamp":"2025-10-16T16:59:55.689Z","level":"WARN","message":"Slow query detected","duration":"2054ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-16T17:00:32.623Z","level":"WARN","message":"Slow query detected","duration":"1982ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-16T17:00:38.869Z","level":"WARN","message":"Slow query detected","duration":"1730ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-10-16T17:13:18.904Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-16T17:13:21.773Z","level":"WARN","message":"Slow query detected","duration":"1969ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-16T17:14:15.104Z","level":"WARN","message":"Slow query detected","duration":"1734ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-16T17:14:29.475Z","level":"WARN","message":"Slow query detected","duration":"1899ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-10-16T17:34:48.241Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T09:09:34.321Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T09:09:36.908Z","level":"WARN","message":"Slow query detected","duration":"1758ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T09:10:15.298Z","level":"WARN","message":"Slow query detected","duration":"2025ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T09:10:22.158Z","level":"WARN","message":"Slow query detected","duration":"1806ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-10-19T09:19:48.125Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T09:19:50.996Z","level":"WARN","message":"Slow query detected","duration":"1978ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T09:45:32.638Z","level":"WARN","message":"Slow query detected","duration":"2060ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T09:45:53.629Z","level":"WARN","message":"Slow query detected","duration":"1795ms","query":"UPDATE votteryy_auth_tokens \n       SET is_revoked = true, revoked_at = CURRENT_"}
+{"timestamp":"2025-10-19T09:48:38.597Z","level":"WARN","message":"Slow query detected","duration":"1738ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T09:49:26.111Z","level":"WARN","message":"Slow query detected","duration":"1959ms","query":"UPDATE votteryy_auth_tokens \n       SET is_revoked = true, revoked_at = CURRENT_"}
+{"timestamp":"2025-10-19T09:49:48.947Z","level":"WARN","message":"Slow query detected","duration":"1830ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T10:16:15.862Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T10:16:18.619Z","level":"WARN","message":"Slow query detected","duration":"1890ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T10:16:47.634Z","level":"WARN","message":"Slow query detected","duration":"2253ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T10:21:31.995Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T10:21:34.832Z","level":"WARN","message":"Slow query detected","duration":"1981ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T11:04:05.432Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T11:04:08.195Z","level":"WARN","message":"Slow query detected","duration":"1886ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T11:13:34.894Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T11:13:37.748Z","level":"WARN","message":"Slow query detected","duration":"1962ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T11:14:04.883Z","level":"WARN","message":"Slow query detected","duration":"1732ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T11:14:18.604Z","level":"WARN","message":"Slow query detected","duration":"1737ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-19T11:33:57.700Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T11:34:00.310Z","level":"WARN","message":"Slow query detected","duration":"1723ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T11:51:10.629Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T11:51:13.329Z","level":"WARN","message":"Slow query detected","duration":"1808ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T11:51:36.156Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T11:51:38.662Z","level":"WARN","message":"Slow query detected","duration":"1619ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T11:51:55.472Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T11:51:58.078Z","level":"WARN","message":"Slow query detected","duration":"1755ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T11:53:43.075Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T11:53:45.736Z","level":"WARN","message":"Slow query detected","duration":"1792ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T11:54:19.518Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T11:54:22.158Z","level":"WARN","message":"Slow query detected","duration":"1783ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T12:01:42.081Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T12:01:44.944Z","level":"WARN","message":"Slow query detected","duration":"1968ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T12:02:21.084Z","level":"WARN","message":"Slow query detected","duration":"1784ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T12:02:45.558Z","level":"WARN","message":"Slow query detected","duration":"1687ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-19T12:10:52.002Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T12:10:54.727Z","level":"WARN","message":"Slow query detected","duration":"1836ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T12:15:04.100Z","level":"WARN","message":"Slow query detected","duration":"1616ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T12:31:18.460Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T12:31:21.066Z","level":"WARN","message":"Slow query detected","duration":"1724ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T12:34:56.440Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T12:34:59.171Z","level":"WARN","message":"Slow query detected","duration":"1836ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T12:35:23.364Z","level":"WARN","message":"Slow query detected","duration":"1781ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T12:35:38.621Z","level":"WARN","message":"Slow query detected","duration":"1895ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-19T12:42:17.260Z","level":"WARN","message":"Slow query detected","duration":"1773ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T12:44:02.733Z","level":"WARN","message":"Slow query detected","duration":"1851ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T12:44:32.429Z","level":"WARN","message":"Slow query detected","duration":"1729ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T13:30:00.930Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T13:30:03.626Z","level":"WARN","message":"Slow query detected","duration":"1823ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T13:30:29.465Z","level":"WARN","message":"Slow query detected","duration":"1865ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T13:30:55.577Z","level":"WARN","message":"Slow query detected","duration":"1738ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T13:31:23.676Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T14:34:16.075Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T14:34:18.657Z","level":"WARN","message":"Slow query detected","duration":"1770ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T14:34:48.656Z","level":"WARN","message":"Slow query detected","duration":"1745ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T14:35:19.478Z","level":"WARN","message":"Slow query detected","duration":"1699ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T14:35:40.265Z","level":"WARN","message":"Slow query detected","duration":"2214ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T14:41:03.856Z","level":"WARN","message":"Slow query detected","duration":"1869ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T14:41:24.985Z","level":"WARN","message":"Slow query detected","duration":"1601ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T14:42:05.718Z","level":"WARN","message":"Slow query detected","duration":"1631ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T14:44:00.720Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T14:44:03.467Z","level":"WARN","message":"Slow query detected","duration":"1862ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T14:44:37.159Z","level":"WARN","message":"Slow query detected","duration":"1906ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T14:44:56.436Z","level":"WARN","message":"Slow query detected","duration":"1631ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T14:45:30.917Z","level":"WARN","message":"Slow query detected","duration":"1698ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T14:53:26.264Z","level":"WARN","message":"Slow query detected","duration":"2119ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T14:53:51.862Z","level":"WARN","message":"Slow query detected","duration":"1812ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T14:54:23.504Z","level":"WARN","message":"Slow query detected","duration":"1846ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T15:06:38.691Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T15:06:41.507Z","level":"WARN","message":"Slow query detected","duration":"1996ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T15:07:35.876Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T15:07:38.543Z","level":"WARN","message":"Slow query detected","duration":"1782ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T15:07:43.674Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T15:07:49.659Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T15:07:52.572Z","level":"WARN","message":"Slow query detected","duration":"2048ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T15:08:31.206Z","level":"WARN","message":"Slow query detected","duration":"1771ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T15:08:52.680Z","level":"WARN","message":"Slow query detected","duration":"1975ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T15:09:19.848Z","level":"WARN","message":"Slow query detected","duration":"1592ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T15:10:01.186Z","level":"WARN","message":"Slow query detected","duration":"1883ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T15:10:56.686Z","level":"WARN","message":"Slow query detected","duration":"1845ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T15:11:20.342Z","level":"WARN","message":"Slow query detected","duration":"1872ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T15:11:59.151Z","level":"WARN","message":"Slow query detected","duration":"2035ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T15:15:41.105Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T15:15:43.821Z","level":"WARN","message":"Slow query detected","duration":"1825ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T15:16:11.570Z","level":"WARN","message":"Slow query detected","duration":"1819ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T15:16:33.687Z","level":"WARN","message":"Slow query detected","duration":"1808ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T15:17:06.252Z","level":"WARN","message":"Slow query detected","duration":"1901ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T15:28:13.667Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T15:28:16.464Z","level":"WARN","message":"Slow query detected","duration":"1913ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T15:28:55.478Z","level":"WARN","message":"Slow query detected","duration":"1878ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T15:29:18.518Z","level":"WARN","message":"Slow query detected","duration":"1934ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T15:29:44.415Z","level":"WARN","message":"Slow query detected","duration":"1671ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T15:37:41.831Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T15:37:44.412Z","level":"WARN","message":"Slow query detected","duration":"1698ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T15:37:46.630Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T15:37:51.782Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T15:37:54.415Z","level":"WARN","message":"Slow query detected","duration":"1743ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T15:38:27.800Z","level":"WARN","message":"Slow query detected","duration":"2296ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T15:38:58.005Z","level":"WARN","message":"Slow query detected","duration":"1855ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T15:39:26.780Z","level":"WARN","message":"Slow query detected","duration":"1966ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T15:39:30.368Z","level":"WARN","message":"Slow query detected","duration":"1829ms","query":"SELECT \n        user_id, \n        is_first_time, \n        authentication_status,"}
+{"timestamp":"2025-10-19T15:43:06.839Z","level":"WARN","message":"Slow query detected","duration":"1983ms","query":"UPDATE votteryy_auth_tokens \n         SET is_revoked = true, revoked_at = CURREN"}
+{"timestamp":"2025-10-19T15:43:31.108Z","level":"WARN","message":"Slow query detected","duration":"2027ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T16:00:36.684Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T16:00:39.418Z","level":"WARN","message":"Slow query detected","duration":"1866ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T16:00:44.294Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T16:00:47.097Z","level":"WARN","message":"Slow query detected","duration":"1916ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T16:01:23.174Z","level":"WARN","message":"Slow query detected","duration":"1758ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T16:02:11.168Z","level":"WARN","message":"Slow query detected","duration":"1824ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T16:17:54.620Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T16:17:57.249Z","level":"WARN","message":"Slow query detected","duration":"1743ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T16:20:51.362Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T16:20:54.095Z","level":"WARN","message":"Slow query detected","duration":"1849ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T16:21:25.634Z","level":"WARN","message":"Slow query detected","duration":"1819ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T16:27:07.794Z","level":"WARN","message":"Slow query detected","duration":"1864ms","query":"UPDATE votteryy_auth_tokens \n         SET is_revoked = true, revoked_at = CURREN"}
+{"timestamp":"2025-10-19T16:27:30.386Z","level":"WARN","message":"Slow query detected","duration":"1814ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T16:28:16.200Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T16:28:19.230Z","level":"WARN","message":"Slow query detected","duration":"2138ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T16:28:53.842Z","level":"WARN","message":"Slow query detected","duration":"1798ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T16:30:41.197Z","level":"WARN","message":"Slow query detected","duration":"2190ms","query":"UPDATE votteryy_auth_tokens \n         SET is_revoked = true, revoked_at = CURREN"}
+{"timestamp":"2025-10-19T16:31:05.461Z","level":"WARN","message":"Slow query detected","duration":"1724ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-19T16:31:30.925Z","level":"WARN","message":"Slow query detected","duration":"1922ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T16:31:52.154Z","level":"WARN","message":"Slow query detected","duration":"1656ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-10-19T16:31:55.732Z","level":"WARN","message":"Slow query detected","duration":"1746ms","query":"SELECT \n        user_id, \n        is_first_time, \n        authentication_status,"}
+{"timestamp":"2025-10-19T16:46:37.628Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T16:46:41.075Z","level":"WARN","message":"Slow query detected","duration":"2553ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T23:53:24.349Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-19T23:53:26.988Z","level":"WARN","message":"Slow query detected","duration":"1824ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-19T23:53:59.039Z","level":"WARN","message":"Slow query detected","duration":"2083ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T02:25:13.645Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-20T02:25:16.101Z","level":"WARN","message":"Slow query detected","duration":"1645ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-20T02:54:02.083Z","level":"WARN","message":"Slow query detected","duration":"2046ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T03:54:58.904Z","level":"WARN","message":"Slow query detected","duration":"1873ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T04:00:07.253Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-20T04:00:09.895Z","level":"WARN","message":"Slow query detected","duration":"1821ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-20T04:09:04.701Z","level":"WARN","message":"Slow query detected","duration":"1731ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T04:10:16.209Z","level":"WARN","message":"Slow query detected","duration":"1735ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T05:09:30.845Z","level":"WARN","message":"Slow query detected","duration":"1789ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T05:10:04.669Z","level":"WARN","message":"Slow query detected","duration":"1679ms","query":"UPDATE votteryy_auth_tokens \n         SET is_revoked = true, revoked_at = CURREN"}
+{"timestamp":"2025-10-20T05:20:00.922Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-20T05:20:03.682Z","level":"WARN","message":"Slow query detected","duration":"1869ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-20T05:21:14.134Z","level":"WARN","message":"Slow query detected","duration":"1884ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T05:23:42.068Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-20T05:23:44.973Z","level":"WARN","message":"Slow query detected","duration":"2014ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-20T05:24:30.333Z","level":"WARN","message":"Slow query detected","duration":"1790ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T05:44:11.220Z","level":"WARN","message":"Slow query detected","duration":"1910ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T05:50:48.636Z","level":"WARN","message":"Slow query detected","duration":"1898ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T06:10:20.203Z","level":"WARN","message":"Slow query detected","duration":"2145ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T06:28:49.204Z","level":"WARN","message":"Slow query detected","duration":"2278ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T06:32:00.694Z","level":"WARN","message":"Slow query detected","duration":"1907ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T06:35:16.100Z","level":"WARN","message":"Slow query detected","duration":"1798ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T06:56:16.930Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-20T06:56:19.086Z","level":"WARN","message":"Slow query detected","duration":"1866ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-20T09:30:38.509Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-20T09:30:41.442Z","level":"WARN","message":"Slow query detected","duration":"2116ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-20T09:31:19.637Z","level":"WARN","message":"Slow query detected","duration":"1911ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T09:37:02.578Z","level":"WARN","message":"Slow query detected","duration":"1985ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T09:38:49.995Z","level":"WARN","message":"Slow query detected","duration":"2018ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T10:14:50.883Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-20T10:14:53.722Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-20T10:15:33.351Z","level":"WARN","message":"Slow query detected","duration":"2163ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T10:17:26.299Z","level":"WARN","message":"Slow query detected","duration":"1951ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T10:20:30.519Z","level":"WARN","message":"Slow query detected","duration":"2198ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T10:29:28.737Z","level":"WARN","message":"Slow query detected","duration":"2034ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T10:31:31.824Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-20T10:31:34.589Z","level":"WARN","message":"Slow query detected","duration":"1872ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-20T10:32:28.553Z","level":"WARN","message":"Slow query detected","duration":"1827ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T10:35:09.242Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-20T10:35:11.986Z","level":"WARN","message":"Slow query detected","duration":"1851ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-20T10:35:49.669Z","level":"WARN","message":"Slow query detected","duration":"2017ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T10:40:44.277Z","level":"WARN","message":"Slow query detected","duration":"1960ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T10:48:19.345Z","level":"WARN","message":"Slow query detected","duration":"1933ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-20T23:43:12.516Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-20T23:43:15.343Z","level":"WARN","message":"Slow query detected","duration":"2001ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-21T00:11:43.284Z","level":"WARN","message":"Slow query detected","duration":"6877ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T00:55:12.662Z","level":"WARN","message":"Slow query detected","duration":"1953ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T04:01:31.850Z","level":"WARN","message":"Slow query detected","duration":"1907ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T04:08:40.602Z","level":"WARN","message":"Slow query detected","duration":"2003ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T04:14:26.622Z","level":"WARN","message":"Slow query detected","duration":"1749ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T04:23:28.007Z","level":"WARN","message":"Slow query detected","duration":"1784ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T04:30:49.664Z","level":"WARN","message":"Slow query detected","duration":"2113ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T04:38:26.471Z","level":"WARN","message":"Slow query detected","duration":"1937ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T04:43:06.129Z","level":"WARN","message":"Slow query detected","duration":"1824ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T04:47:24.077Z","level":"WARN","message":"Slow query detected","duration":"1744ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T04:50:41.608Z","level":"WARN","message":"Slow query detected","duration":"1759ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T05:07:50.018Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T05:08:41.526Z","level":"WARN","message":"Slow query detected","duration":"1886ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-21T05:15:13.855Z","level":"WARN","message":"Slow query detected","duration":"1897ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T05:19:13.031Z","level":"WARN","message":"Slow query detected","duration":"1831ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T05:21:57.487Z","level":"WARN","message":"Slow query detected","duration":"1815ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T05:57:19.743Z","level":"WARN","message":"Slow query detected","duration":"1745ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T05:58:55.313Z","level":"WARN","message":"Slow query detected","duration":"1708ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T06:05:00.818Z","level":"WARN","message":"Slow query detected","duration":"1916ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T10:32:16.712Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-21T10:32:19.617Z","level":"WARN","message":"Slow query detected","duration":"2111ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-21T11:47:24.088Z","level":"WARN","message":"Slow query detected","duration":"1896ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T11:47:32.076Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T11:49:16.114Z","level":"WARN","message":"Slow query detected","duration":"1734ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T11:49:26.867Z","level":"WARN","message":"Slow query detected","duration":"1638ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T11:51:16.928Z","level":"WARN","message":"Slow query detected","duration":"1902ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-21T11:51:27.836Z","level":"WARN","message":"Slow query detected","duration":"1775ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T12:18:29.727Z","level":"WARN","message":"Slow query detected","duration":"1998ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T12:18:35.871Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T12:28:29.004Z","level":"WARN","message":"Slow query detected","duration":"1998ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T12:28:36.246Z","level":"WARN","message":"Slow query detected","duration":"1918ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T12:32:45.933Z","level":"WARN","message":"Slow query detected","duration":"1900ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T12:32:52.761Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T12:38:01.192Z","level":"WARN","message":"Slow query detected","duration":"2125ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T12:38:08.462Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T12:44:00.858Z","level":"WARN","message":"Slow query detected","duration":"1677ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T12:44:07.377Z","level":"WARN","message":"Slow query detected","duration":"1899ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T12:46:03.602Z","level":"WARN","message":"Slow query detected","duration":"1743ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T12:46:10.053Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T12:49:16.424Z","level":"WARN","message":"Slow query detected","duration":"1810ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T12:49:22.671Z","level":"WARN","message":"Slow query detected","duration":"1892ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T12:53:01.807Z","level":"WARN","message":"Slow query detected","duration":"2241ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T12:53:13.584Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T13:05:59.951Z","level":"WARN","message":"Slow query detected","duration":"2090ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T13:06:07.733Z","level":"WARN","message":"Slow query detected","duration":"1638ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T13:08:24.132Z","level":"WARN","message":"Slow query detected","duration":"1778ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T13:08:30.992Z","level":"WARN","message":"Slow query detected","duration":"1695ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T13:14:34.721Z","level":"WARN","message":"Slow query detected","duration":"1924ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T13:14:41.069Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T13:17:55.221Z","level":"WARN","message":"Slow query detected","duration":"2182ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T13:18:01.366Z","level":"WARN","message":"Slow query detected","duration":"1639ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T13:20:38.274Z","level":"WARN","message":"Slow query detected","duration":"1950ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T13:20:44.901Z","level":"WARN","message":"Slow query detected","duration":"1638ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T16:33:10.593Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-21T16:33:13.668Z","level":"WARN","message":"Slow query detected","duration":"2258ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-21T16:34:40.706Z","level":"WARN","message":"Slow query detected","duration":"2039ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T16:34:55.761Z","level":"WARN","message":"Slow query detected","duration":"2068ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-21T16:35:01.801Z","level":"WARN","message":"Slow query detected","duration":"2046ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T16:56:55.393Z","level":"WARN","message":"Slow query detected","duration":"7003ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T16:58:38.511Z","level":"WARN","message":"Slow query detected","duration":"1978ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-21T16:58:44.143Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T17:11:37.167Z","level":"WARN","message":"Slow query detected","duration":"1994ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T17:11:43.311Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T18:12:29.421Z","level":"WARN","message":"Slow query detected","duration":"2058ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T18:12:36.660Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T18:58:19.367Z","level":"WARN","message":"Slow query detected","duration":"1983ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T18:58:26.258Z","level":"WARN","message":"Slow query detected","duration":"1772ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T18:59:48.738Z","level":"WARN","message":"Slow query detected","duration":"1899ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T18:59:56.955Z","level":"WARN","message":"Slow query detected","duration":"1947ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T19:04:41.526Z","level":"WARN","message":"Slow query detected","duration":"2067ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T19:04:48.539Z","level":"WARN","message":"Slow query detected","duration":"2199ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T19:09:05.138Z","level":"WARN","message":"Slow query detected","duration":"1651ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T19:09:17.804Z","level":"WARN","message":"Slow query detected","duration":"2150ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T19:10:40.032Z","level":"WARN","message":"Slow query detected","duration":"1709ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T19:10:50.733Z","level":"WARN","message":"Slow query detected","duration":"1791ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T19:18:53.127Z","level":"WARN","message":"Slow query detected","duration":"1656ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T19:21:43.848Z","level":"WARN","message":"Slow query detected","duration":"1822ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-21T19:21:49.326Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T19:23:04.384Z","level":"WARN","message":"Slow query detected","duration":"1834ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T19:23:12.269Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T19:28:10.173Z","level":"WARN","message":"Slow query detected","duration":"1860ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T19:28:25.513Z","level":"WARN","message":"Slow query detected","duration":"2047ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T19:31:53.182Z","level":"WARN","message":"Slow query detected","duration":"2086ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T19:31:59.530Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T19:36:52.397Z","level":"WARN","message":"Slow query detected","duration":"2419ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T19:36:59.873Z","level":"WARN","message":"Slow query detected","duration":"1742ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T19:42:39.229Z","level":"WARN","message":"Slow query detected","duration":"2021ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T19:42:47.729Z","level":"WARN","message":"Slow query detected","duration":"1742ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T19:47:30.457Z","level":"WARN","message":"Slow query detected","duration":"1750ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T19:47:38.080Z","level":"WARN","message":"Slow query detected","duration":"1889ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T19:51:55.982Z","level":"WARN","message":"Slow query detected","duration":"1999ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T19:52:09.805Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T20:20:50.241Z","level":"WARN","message":"Slow query detected","duration":"2107ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T20:20:56.797Z","level":"WARN","message":"Slow query detected","duration":"2048ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-21T20:26:10.244Z","level":"WARN","message":"Slow query detected","duration":"2141ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-21T20:26:17.604Z","level":"WARN","message":"Slow query detected","duration":"1827ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T04:02:13.694Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-22T04:02:17.070Z","level":"WARN","message":"Slow query detected","duration":"2562ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-22T04:04:16.057Z","level":"WARN","message":"Slow query detected","duration":"1811ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T04:04:23.532Z","level":"WARN","message":"Slow query detected","duration":"2046ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T09:46:13.470Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-22T09:46:16.262Z","level":"WARN","message":"Slow query detected","duration":"1986ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-22T09:47:53.431Z","level":"WARN","message":"Slow query detected","duration":"2292ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T09:48:01.008Z","level":"WARN","message":"Slow query detected","duration":"2331ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T09:51:50.795Z","level":"WARN","message":"Slow query detected","duration":"1853ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T09:51:57.451Z","level":"WARN","message":"Slow query detected","duration":"2048ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T09:56:33.864Z","level":"WARN","message":"Slow query detected","duration":"1784ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T09:56:40.693Z","level":"WARN","message":"Slow query detected","duration":"2004ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T10:21:00.179Z","level":"WARN","message":"Slow query detected","duration":"1986ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T10:21:07.068Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T10:29:39.112Z","level":"WARN","message":"Slow query detected","duration":"1805ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T10:29:45.319Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T10:48:20.364Z","level":"WARN","message":"Slow query detected","duration":"1817ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T10:48:28.248Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T10:53:04.013Z","level":"WARN","message":"Slow query detected","duration":"1864ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T10:53:32.173Z","level":"WARN","message":"Slow query detected","duration":"1957ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-22T10:53:37.805Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T11:23:37.300Z","level":"WARN","message":"Slow query detected","duration":"6867ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T11:24:57.888Z","level":"WARN","message":"Slow query detected","duration":"1807ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-22T11:25:03.418Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T11:34:42.495Z","level":"WARN","message":"Slow query detected","duration":"1875ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T11:34:48.945Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T11:43:38.153Z","level":"WARN","message":"Slow query detected","duration":"2301ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T11:43:45.219Z","level":"WARN","message":"Slow query detected","duration":"1809ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T14:56:36.671Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-22T14:56:39.497Z","level":"WARN","message":"Slow query detected","duration":"2020ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-22T15:02:38.617Z","level":"WARN","message":"Slow query detected","duration":"1934ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T15:02:45.887Z","level":"WARN","message":"Slow query detected","duration":"2150ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T16:48:10.884Z","level":"WARN","message":"Slow query detected","duration":"2388ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T16:48:17.150Z","level":"WARN","message":"Slow query detected","duration":"1770ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T16:57:04.484Z","level":"WARN","message":"Slow query detected","duration":"1915ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T16:57:11.478Z","level":"WARN","message":"Slow query detected","duration":"1772ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T17:02:29.710Z","level":"WARN","message":"Slow query detected","duration":"2003ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T17:02:37.900Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T17:14:02.551Z","level":"WARN","message":"Slow query detected","duration":"6882ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T17:14:10.027Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T17:15:32.665Z","level":"WARN","message":"Slow query detected","duration":"2062ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T17:15:41.677Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T17:18:05.343Z","level":"WARN","message":"Slow query detected","duration":"1824ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T17:18:11.897Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T17:26:49.872Z","level":"WARN","message":"Slow query detected","duration":"1721ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T17:26:55.909Z","level":"WARN","message":"Slow query detected","duration":"1664ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T17:29:36.037Z","level":"WARN","message":"Slow query detected","duration":"1882ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T17:29:46.481Z","level":"WARN","message":"Slow query detected","duration":"1943ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T17:35:23.994Z","level":"WARN","message":"Slow query detected","duration":"1903ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T17:35:30.446Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T17:38:31.285Z","level":"WARN","message":"Slow query detected","duration":"1803ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T17:38:37.634Z","level":"WARN","message":"Slow query detected","duration":"1836ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T17:54:15.421Z","level":"WARN","message":"Slow query detected","duration":"1789ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T17:54:22.077Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T17:57:55.379Z","level":"WARN","message":"Slow query detected","duration":"1815ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T17:58:02.147Z","level":"WARN","message":"Slow query detected","duration":"2160ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T17:58:48.524Z","level":"WARN","message":"Slow query detected","duration":"1953ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T17:58:55.676Z","level":"WARN","message":"Slow query detected","duration":"1694ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T18:02:02.778Z","level":"WARN","message":"Slow query detected","duration":"1820ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T18:03:54.499Z","level":"WARN","message":"Slow query detected","duration":"1980ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-22T18:03:55.728Z","level":"WARN","message":"Slow query detected","duration":"1755ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-22T18:04:55.426Z","level":"WARN","message":"Slow query detected","duration":"2077ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T18:05:04.449Z","level":"WARN","message":"Slow query detected","duration":"2365ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T18:10:40.897Z","level":"WARN","message":"Slow query detected","duration":"2220ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T18:10:50.655Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T23:35:41.313Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-22T23:35:43.982Z","level":"WARN","message":"Slow query detected","duration":"1851ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-22T23:37:38.159Z","level":"WARN","message":"Slow query detected","duration":"1832ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T23:37:48.910Z","level":"WARN","message":"Slow query detected","duration":"1840ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-22T23:50:40.266Z","level":"WARN","message":"Slow query detected","duration":"3884ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-22T23:50:47.059Z","level":"WARN","message":"Slow query detected","duration":"1792ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T00:04:34.970Z","level":"WARN","message":"Slow query detected","duration":"1722ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T00:04:42.650Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T00:14:53.472Z","level":"WARN","message":"Slow query detected","duration":"1836ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T00:15:00.232Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T00:19:56.681Z","level":"WARN","message":"Slow query detected","duration":"1935ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T00:20:03.470Z","level":"WARN","message":"Slow query detected","duration":"1771ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T00:22:12.158Z","level":"WARN","message":"Slow query detected","duration":"1683ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T00:22:19.121Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T00:30:59.625Z","level":"WARN","message":"Slow query detected","duration":"2415ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T00:31:06.589Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T00:37:51.124Z","level":"WARN","message":"Slow query detected","duration":"1818ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T00:38:02.643Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T01:06:01.093Z","level":"WARN","message":"Slow query detected","duration":"2020ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T01:06:07.443Z","level":"WARN","message":"Slow query detected","duration":"1804ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T01:12:06.869Z","level":"WARN","message":"Slow query detected","duration":"2939ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T01:12:13.525Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T01:20:50.753Z","level":"WARN","message":"Slow query detected","duration":"2386ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T01:20:57.818Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T01:25:52.117Z","level":"WARN","message":"Slow query detected","duration":"1987ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T02:07:33.156Z","level":"WARN","message":"Slow query detected","duration":"1872ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T02:07:39.503Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T05:43:07.680Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-23T05:43:10.305Z","level":"WARN","message":"Slow query detected","duration":"1800ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-23T06:11:11.379Z","level":"WARN","message":"Slow query detected","duration":"1851ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T06:11:18.751Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T06:18:20.131Z","level":"WARN","message":"Slow query detected","duration":"1809ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T06:18:30.473Z","level":"WARN","message":"Slow query detected","duration":"1845ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T06:33:27.512Z","level":"WARN","message":"Slow query detected","duration":"2180ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T06:33:34.873Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T08:02:57.706Z","level":"WARN","message":"Slow query detected","duration":"2061ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T08:03:09.074Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T08:04:29.663Z","level":"WARN","message":"Slow query detected","duration":"1893ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T08:04:39.799Z","level":"WARN","message":"Slow query detected","duration":"1637ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T08:05:54.551Z","level":"WARN","message":"Slow query detected","duration":"1975ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T08:05:54.552Z","level":"WARN","message":"User not found in database","email":"arabhifdfsfsl@gmail.com","phone":"+8801718755978"}
+{"timestamp":"2025-10-23T08:06:09.914Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T08:07:50.265Z","level":"WARN","message":"Slow query detected","duration":"1795ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T08:07:57.639Z","level":"WARN","message":"Slow query detected","duration":"2047ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T08:09:16.384Z","level":"WARN","message":"Slow query detected","duration":"1794ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T08:09:23.043Z","level":"WARN","message":"Slow query detected","duration":"1846ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T10:18:04.782Z","level":"WARN","message":"Slow query detected","duration":"2103ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T10:18:12.872Z","level":"WARN","message":"Slow query detected","duration":"1779ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T12:52:58.154Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-23T12:53:01.144Z","level":"WARN","message":"Slow query detected","duration":"2171ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-23T13:03:51.796Z","level":"WARN","message":"Slow query detected","duration":"1799ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T13:03:58.473Z","level":"WARN","message":"Slow query detected","duration":"1863ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T13:07:15.778Z","level":"WARN","message":"Slow query detected","duration":"1895ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T13:07:22.772Z","level":"WARN","message":"Slow query detected","duration":"1669ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T13:28:09.707Z","level":"WARN","message":"Slow query detected","duration":"2270ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-23T13:28:23.297Z","level":"WARN","message":"Slow query detected","duration":"2065ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-23T13:28:28.929Z","level":"WARN","message":"Slow query detected","duration":"2009ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T13:35:25.802Z","level":"WARN","message":"Slow query detected","duration":"1990ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-23T13:35:35.327Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T13:40:15.289Z","level":"WARN","message":"Slow query detected","duration":"1793ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T13:40:22.867Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T13:47:31.824Z","level":"WARN","message":"Slow query detected","duration":"2234ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T13:47:53.534Z","level":"WARN","message":"Slow query detected","duration":"1908ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-10-23T13:47:57.117Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T13:54:12.929Z","level":"WARN","message":"Slow query detected","duration":"2145ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-23T13:54:24.398Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T14:02:00.082Z","level":"WARN","message":"Slow query detected","duration":"2091ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T14:02:07.044Z","level":"WARN","message":"Slow query detected","duration":"1636ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T14:10:15.394Z","level":"WARN","message":"Slow query detected","duration":"1735ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T14:10:26.043Z","level":"WARN","message":"Slow query detected","duration":"2149ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T14:13:58.669Z","level":"WARN","message":"Slow query detected","duration":"1964ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T14:14:12.861Z","level":"WARN","message":"Slow query detected","duration":"1793ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-23T14:14:18.392Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T14:23:16.508Z","level":"WARN","message":"Slow query detected","duration":"1957ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T14:23:24.393Z","level":"WARN","message":"Slow query detected","duration":"2867ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T14:23:25.452Z","level":"WARN","message":"Slow query detected","duration":"1059ms","query":"SELECT device_id, device_type, os_name, browser_name, ip_address, \n             "}
+{"timestamp":"2025-10-23T14:28:47.468Z","level":"WARN","message":"Slow query detected","duration":"1995ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T14:28:54.839Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T14:36:04.514Z","level":"WARN","message":"Slow query detected","duration":"1968ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T14:36:14.958Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T14:43:56.068Z","level":"WARN","message":"Slow query detected","duration":"1942ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T14:44:02.826Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T15:06:43.218Z","level":"WARN","message":"Slow query detected","duration":"1802ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T15:06:50.899Z","level":"WARN","message":"Slow query detected","duration":"1947ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T15:46:10.827Z","level":"WARN","message":"Slow query detected","duration":"1703ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T15:46:17.586Z","level":"WARN","message":"Slow query detected","duration":"1711ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T15:54:45.350Z","level":"WARN","message":"Slow query detected","duration":"2138ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T15:54:52.150Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T16:03:08.625Z","level":"WARN","message":"Slow query detected","duration":"1862ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T16:03:18.757Z","level":"WARN","message":"Slow query detected","duration":"1795ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T16:12:24.780Z","level":"WARN","message":"Slow query detected","duration":"1797ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T16:12:35.334Z","level":"WARN","message":"Slow query detected","duration":"1697ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T16:22:52.957Z","level":"WARN","message":"Slow query detected","duration":"1873ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T16:22:59.613Z","level":"WARN","message":"Slow query detected","duration":"1815ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-23T16:33:05.957Z","level":"WARN","message":"Slow query detected","duration":"1892ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-23T16:33:13.303Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T05:23:19.224Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-24T05:23:22.071Z","level":"WARN","message":"Slow query detected","duration":"2027ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-24T05:41:22.091Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T05:41:29.362Z","level":"WARN","message":"Slow query detected","duration":"1812ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T07:56:54.608Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-24T07:56:57.222Z","level":"WARN","message":"Slow query detected","duration":"1802ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-24T10:29:26.220Z","level":"WARN","message":"Slow query detected","duration":"1972ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T10:29:34.410Z","level":"WARN","message":"Slow query detected","duration":"1760ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T10:31:40.418Z","level":"WARN","message":"Slow query detected","duration":"1826ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T10:31:46.814Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T12:52:29.092Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-24T12:52:31.709Z","level":"WARN","message":"Slow query detected","duration":"1808ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-24T12:57:38.118Z","level":"WARN","message":"Slow query detected","duration":"1760ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T12:57:44.542Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T13:59:05.031Z","level":"WARN","message":"Slow query detected","duration":"1921ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T13:59:12.839Z","level":"WARN","message":"Slow query detected","duration":"1647ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T14:01:47.951Z","level":"WARN","message":"Slow query detected","duration":"1879ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T14:01:54.874Z","level":"WARN","message":"Slow query detected","duration":"1800ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T14:10:07.564Z","level":"WARN","message":"Slow query detected","duration":"1860ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T14:10:14.223Z","level":"WARN","message":"Slow query detected","duration":"1742ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T14:22:22.171Z","level":"WARN","message":"Slow query detected","duration":"1961ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T14:22:29.356Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T14:39:08.381Z","level":"WARN","message":"Slow query detected","duration":"1830ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T14:39:16.264Z","level":"WARN","message":"Slow query detected","duration":"2867ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T14:43:07.280Z","level":"WARN","message":"Slow query detected","duration":"1710ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T14:43:22.063Z","level":"WARN","message":"Slow query detected","duration":"2720ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T14:54:31.010Z","level":"WARN","message":"Slow query detected","duration":"1974ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T14:54:38.382Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T14:58:54.693Z","level":"WARN","message":"Slow query detected","duration":"1718ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T14:59:01.347Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T15:03:15.350Z","level":"WARN","message":"Slow query detected","duration":"1733ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T15:03:21.138Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T15:07:33.556Z","level":"WARN","message":"Slow query detected","duration":"1727ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T15:09:43.196Z","level":"WARN","message":"Slow query detected","duration":"1719ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-24T15:09:50.466Z","level":"WARN","message":"Slow query detected","duration":"1944ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T15:18:09.083Z","level":"WARN","message":"Slow query detected","duration":"1763ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T15:18:16.018Z","level":"WARN","message":"Slow query detected","duration":"1739ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T15:23:30.183Z","level":"WARN","message":"Slow query detected","duration":"1817ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T15:23:41.959Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T15:41:21.807Z","level":"WARN","message":"Slow query detected","duration":"2209ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T15:41:30.204Z","level":"WARN","message":"Slow query detected","duration":"1874ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T15:53:43.291Z","level":"WARN","message":"Slow query detected","duration":"1939ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T15:53:52.406Z","level":"WARN","message":"Slow query detected","duration":"2049ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T15:59:08.926Z","level":"WARN","message":"Slow query detected","duration":"2117ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T15:59:18.653Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T16:12:50.385Z","level":"WARN","message":"Slow query detected","duration":"6903ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T16:12:56.427Z","level":"WARN","message":"Slow query detected","duration":"1865ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T19:05:10.323Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-24T19:05:13.076Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-24T19:07:34.801Z","level":"WARN","message":"Slow query detected","duration":"1873ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T19:07:43.605Z","level":"WARN","message":"Slow query detected","duration":"1840ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T19:55:27.341Z","level":"WARN","message":"Slow query detected","duration":"1930ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T19:55:36.966Z","level":"WARN","message":"Slow query detected","duration":"1840ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T19:58:52.961Z","level":"WARN","message":"Slow query detected","duration":"2147ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T19:59:00.847Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T20:00:11.503Z","level":"WARN","message":"Slow query detected","duration":"1826ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T20:00:18.264Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T20:34:41.333Z","level":"WARN","message":"Slow query detected","duration":"1709ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T20:34:47.579Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T20:42:17.017Z","level":"WARN","message":"Slow query detected","duration":"2065ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T20:42:23.705Z","level":"WARN","message":"Slow query detected","duration":"1744ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T21:02:05.583Z","level":"WARN","message":"Slow query detected","duration":"1882ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T21:02:13.191Z","level":"WARN","message":"Slow query detected","duration":"1665ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T21:06:18.411Z","level":"WARN","message":"Slow query detected","duration":"1798ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T21:06:32.717Z","level":"WARN","message":"Slow query detected","duration":"2120ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T21:19:29.864Z","level":"WARN","message":"Slow query detected","duration":"1953ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T21:19:36.828Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T21:24:52.836Z","level":"WARN","message":"Slow query detected","duration":"2111ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T21:24:59.082Z","level":"WARN","message":"Slow query detected","duration":"2047ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T21:31:58.993Z","level":"WARN","message":"Slow query detected","duration":"1908ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T21:32:08.687Z","level":"WARN","message":"Slow query detected","duration":"1774ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T21:38:13.506Z","level":"WARN","message":"Slow query detected","duration":"1854ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T21:38:27.538Z","level":"WARN","message":"Slow query detected","duration":"1611ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-24T21:38:33.065Z","level":"WARN","message":"Slow query detected","duration":"1880ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T22:10:46.903Z","level":"WARN","message":"Slow query detected","duration":"2056ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T22:11:00.037Z","level":"WARN","message":"Slow query detected","duration":"1769ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T22:14:22.354Z","level":"WARN","message":"Slow query detected","duration":"1848ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T22:14:29.829Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T22:23:27.536Z","level":"WARN","message":"Slow query detected","duration":"1856ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T22:23:37.774Z","level":"WARN","message":"Slow query detected","duration":"2047ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-24T22:29:51.333Z","level":"WARN","message":"Slow query detected","duration":"1902ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-24T22:29:57.272Z","level":"WARN","message":"Slow query detected","duration":"1784ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-25T04:39:02.883Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-25T04:39:05.446Z","level":"WARN","message":"Slow query detected","duration":"1752ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-25T04:42:01.985Z","level":"WARN","message":"Slow query detected","duration":"1820ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-25T04:42:08.436Z","level":"WARN","message":"Slow query detected","duration":"1827ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-25T04:45:39.852Z","level":"WARN","message":"Slow query detected","duration":"1829ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-25T04:45:46.037Z","level":"WARN","message":"Slow query detected","duration":"1739ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-25T04:49:18.519Z","level":"WARN","message":"Slow query detected","duration":"1869ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-25T04:49:25.072Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-25T05:06:33.275Z","level":"WARN","message":"Slow query detected","duration":"2160ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-25T05:06:40.282Z","level":"WARN","message":"Slow query detected","duration":"1782ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-25T07:51:19.273Z","level":"WARN","message":"SendGrid API key not configured. Email sending will be skipped."}
+{"timestamp":"2025-10-25T07:51:22.130Z","level":"WARN","message":"Slow query detected","duration":"2045ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-25T07:52:45.690Z","level":"WARN","message":"Slow query detected","duration":"1939ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-25T07:52:51.834Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
