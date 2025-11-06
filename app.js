@@ -14,6 +14,7 @@ import securityQuestionsRoutes from './routes/v1/securityQuestions.js';
 import sessionRoutes from './routes/v1/session.js';
 import healthRoutes from './routes/health.js';
 
+
 const app = express();
 
 // Middleware
@@ -22,7 +23,7 @@ app.use(cookieParser());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 app.use(limiter);
-
+app.set('trust proxy', true);
 app.get('/health', (req, res) => {
   res.send('✅ Auth Service is running');
 });

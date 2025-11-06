@@ -63,13 +63,34 @@ CREATE TABLE votteryy_user_details (
 CREATE TABLE votteryy_user_roles (
   id SERIAL PRIMARY KEY,
   user_id INT NOT NULL,
-  role_name VARCHAR(100) NOT NULL, -- 'Voter', 'Creator', 'Admin', etc.
+  role_name VARCHAR(100) NOT NULL,
   is_active BOOLEAN DEFAULT TRUE,
   assigned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  assigned_by INT, -- admin_id if assigned by admin
+  assigned_by INT, -- admin_id if manually assigned, NULL if automatic
+  assignment_type VARCHAR(50) DEFAULT 'automatic', -- 'automatic', 'manual', 'subscription', 'trigger'
+  assignment_source VARCHAR(50), -- 'auth_service', 'subscription_service', 'election_service', 'role_service'
+  expires_at TIMESTAMP, -- NULL for permanent, set for subscription-based roles
+  metadata JSONB, -- Additional info (e.g., subscription details)
+  deactivated_at TIMESTAMP,
+  deactivated_by INT,
+  deactivation_reason TEXT,
   FOREIGN KEY (user_id) REFERENCES public.users(user_id),
   UNIQUE(user_id, role_name)
 );
+CREATE INDEX idx_user_roles_user_id ON votteryy_user_roles(user_id);
+CREATE INDEX idx_user_roles_active ON votteryy_user_roles(is_active);
+CREATE INDEX idx_user_roles_expires ON votteryy_user_roles(expires_at);
+--old
+-- CREATE TABLE votteryy_user_roles (
+--   id SERIAL PRIMARY KEY,
+--   user_id INT NOT NULL,
+--   role_name VARCHAR(100) NOT NULL, -- 'Voter', 'Creator', 'Admin', etc.
+--   is_active BOOLEAN DEFAULT TRUE,
+--   assigned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--   assigned_by INT, -- admin_id if assigned by admin
+--   FOREIGN KEY (user_id) REFERENCES public.users(user_id),
+--   UNIQUE(user_id, role_name)
+-- );
 
 -- Subscription tracking
 CREATE TABLE votteryy_user_subscriptions (

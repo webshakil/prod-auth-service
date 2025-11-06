@@ -561,3 +561,780 @@
 {"timestamp":"2025-10-25T08:55:32.605Z","level":"WARN","message":"Slow query detected","duration":"1752ms","query":"SELECT NOW()"}
 {"timestamp":"2025-10-25T08:56:29.515Z","level":"WARN","message":"Slow query detected","duration":"1804ms","query":"SELECT NOW()"}
 {"timestamp":"2025-10-25T08:59:15.326Z","level":"WARN","message":"Slow query detected","duration":"2006ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-27T09:41:03.244Z","level":"WARN","message":"Slow query detected","duration":"1948ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-27T09:41:27.105Z","level":"WARN","message":"Slow query detected","duration":"1922ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-27T09:52:15.499Z","level":"WARN","message":"Slow query detected","duration":"1868ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-27T09:52:21.950Z","level":"WARN","message":"Slow query detected","duration":"1879ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-27T10:08:31.374Z","level":"WARN","message":"Slow query detected","duration":"2011ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-27T10:08:40.795Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-27T14:51:29.335Z","level":"WARN","message":"Slow query detected","duration":"2177ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-27T14:55:24.854Z","level":"WARN","message":"Slow query detected","duration":"1875ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-27T14:55:33.046Z","level":"WARN","message":"Slow query detected","duration":"2125ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-27T15:50:13.966Z","level":"WARN","message":"Slow query detected","duration":"1871ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-27T15:50:20.827Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-27T16:18:11.703Z","level":"WARN","message":"Slow query detected","duration":"1709ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-27T16:18:23.581Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-27T16:31:48.173Z","level":"WARN","message":"Slow query detected","duration":"1816ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-27T16:31:57.158Z","level":"WARN","message":"Slow query detected","duration":"1845ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-27T16:37:20.169Z","level":"WARN","message":"Slow query detected","duration":"1689ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-27T16:37:29.345Z","level":"WARN","message":"Slow query detected","duration":"2865ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-27T16:40:57.935Z","level":"WARN","message":"Slow query detected","duration":"1811ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-27T16:41:07.664Z","level":"WARN","message":"Slow query detected","duration":"2174ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-27T17:05:43.977Z","level":"WARN","message":"Slow query detected","duration":"2137ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-27T17:05:51.451Z","level":"WARN","message":"Slow query detected","duration":"1915ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-27T23:57:58.075Z","level":"WARN","message":"Slow query detected","duration":"1896ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-27T23:59:18.255Z","level":"WARN","message":"Slow query detected","duration":"1921ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-27T23:59:25.013Z","level":"WARN","message":"Slow query detected","duration":"1944ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T00:44:36.481Z","level":"WARN","message":"Slow query detected","duration":"1869ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-28T00:44:43.240Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T16:08:05.876Z","level":"WARN","message":"Slow query detected","duration":"2595ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-28T16:13:14.001Z","level":"WARN","message":"Slow query detected","duration":"2031ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-28T16:13:21.279Z","level":"WARN","message":"Slow query detected","duration":"1908ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T17:18:37.587Z","level":"WARN","message":"Slow query detected","duration":"1882ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-28T17:18:44.754Z","level":"WARN","message":"Slow query detected","duration":"2313ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T17:35:18.247Z","level":"WARN","message":"Slow query detected","duration":"1895ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-28T17:35:25.621Z","level":"WARN","message":"Slow query detected","duration":"2049ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T17:42:29.354Z","level":"WARN","message":"Slow query detected","duration":"2092ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-28T17:42:35.948Z","level":"WARN","message":"Slow query detected","duration":"1781ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T17:55:14.083Z","level":"WARN","message":"Slow query detected","duration":"2066ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-28T17:55:22.378Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T18:12:09.287Z","level":"WARN","message":"Slow query detected","duration":"1802ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-28T18:12:16.762Z","level":"WARN","message":"Slow query detected","duration":"1816ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T18:24:39.169Z","level":"WARN","message":"Slow query detected","duration":"1808ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-28T18:24:46.236Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T18:29:11.182Z","level":"WARN","message":"Slow query detected","duration":"1947ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-28T18:29:18.416Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T18:35:32.896Z","level":"WARN","message":"Slow query detected","duration":"1887ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE (user_email = $1 "}
+{"timestamp":"2025-10-28T18:35:42.757Z","level":"WARN","message":"Slow query detected","duration":"1637ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T18:44:44.120Z","level":"WARN","message":"Slow query detected","duration":"1838ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-28T18:44:52.549Z","level":"WARN","message":"Slow query detected","duration":"1773ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T18:49:08.929Z","level":"WARN","message":"Slow query detected","duration":"1828ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-28T18:49:19.271Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T18:50:53.992Z","level":"WARN","message":"Slow query detected","duration":"1917ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-28T18:51:03.517Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T18:54:36.509Z","level":"WARN","message":"Slow query detected","duration":"1715ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-28T18:54:46.379Z","level":"WARN","message":"Slow query detected","duration":"1779ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T19:19:34.020Z","level":"WARN","message":"Slow query detected","duration":"1809ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-28T19:19:42.006Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T19:23:45.415Z","level":"WARN","message":"Slow query detected","duration":"1893ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-28T19:23:58.634Z","level":"WARN","message":"Slow query detected","duration":"2058ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-28T19:27:59.265Z","level":"WARN","message":"Slow query detected","duration":"2378ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-28T19:28:06.025Z","level":"WARN","message":"Slow query detected","duration":"1947ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T04:09:49.442Z","level":"WARN","message":"Slow query detected","duration":"2546ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-29T05:00:20.912Z","level":"WARN","message":"Slow query detected","duration":"2089ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T05:00:30.229Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T05:01:34.720Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T05:01:40.784Z","level":"WARN","message":"Slow query detected","duration":"1639ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T05:03:16.938Z","level":"WARN","message":"Slow query detected","duration":"1860ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T05:03:24.720Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T05:13:34.309Z","level":"WARN","message":"Slow query detected","duration":"1857ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T05:13:40.486Z","level":"WARN","message":"Slow query detected","duration":"1814ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T05:16:46.925Z","level":"WARN","message":"Slow query detected","duration":"1940ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T05:16:57.370Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T05:19:29.434Z","level":"WARN","message":"Slow query detected","duration":"1852ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T05:19:35.988Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T05:25:35.564Z","level":"WARN","message":"Slow query detected","duration":"2160ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T05:25:42.071Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T05:37:17.170Z","level":"WARN","message":"Slow query detected","duration":"1802ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T05:37:24.235Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T05:39:54.456Z","level":"WARN","message":"Slow query detected","duration":"1795ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T05:40:02.750Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T05:42:56.832Z","level":"WARN","message":"Slow query detected","duration":"2016ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T05:43:07.380Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T06:26:19.717Z","level":"WARN","message":"Slow query detected","duration":"1983ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T06:26:26.004Z","level":"WARN","message":"Slow query detected","duration":"1739ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T08:11:54.384Z","level":"WARN","message":"Slow query detected","duration":"2073ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-29T08:19:56.380Z","level":"WARN","message":"Slow query detected","duration":"2140ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T08:20:02.831Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T09:28:27.162Z","level":"WARN","message":"Slow query detected","duration":"1860ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T09:28:33.717Z","level":"WARN","message":"Slow query detected","duration":"1845ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T10:03:05.082Z","level":"WARN","message":"Slow query detected","duration":"1977ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T10:03:11.840Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T10:18:04.257Z","level":"WARN","message":"Slow query detected","duration":"1971ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T10:18:11.534Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T10:18:25.357Z","level":"WARN","message":"Slow query detected","duration":"1804ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T10:18:32.527Z","level":"WARN","message":"Slow query detected","duration":"1947ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T10:27:44.056Z","level":"WARN","message":"Slow query detected","duration":"2035ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T10:27:52.760Z","level":"WARN","message":"Slow query detected","duration":"2150ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T10:34:33.966Z","level":"WARN","message":"Slow query detected","duration":"1896ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T10:34:40.652Z","level":"WARN","message":"Slow query detected","duration":"1769ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T10:57:26.445Z","level":"WARN","message":"Slow query detected","duration":"1840ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T10:57:32.874Z","level":"WARN","message":"Slow query detected","duration":"1821ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T11:17:39.172Z","level":"WARN","message":"Slow query detected","duration":"1715ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T11:17:45.830Z","level":"WARN","message":"Slow query detected","duration":"1817ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T11:20:56.601Z","level":"WARN","message":"Slow query detected","duration":"1820ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T11:21:08.991Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T11:29:51.746Z","level":"WARN","message":"Slow query detected","duration":"1943ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T11:30:01.167Z","level":"WARN","message":"Slow query detected","duration":"1794ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T13:22:41.169Z","level":"WARN","message":"Slow query detected","duration":"2089ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-29T13:26:12.522Z","level":"WARN","message":"Slow query detected","duration":"14881ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T13:26:26.244Z","level":"WARN","message":"Slow query detected","duration":"13721ms","query":"SELECT user_id, user_activated, user_banned, user_name, user_firstname, user_las"}
+{"timestamp":"2025-10-29T13:26:42.013Z","level":"WARN","message":"Slow query detected","duration":"1943ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T13:56:22.855Z","level":"WARN","message":"Slow query detected","duration":"1896ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T13:56:30.434Z","level":"WARN","message":"Slow query detected","duration":"2048ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T14:12:42.115Z","level":"WARN","message":"Slow query detected","duration":"2080ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T14:12:49.006Z","level":"WARN","message":"Slow query detected","duration":"1870ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T14:44:33.834Z","level":"WARN","message":"Slow query detected","duration":"1845ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T14:44:43.971Z","level":"WARN","message":"Slow query detected","duration":"2042ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T14:52:22.624Z","level":"WARN","message":"Slow query detected","duration":"2270ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T14:52:29.895Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T15:45:18.037Z","level":"WARN","message":"Slow query detected","duration":"1853ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T15:45:26.370Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T16:32:33.861Z","level":"WARN","message":"Slow query detected","duration":"1939ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T16:32:40.312Z","level":"WARN","message":"Slow query detected","duration":"1638ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T16:45:58.017Z","level":"WARN","message":"Slow query detected","duration":"2004ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T16:46:04.670Z","level":"WARN","message":"Slow query detected","duration":"2046ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T17:14:11.990Z","level":"WARN","message":"Slow query detected","duration":"2608ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T17:14:18.585Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T18:41:09.051Z","level":"WARN","message":"Slow query detected","duration":"1995ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T18:41:16.320Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T18:47:52.305Z","level":"WARN","message":"Slow query detected","duration":"1962ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T18:47:59.576Z","level":"WARN","message":"Slow query detected","duration":"2224ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T19:01:41.445Z","level":"WARN","message":"Slow query detected","duration":"1775ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T19:01:48.818Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T19:18:39.722Z","level":"WARN","message":"Slow query detected","duration":"2197ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T19:18:48.630Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T19:20:01.981Z","level":"WARN","message":"Slow query detected","duration":"1642ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T19:20:08.817Z","level":"WARN","message":"Slow query detected","duration":"2310ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-29T19:37:49.275Z","level":"WARN","message":"Slow query detected","duration":"2151ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-29T19:37:57.776Z","level":"WARN","message":"Slow query detected","duration":"1947ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T02:26:28.056Z","level":"WARN","message":"Slow query detected","duration":"1948ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-30T02:32:13.660Z","level":"WARN","message":"Slow query detected","duration":"2053ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T02:32:21.340Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T02:49:29.233Z","level":"WARN","message":"Slow query detected","duration":"1973ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T02:49:35.890Z","level":"WARN","message":"Slow query detected","duration":"2048ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T03:04:57.603Z","level":"WARN","message":"Slow query detected","duration":"2187ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T03:05:04.389Z","level":"WARN","message":"Slow query detected","duration":"1860ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T03:20:14.807Z","level":"WARN","message":"Slow query detected","duration":"2531ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T03:20:25.763Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T03:54:51.696Z","level":"WARN","message":"Slow query detected","duration":"2302ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T03:54:58.557Z","level":"WARN","message":"Slow query detected","duration":"1985ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T04:12:07.275Z","level":"WARN","message":"Slow query detected","duration":"2085ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T04:12:15.775Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T04:21:40.968Z","level":"WARN","message":"Slow query detected","duration":"2077ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T04:26:11.058Z","level":"WARN","message":"Slow query detected","duration":"2464ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-30T04:26:17.624Z","level":"WARN","message":"Slow query detected","duration":"2263ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T04:36:20.242Z","level":"WARN","message":"Slow query detected","duration":"2726ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T04:36:27.256Z","level":"WARN","message":"Slow query detected","duration":"1791ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T04:56:28.266Z","level":"WARN","message":"Slow query detected","duration":"1849ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T04:56:35.640Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T05:02:38.139Z","level":"WARN","message":"Slow query detected","duration":"2687ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T05:02:49.505Z","level":"WARN","message":"Slow query detected","duration":"2400ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T05:15:33.530Z","level":"WARN","message":"Slow query detected","duration":"2534ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T05:15:40.994Z","level":"WARN","message":"Slow query detected","duration":"2148ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T05:59:34.668Z","level":"WARN","message":"Slow query detected","duration":"2344ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T05:59:40.786Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T06:13:35.043Z","level":"WARN","message":"Slow query detected","duration":"2278ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T06:13:43.133Z","level":"WARN","message":"Slow query detected","duration":"2662ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T06:16:59.895Z","level":"WARN","message":"Slow query detected","duration":"2088ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T06:17:07.424Z","level":"WARN","message":"Slow query detected","duration":"2254ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T06:23:20.879Z","level":"WARN","message":"Slow query detected","duration":"2136ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T06:23:29.173Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T06:29:32.604Z","level":"WARN","message":"Slow query detected","duration":"2323ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T06:29:39.453Z","level":"WARN","message":"Slow query detected","duration":"2151ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T06:50:40.858Z","level":"WARN","message":"Slow query detected","duration":"1955ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T06:50:46.868Z","level":"WARN","message":"Slow query detected","duration":"1706ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T06:53:15.245Z","level":"WARN","message":"Slow query detected","duration":"1921ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T06:53:24.564Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T06:56:29.899Z","level":"WARN","message":"Slow query detected","duration":"1762ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T06:56:40.423Z","level":"WARN","message":"Slow query detected","duration":"2014ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T07:09:09.005Z","level":"WARN","message":"Slow query detected","duration":"1975ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T07:09:17.517Z","level":"WARN","message":"Slow query detected","duration":"2368ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T07:32:37.526Z","level":"WARN","message":"Slow query detected","duration":"1923ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T07:32:43.669Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T07:40:52.417Z","level":"WARN","message":"Slow query detected","duration":"2166ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T07:41:11.986Z","level":"WARN","message":"Slow query detected","duration":"1941ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-30T07:41:17.965Z","level":"WARN","message":"Slow query detected","duration":"2188ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T08:21:33.499Z","level":"WARN","message":"Slow query detected","duration":"2328ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T08:21:43.655Z","level":"WARN","message":"Slow query detected","duration":"1901ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T08:25:05.119Z","level":"WARN","message":"Slow query detected","duration":"2129ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T08:25:11.675Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T10:44:13.271Z","level":"WARN","message":"Slow query detected","duration":"1735ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T10:44:20.613Z","level":"WARN","message":"Slow query detected","duration":"1934ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T11:00:09.060Z","level":"WARN","message":"Slow query detected","duration":"2030ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T11:00:16.591Z","level":"WARN","message":"Slow query detected","duration":"2010ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T11:04:56.899Z","level":"WARN","message":"Slow query detected","duration":"1949ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T11:05:08.511Z","level":"WARN","message":"Slow query detected","duration":"3010ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T11:25:45.267Z","level":"WARN","message":"Slow query detected","duration":"1857ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T11:25:52.027Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T12:07:11.560Z","level":"WARN","message":"Slow query detected","duration":"2476ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T12:07:22.416Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T12:08:42.185Z","level":"WARN","message":"Slow query detected","duration":"1887ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T12:09:35.740Z","level":"WARN","message":"Slow query detected","duration":"2072ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-30T12:09:37.378Z","level":"WARN","message":"Slow query detected","duration":"1952ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-30T12:17:36.954Z","level":"WARN","message":"Slow query detected","duration":"1913ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T12:17:43.758Z","level":"WARN","message":"Slow query detected","duration":"1919ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T12:23:03.624Z","level":"WARN","message":"Slow query detected","duration":"2386ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T12:23:14.333Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T12:25:50.494Z","level":"WARN","message":"Slow query detected","duration":"1867ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T12:25:56.638Z","level":"WARN","message":"Slow query detected","duration":"1738ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T12:34:07.446Z","level":"WARN","message":"Slow query detected","duration":"2042ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T12:35:02.525Z","level":"WARN","message":"Slow query detected","duration":"1900ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-10-30T12:35:07.760Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T12:39:11.784Z","level":"WARN","message":"Slow query detected","duration":"1631ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T12:39:19.185Z","level":"WARN","message":"Slow query detected","duration":"2141ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T13:14:23.085Z","level":"WARN","message":"Slow query detected","duration":"1767ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T13:14:29.416Z","level":"WARN","message":"Slow query detected","duration":"1724ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T13:29:11.922Z","level":"WARN","message":"Slow query detected","duration":"1827ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T13:29:26.361Z","level":"WARN","message":"Slow query detected","duration":"1638ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T13:45:08.041Z","level":"WARN","message":"Slow query detected","duration":"2327ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T13:45:15.310Z","level":"WARN","message":"Slow query detected","duration":"2303ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T14:48:26.706Z","level":"WARN","message":"Slow query detected","duration":"1955ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-30T14:50:30.920Z","level":"WARN","message":"Slow query detected","duration":"1852ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T14:50:38.702Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T14:57:44.069Z","level":"WARN","message":"Slow query detected","duration":"1855ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T14:57:52.158Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T15:58:25.541Z","level":"WARN","message":"Slow query detected","duration":"1838ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T15:58:37.317Z","level":"WARN","message":"Slow query detected","duration":"2047ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T16:10:10.814Z","level":"WARN","message":"Slow query detected","duration":"2093ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T16:10:17.432Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T16:20:39.623Z","level":"WARN","message":"Slow query detected","duration":"1864ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T16:20:47.712Z","level":"WARN","message":"Slow query detected","duration":"1831ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T16:33:59.374Z","level":"WARN","message":"Slow query detected","duration":"2081ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T16:34:22.311Z","level":"WARN","message":"Slow query detected","duration":"1804ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-10-30T16:34:25.605Z","level":"WARN","message":"Slow query detected","duration":"1756ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T16:45:16.346Z","level":"WARN","message":"Slow query detected","duration":"1758ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T16:45:25.254Z","level":"WARN","message":"Slow query detected","duration":"2147ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-30T17:19:00.397Z","level":"WARN","message":"Slow query detected","duration":"1858ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-30T17:19:08.589Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T02:56:40.208Z","level":"WARN","message":"Slow query detected","duration":"1902ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-31T03:16:28.196Z","level":"WARN","message":"Slow query detected","duration":"1870ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T03:16:38.509Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T11:36:59.465Z","level":"WARN","message":"Slow query detected","duration":"2221ms","query":"SELECT NOW()"}
+{"timestamp":"2025-10-31T11:47:22.165Z","level":"WARN","message":"Slow query detected","duration":"1935ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T11:47:30.047Z","level":"WARN","message":"Slow query detected","duration":"1830ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T11:48:47.976Z","level":"WARN","message":"Slow query detected","duration":"1751ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T11:48:53.914Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T11:54:39.927Z","level":"WARN","message":"Slow query detected","duration":"1920ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T11:54:54.570Z","level":"WARN","message":"Slow query detected","duration":"2174ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T11:56:55.094Z","level":"WARN","message":"Slow query detected","duration":"1686ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T11:57:04.310Z","level":"WARN","message":"Slow query detected","duration":"2354ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T12:18:59.042Z","level":"WARN","message":"Slow query detected","duration":"2388ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T12:19:07.838Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T12:45:37.709Z","level":"WARN","message":"Slow query detected","duration":"1857ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T12:45:43.956Z","level":"WARN","message":"Slow query detected","duration":"1738ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T13:03:46.361Z","level":"WARN","message":"Slow query detected","duration":"1867ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T13:03:53.800Z","level":"WARN","message":"Slow query detected","duration":"1836ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T13:09:49.751Z","level":"WARN","message":"Slow query detected","duration":"1776ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T13:09:58.251Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T13:51:23.003Z","level":"WARN","message":"Slow query detected","duration":"1906ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T13:51:33.141Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T15:11:27.112Z","level":"WARN","message":"Slow query detected","duration":"1893ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T15:11:34.614Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T15:20:34.061Z","level":"WARN","message":"Slow query detected","duration":"1879ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T15:20:43.996Z","level":"WARN","message":"Slow query detected","duration":"1846ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T15:33:13.158Z","level":"WARN","message":"Slow query detected","duration":"2003ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T15:33:20.328Z","level":"WARN","message":"Slow query detected","duration":"1845ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T15:40:41.674Z","level":"WARN","message":"Slow query detected","duration":"1922ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T15:40:48.945Z","level":"WARN","message":"Slow query detected","duration":"1742ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T15:52:35.204Z","level":"WARN","message":"Slow query detected","duration":"2032ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T15:52:42.677Z","level":"WARN","message":"Slow query detected","duration":"1795ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T16:02:46.638Z","level":"WARN","message":"Slow query detected","duration":"2061ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T16:02:53.601Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T16:04:27.707Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T16:04:34.363Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T16:05:58.946Z","level":"WARN","message":"Slow query detected","duration":"1976ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T16:06:11.545Z","level":"WARN","message":"Slow query detected","duration":"1847ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T16:07:22.812Z","level":"WARN","message":"Slow query detected","duration":"2185ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T16:07:29.675Z","level":"WARN","message":"Slow query detected","duration":"1947ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T16:08:56.202Z","level":"WARN","message":"Slow query detected","duration":"1798ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T16:09:03.370Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T16:10:03.173Z","level":"WARN","message":"Slow query detected","duration":"1839ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T16:10:10.545Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T16:39:07.979Z","level":"WARN","message":"Slow query detected","duration":"1757ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T16:39:18.221Z","level":"WARN","message":"Slow query detected","duration":"1947ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T16:43:52.656Z","level":"WARN","message":"Slow query detected","duration":"1893ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T16:44:00.438Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T16:52:52.039Z","level":"WARN","message":"Slow query detected","duration":"1918ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T16:53:03.048Z","level":"WARN","message":"Slow query detected","duration":"1829ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T17:11:03.288Z","level":"WARN","message":"Slow query detected","duration":"1809ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T17:11:03.288Z","level":"WARN","message":"User not found in database","email":"chumkysk@gamil.com","phone":""}
+{"timestamp":"2025-10-31T17:11:15.666Z","level":"WARN","message":"Slow query detected","duration":"1877ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T17:11:26.739Z","level":"WARN","message":"Slow query detected","duration":"1867ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T17:32:45.112Z","level":"WARN","message":"Slow query detected","duration":"1806ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T17:32:58.937Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T17:44:41.407Z","level":"WARN","message":"Slow query detected","duration":"1969ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T17:44:50.623Z","level":"WARN","message":"Slow query detected","duration":"1944ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T18:07:24.875Z","level":"WARN","message":"Slow query detected","duration":"1903ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T18:07:40.339Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T18:20:01.720Z","level":"WARN","message":"Slow query detected","duration":"1986ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T18:20:13.907Z","level":"WARN","message":"Slow query detected","duration":"2560ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T18:39:10.351Z","level":"WARN","message":"Slow query detected","duration":"1934ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T18:39:17.700Z","level":"WARN","message":"Slow query detected","duration":"1820ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T18:55:03.601Z","level":"WARN","message":"Slow query detected","duration":"1969ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T18:55:25.822Z","level":"WARN","message":"Slow query detected","duration":"1805ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T19:08:24.273Z","level":"WARN","message":"Slow query detected","duration":"1884ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T19:08:31.341Z","level":"WARN","message":"Slow query detected","duration":"2050ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T19:19:26.295Z","level":"WARN","message":"Slow query detected","duration":"1713ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T19:19:34.589Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T19:33:31.118Z","level":"WARN","message":"Slow query detected","duration":"1729ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T19:33:42.059Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T19:44:27.390Z","level":"WARN","message":"Slow query detected","duration":"2086ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T19:44:35.462Z","level":"WARN","message":"Slow query detected","duration":"1825ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T20:40:41.600Z","level":"WARN","message":"Slow query detected","duration":"1860ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T20:40:53.274Z","level":"WARN","message":"Slow query detected","duration":"1803ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T21:07:56.019Z","level":"WARN","message":"Slow query detected","duration":"2429ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T21:08:02.267Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T21:20:31.123Z","level":"WARN","message":"Slow query detected","duration":"1965ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T21:20:37.984Z","level":"WARN","message":"Slow query detected","duration":"1739ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T21:39:26.192Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T21:39:42.519Z","level":"WARN","message":"Slow query detected","duration":"1742ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T21:46:56.697Z","level":"WARN","message":"Slow query detected","duration":"1755ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T21:47:03.660Z","level":"WARN","message":"Slow query detected","duration":"1821ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T21:59:15.586Z","level":"WARN","message":"Slow query detected","duration":"1838ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T21:59:21.766Z","level":"WARN","message":"Slow query detected","duration":"1840ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T22:57:14.990Z","level":"WARN","message":"Slow query detected","duration":"1915ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T22:57:14.990Z","level":"WARN","message":"User not found in database","email":"arabhi@gmail.com","phone":""}
+{"timestamp":"2025-10-31T22:57:28.712Z","level":"WARN","message":"Slow query detected","duration":"1638ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T23:16:39.186Z","level":"WARN","message":"Slow query detected","duration":"1590ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T23:16:48.812Z","level":"WARN","message":"Slow query detected","duration":"1580ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-10-31T23:56:12.737Z","level":"WARN","message":"Slow query detected","duration":"1716ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-10-31T23:56:12.738Z","level":"WARN","message":"User not found in database","email":"arabhi@gmail.com","phone":""}
+{"timestamp":"2025-10-31T23:56:28.916Z","level":"WARN","message":"Slow query detected","duration":"1753ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T00:03:27.328Z","level":"WARN","message":"Slow query detected","duration":"1776ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T00:03:34.429Z","level":"WARN","message":"Slow query detected","duration":"1775ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T00:20:05.020Z","level":"WARN","message":"Slow query detected","duration":"2089ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T00:20:12.087Z","level":"WARN","message":"Slow query detected","duration":"1799ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T01:28:17.367Z","level":"WARN","message":"Slow query detected","duration":"1656ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T01:28:24.842Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T01:36:08.616Z","level":"WARN","message":"Slow query detected","duration":"1796ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T01:36:15.272Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T02:51:41.494Z","level":"WARN","message":"Slow query detected","duration":"1760ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-01T02:57:37.384Z","level":"WARN","message":"Slow query detected","duration":"1518ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T02:57:43.705Z","level":"WARN","message":"Slow query detected","duration":"1572ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T03:22:15.578Z","level":"WARN","message":"Slow query detected","duration":"1738ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T03:22:23.770Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T03:36:02.161Z","level":"WARN","message":"Slow query detected","duration":"1853ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T03:36:08.817Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T03:42:59.962Z","level":"WARN","message":"Slow query detected","duration":"1834ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T03:43:07.847Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T04:01:29.993Z","level":"WARN","message":"Slow query detected","duration":"2020ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T04:01:36.340Z","level":"WARN","message":"Slow query detected","duration":"1811ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T05:04:08.810Z","level":"WARN","message":"Slow query detected","duration":"1846ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-01T05:08:14.979Z","level":"WARN","message":"Slow query detected","duration":"1783ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T05:08:14.979Z","level":"WARN","message":"User not found in database","email":"arabhi@gmail.com","phone":""}
+{"timestamp":"2025-11-01T05:08:29.624Z","level":"WARN","message":"Slow query detected","duration":"1738ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T05:26:47.921Z","level":"WARN","message":"Slow query detected","duration":"1935ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-01T06:28:12.257Z","level":"WARN","message":"Slow query detected","duration":"1553ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T06:28:21.401Z","level":"WARN","message":"Slow query detected","duration":"1727ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T06:32:08.030Z","level":"WARN","message":"Slow query detected","duration":"1891ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T06:32:14.071Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T06:43:26.131Z","level":"WARN","message":"Slow query detected","duration":"1811ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T06:43:33.400Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T06:49:32.419Z","level":"WARN","message":"Slow query detected","duration":"2595ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T06:49:32.420Z","level":"WARN","message":"User not found in database","email":"chuumkysk@gmail.com","phone":""}
+{"timestamp":"2025-11-01T06:49:59.861Z","level":"WARN","message":"Slow query detected","duration":"1856ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T06:50:15.455Z","level":"WARN","message":"Slow query detected","duration":"1761ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-11-01T06:50:17.203Z","level":"WARN","message":"Slow query detected","duration":"1807ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-11-01T06:53:34.905Z","level":"WARN","message":"Slow query detected","duration":"1860ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T06:53:41.356Z","level":"WARN","message":"Slow query detected","duration":"1813ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T08:34:52.559Z","level":"WARN","message":"Slow query detected","duration":"1858ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-01T08:40:20.606Z","level":"WARN","message":"Slow query detected","duration":"1814ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T08:40:29.819Z","level":"WARN","message":"Slow query detected","duration":"1913ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T08:42:44.068Z","level":"WARN","message":"Slow query detected","duration":"1828ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T08:42:50.110Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T08:49:08.994Z","level":"WARN","message":"Slow query detected","duration":"1791ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T08:49:15.240Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T09:09:02.268Z","level":"WARN","message":"Slow query detected","duration":"2224ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T09:09:10.972Z","level":"WARN","message":"Slow query detected","duration":"1884ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T09:41:12.423Z","level":"WARN","message":"Slow query detected","duration":"1952ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T09:41:21.944Z","level":"WARN","message":"Slow query detected","duration":"1945ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T09:48:46.469Z","level":"WARN","message":"Slow query detected","duration":"1898ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T09:48:52.920Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T10:01:08.672Z","level":"WARN","message":"Slow query detected","duration":"2728ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T10:01:15.225Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T10:10:45.085Z","level":"WARN","message":"Slow query detected","duration":"2009ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T10:10:51.640Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T10:22:26.429Z","level":"WARN","message":"Slow query detected","duration":"1862ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T10:22:32.880Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T11:15:03.652Z","level":"WARN","message":"Slow query detected","duration":"1805ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T11:15:10.001Z","level":"WARN","message":"Slow query detected","duration":"1856ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T11:23:05.140Z","level":"WARN","message":"Slow query detected","duration":"1802ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T11:23:05.141Z","level":"WARN","message":"User not found in database","email":"ar.abhi@gamil.com","phone":""}
+{"timestamp":"2025-11-01T11:23:24.291Z","level":"WARN","message":"Slow query detected","duration":"1884ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T11:23:30.742Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T11:46:29.562Z","level":"WARN","message":"Slow query detected","duration":"1775ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T11:46:39.495Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T11:57:36.291Z","level":"WARN","message":"Slow query detected","duration":"1797ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T11:57:43.049Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T12:12:20.212Z","level":"WARN","message":"Slow query detected","duration":"1867ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T12:12:26.664Z","level":"WARN","message":"Slow query detected","duration":"1867ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T12:24:41.182Z","level":"WARN","message":"Slow query detected","duration":"1924ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T12:24:41.182Z","level":"WARN","message":"User not found in database","email":"ar.abhhi@gmail.com","phone":""}
+{"timestamp":"2025-11-01T12:25:03.505Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T12:25:09.958Z","level":"WARN","message":"Slow query detected","duration":"1845ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T12:33:17.517Z","level":"WARN","message":"Slow query detected","duration":"1845ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T12:33:24.458Z","level":"WARN","message":"Slow query detected","duration":"1749ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T13:03:00.829Z","level":"WARN","message":"Slow query detected","duration":"2177ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T13:03:08.018Z","level":"WARN","message":"Slow query detected","duration":"2406ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T13:30:51.466Z","level":"WARN","message":"Slow query detected","duration":"1862ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T13:30:58.065Z","level":"WARN","message":"Slow query detected","duration":"1785ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T13:44:48.285Z","level":"WARN","message":"Slow query detected","duration":"1792ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T13:44:55.555Z","level":"WARN","message":"Slow query detected","duration":"1739ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T13:57:50.525Z","level":"WARN","message":"Slow query detected","duration":"1917ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T13:58:01.993Z","level":"WARN","message":"Slow query detected","duration":"2252ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T14:05:06.752Z","level":"WARN","message":"Slow query detected","duration":"1898ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T14:05:13.409Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-01T14:09:39.887Z","level":"WARN","message":"Slow query detected","duration":"1831ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-01T14:09:47.742Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T02:14:52.694Z","level":"WARN","message":"Slow query detected","duration":"1854ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-02T02:27:36.194Z","level":"WARN","message":"Slow query detected","duration":"1786ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T02:27:42.542Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T02:59:30.376Z","level":"WARN","message":"Slow query detected","duration":"1849ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T02:59:37.235Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T03:02:50.670Z","level":"WARN","message":"Slow query detected","duration":"1811ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T03:02:56.916Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T03:24:32.321Z","level":"WARN","message":"Slow query detected","duration":"1759ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T03:24:38.942Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T03:28:13.062Z","level":"WARN","message":"Slow query detected","duration":"2006ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T03:28:19.309Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T03:36:26.940Z","level":"WARN","message":"Slow query detected","duration":"1865ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T03:36:33.494Z","level":"WARN","message":"Slow query detected","duration":"1944ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T03:42:29.234Z","level":"WARN","message":"Slow query detected","duration":"1719ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T03:42:35.584Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T04:22:08.415Z","level":"WARN","message":"Slow query detected","duration":"1989ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T04:22:15.716Z","level":"WARN","message":"Slow query detected","duration":"1771ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T04:26:40.393Z","level":"WARN","message":"Slow query detected","duration":"1778ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T04:26:46.637Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T05:00:18.712Z","level":"WARN","message":"Slow query detected","duration":"1767ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-02T05:00:53.323Z","level":"WARN","message":"Slow query detected","duration":"1893ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T05:00:59.671Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T05:46:46.164Z","level":"WARN","message":"Slow query detected","duration":"1794ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T05:46:52.308Z","level":"WARN","message":"Slow query detected","duration":"1840ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T05:53:48.143Z","level":"WARN","message":"Slow query detected","duration":"2582ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-02T05:55:52.967Z","level":"WARN","message":"Slow query detected","duration":"1685ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T05:55:59.213Z","level":"WARN","message":"Slow query detected","duration":"1822ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T06:02:51.170Z","level":"WARN","message":"Slow query detected","duration":"1810ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T06:03:03.412Z","level":"WARN","message":"Slow query detected","duration":"1899ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T06:06:51.604Z","level":"WARN","message":"Slow query detected","duration":"1784ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T06:06:57.646Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T06:15:25.337Z","level":"WARN","message":"Slow query detected","duration":"1801ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T06:15:35.475Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T06:22:28.863Z","level":"WARN","message":"Slow query detected","duration":"1794ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T06:22:35.008Z","level":"WARN","message":"Slow query detected","duration":"1944ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T06:27:01.149Z","level":"WARN","message":"Slow query detected","duration":"1801ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T06:27:07.498Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T06:32:13.092Z","level":"WARN","message":"Slow query detected","duration":"1756ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T06:32:20.846Z","level":"WARN","message":"Slow query detected","duration":"1946ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T06:40:52.956Z","level":"WARN","message":"Slow query detected","duration":"1691ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T06:40:59.509Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T06:49:01.818Z","level":"WARN","message":"Slow query detected","duration":"1793ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T07:54:32.397Z","level":"WARN","message":"Slow query detected","duration":"1915ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-02T08:01:40.940Z","level":"WARN","message":"Slow query detected","duration":"1997ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-02T08:13:00.984Z","level":"WARN","message":"Slow query detected","duration":"1863ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T08:13:07.436Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T08:32:11.355Z","level":"WARN","message":"Slow query detected","duration":"2034ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T08:32:17.501Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T08:38:07.915Z","level":"WARN","message":"Slow query detected","duration":"1856ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T08:38:14.981Z","level":"WARN","message":"Slow query detected","duration":"1742ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T08:43:01.087Z","level":"WARN","message":"Slow query detected","duration":"1947ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T08:43:07.744Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T08:55:46.531Z","level":"WARN","message":"Slow query detected","duration":"1931ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T08:55:53.594Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T09:03:04.088Z","level":"WARN","message":"Slow query detected","duration":"1776ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T09:03:11.358Z","level":"WARN","message":"Slow query detected","duration":"2047ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T09:08:02.587Z","level":"WARN","message":"Slow query detected","duration":"1867ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T09:08:08.834Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T09:14:47.482Z","level":"WARN","message":"Slow query detected","duration":"2105ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T09:14:53.773Z","level":"WARN","message":"Slow query detected","duration":"1785ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T09:20:00.933Z","level":"WARN","message":"Slow query detected","duration":"1859ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T09:20:07.384Z","level":"WARN","message":"Slow query detected","duration":"1736ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T09:25:49.842Z","level":"WARN","message":"Slow query detected","duration":"1630ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T09:25:57.288Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T09:37:07.195Z","level":"WARN","message":"Slow query detected","duration":"1883ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T09:37:13.441Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-02T10:17:57.133Z","level":"WARN","message":"Slow query detected","duration":"1956ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-02T10:18:03.278Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-03T03:37:00.672Z","level":"WARN","message":"Slow query detected","duration":"2304ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-03T04:02:02.292Z","level":"WARN","message":"Slow query detected","duration":"1816ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-03T04:03:10.356Z","level":"WARN","message":"Slow query detected","duration":"2002ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-11-03T04:03:14.957Z","level":"WARN","message":"Slow query detected","duration":"1488ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-03T04:18:30.352Z","level":"WARN","message":"Slow query detected","duration":"2007ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-03T04:18:36.981Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-03T04:25:42.862Z","level":"WARN","message":"Slow query detected","duration":"1688ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-03T04:25:49.520Z","level":"WARN","message":"Slow query detected","duration":"1845ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-03T04:39:15.741Z","level":"WARN","message":"Slow query detected","duration":"1716ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-03T04:39:22.378Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-03T04:55:53.518Z","level":"WARN","message":"Slow query detected","duration":"1884ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-03T04:55:59.867Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-03T05:13:02.030Z","level":"WARN","message":"Slow query detected","duration":"1814ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-03T05:13:07.969Z","level":"WARN","message":"Slow query detected","duration":"1807ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-03T05:21:53.694Z","level":"WARN","message":"Slow query detected","duration":"1891ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-03T05:22:00.042Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-03T05:39:18.902Z","level":"WARN","message":"Slow query detected","duration":"1915ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-03T05:39:25.456Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-03T08:11:22.608Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-03T11:30:47.786Z","level":"WARN","message":"Slow query detected","duration":"1570ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-03T11:30:57.656Z","level":"WARN","message":"Slow query detected","duration":"1942ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-04T13:17:43.027Z","level":"WARN","message":"Slow query detected","duration":"2404ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-04T13:23:45.821Z","level":"WARN","message":"Slow query detected","duration":"1718ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-04T13:23:55.959Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-04T16:22:47.582Z","level":"WARN","message":"Slow query detected","duration":"1815ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-04T17:32:27.505Z","level":"WARN","message":"Slow query detected","duration":"2040ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-04T17:32:35.546Z","level":"WARN","message":"Slow query detected","duration":"1710ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-04T17:35:20.310Z","level":"WARN","message":"Slow query detected","duration":"1913ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-04T17:35:26.761Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-04T17:41:17.733Z","level":"WARN","message":"Slow query detected","duration":"1874ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-04T17:51:23.185Z","level":"WARN","message":"Slow query detected","duration":"2100ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-04T17:51:33.836Z","level":"WARN","message":"Slow query detected","duration":"1813ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T03:19:03.288Z","level":"WARN","message":"Slow query detected","duration":"1877ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-05T03:21:46.614Z","level":"WARN","message":"Slow query detected","duration":"2319ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T03:21:53.074Z","level":"WARN","message":"Slow query detected","duration":"1953ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T04:25:53.600Z","level":"WARN","message":"Slow query detected","duration":"1957ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-05T04:44:14.401Z","level":"WARN","message":"Slow query detected","duration":"1847ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T04:44:21.291Z","level":"WARN","message":"Slow query detected","duration":"1767ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T05:09:31.571Z","level":"WARN","message":"Slow query detected","duration":"1917ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T05:09:37.814Z","level":"WARN","message":"Slow query detected","duration":"1840ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T05:11:34.042Z","level":"WARN","message":"Slow query detected","duration":"1998ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T05:11:41.619Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T05:21:19.261Z","level":"WARN","message":"Slow query detected","duration":"1876ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T05:21:25.815Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T05:23:41.293Z","level":"WARN","message":"Slow query detected","duration":"1864ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T05:23:47.642Z","level":"WARN","message":"Slow query detected","duration":"1845ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T05:43:03.131Z","level":"WARN","message":"Slow query detected","duration":"1877ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T05:43:26.862Z","level":"WARN","message":"Slow query detected","duration":"1984ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-11-05T05:43:28.454Z","level":"WARN","message":"Slow query detected","duration":"1802ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-11-05T05:43:31.479Z","level":"WARN","message":"Slow query detected","duration":"1763ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T05:43:33.337Z","level":"WARN","message":"Slow query detected","duration":"1858ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T05:56:53.507Z","level":"WARN","message":"Slow query detected","duration":"2459ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T05:57:00.255Z","level":"WARN","message":"Slow query detected","duration":"1846ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T06:01:49.332Z","level":"WARN","message":"Slow query detected","duration":"1825ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T06:01:55.422Z","level":"WARN","message":"Slow query detected","duration":"1789ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T06:03:18.985Z","level":"WARN","message":"Slow query detected","duration":"1784ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T06:03:25.929Z","level":"WARN","message":"Slow query detected","duration":"1773ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T06:04:11.464Z","level":"WARN","message":"Slow query detected","duration":"1864ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T06:04:17.813Z","level":"WARN","message":"Slow query detected","duration":"1871ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T06:08:22.550Z","level":"WARN","message":"Slow query detected","duration":"1907ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T06:08:30.333Z","level":"WARN","message":"Slow query detected","duration":"1709ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T06:36:07.379Z","level":"WARN","message":"Slow query detected","duration":"1815ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T06:36:13.423Z","level":"WARN","message":"Slow query detected","duration":"1880ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T06:48:24.870Z","level":"WARN","message":"Slow query detected","duration":"1864ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T06:48:31.322Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T06:52:47.016Z","level":"WARN","message":"Slow query detected","duration":"1919ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T06:52:53.442Z","level":"WARN","message":"Slow query detected","duration":"1614ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T06:53:46.032Z","level":"WARN","message":"Slow query detected","duration":"1818ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T06:53:52.347Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T06:57:44.386Z","level":"WARN","message":"Slow query detected","duration":"1893ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T06:57:50.266Z","level":"WARN","message":"Slow query detected","duration":"1680ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T06:58:21.557Z","level":"WARN","message":"Slow query detected","duration":"1930ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T06:58:28.317Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T07:45:05.804Z","level":"WARN","message":"Slow query detected","duration":"1731ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-05T07:47:43.908Z","level":"WARN","message":"Slow query detected","duration":"1916ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T07:47:50.256Z","level":"WARN","message":"Slow query detected","duration":"1840ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T07:54:11.081Z","level":"WARN","message":"Slow query detected","duration":"1923ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T07:54:17.479Z","level":"WARN","message":"Slow query detected","duration":"1787ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T08:20:28.298Z","level":"WARN","message":"Slow query detected","duration":"1981ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T08:20:35.942Z","level":"WARN","message":"Slow query detected","duration":"2048ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T10:44:05.589Z","level":"WARN","message":"Slow query detected","duration":"1967ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T10:44:13.267Z","level":"WARN","message":"Slow query detected","duration":"2251ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T10:51:49.464Z","level":"WARN","message":"Slow query detected","duration":"69979ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T10:52:20.265Z","level":"WARN","message":"Slow query detected","duration":"1600ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-11-05T10:52:29.686Z","level":"WARN","message":"Slow query detected","duration":"1496ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T11:17:38.168Z","level":"WARN","message":"Slow query detected","duration":"1835ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T11:17:46.160Z","level":"WARN","message":"Slow query detected","duration":"1802ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T11:27:27.460Z","level":"WARN","message":"Slow query detected","duration":"2162ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T11:27:34.143Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T11:30:04.879Z","level":"WARN","message":"Slow query detected","duration":"1660ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T11:30:11.237Z","level":"WARN","message":"Slow query detected","duration":"2365ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T12:01:05.498Z","level":"WARN","message":"Slow query detected","duration":"1852ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T12:01:12.063Z","level":"WARN","message":"Slow query detected","duration":"2366ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T12:04:56.115Z","level":"WARN","message":"Slow query detected","duration":"2194ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T12:05:02.490Z","level":"WARN","message":"Slow query detected","duration":"1777ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T12:13:03.327Z","level":"WARN","message":"Slow query detected","duration":"1815ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T12:13:03.327Z","level":"WARN","message":"User not found in database","email":"chumkysk@gamil.com","phone":""}
+{"timestamp":"2025-11-05T12:13:10.409Z","level":"WARN","message":"User not found in database","email":"chumkysk@gamil.com","phone":""}
+{"timestamp":"2025-11-05T12:13:13.874Z","level":"WARN","message":"User not found in database","email":"chumkysk@gamil.com","phone":""}
+{"timestamp":"2025-11-05T12:13:34.457Z","level":"WARN","message":"Slow query detected","duration":"1881ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T12:13:43.274Z","level":"WARN","message":"Slow query detected","duration":"2522ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T12:25:42.537Z","level":"WARN","message":"Slow query detected","duration":"7527ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T12:25:48.636Z","level":"WARN","message":"Slow query detected","duration":"1809ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T12:37:36.977Z","level":"WARN","message":"Slow query detected","duration":"1724ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T12:37:48.240Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T12:42:20.114Z","level":"WARN","message":"Slow query detected","duration":"1776ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T12:42:26.678Z","level":"WARN","message":"Slow query detected","duration":"2263ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T13:02:56.715Z","level":"WARN","message":"Slow query detected","duration":"2211ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T13:03:08.787Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T13:05:26.720Z","level":"WARN","message":"Slow query detected","duration":"1923ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T13:05:37.575Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T13:22:01.578Z","level":"WARN","message":"Slow query detected","duration":"1710ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T13:22:07.688Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T13:36:51.407Z","level":"WARN","message":"Slow query detected","duration":"1955ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T13:36:57.755Z","level":"WARN","message":"Slow query detected","duration":"2191ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T13:37:14.549Z","level":"WARN","message":"Slow query detected","duration":"2011ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T13:37:21.439Z","level":"WARN","message":"Slow query detected","duration":"1770ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T13:40:00.951Z","level":"WARN","message":"Slow query detected","duration":"1896ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T13:40:07.094Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T13:51:22.736Z","level":"WARN","message":"Slow query detected","duration":"1864ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T13:51:34.102Z","level":"WARN","message":"Slow query detected","duration":"1844ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T13:51:59.291Z","level":"WARN","message":"Slow query detected","duration":"1859ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T13:52:05.436Z","level":"WARN","message":"Slow query detected","duration":"1742ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T14:04:29.171Z","level":"WARN","message":"Slow query detected","duration":"1911ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T14:04:35.315Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T14:04:56.819Z","level":"WARN","message":"Slow query detected","duration":"1969ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T14:04:56.819Z","level":"WARN","message":"User not found in database","email":"chumksysk@gmail.com","phone":""}
+{"timestamp":"2025-11-05T14:05:13.851Z","level":"WARN","message":"Slow query detected","duration":"2026ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T14:05:19.758Z","level":"WARN","message":"Slow query detected","duration":"1639ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T14:25:25.013Z","level":"WARN","message":"Slow query detected","duration":"1789ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T14:25:31.772Z","level":"WARN","message":"Slow query detected","duration":"2048ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T14:26:37.308Z","level":"WARN","message":"Slow query detected","duration":"1817ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T14:26:44.439Z","level":"WARN","message":"Slow query detected","duration":"2100ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T14:27:13.355Z","level":"WARN","message":"Slow query detected","duration":"2402ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T14:27:19.395Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T14:29:15.174Z","level":"WARN","message":"Slow query detected","duration":"2134ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T14:29:24.835Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T14:40:56.154Z","level":"WARN","message":"Slow query detected","duration":"2384ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T14:40:56.154Z","level":"WARN","message":"User not found in database","email":"chumksysk@gmail.com","phone":""}
+{"timestamp":"2025-11-05T14:41:11.545Z","level":"WARN","message":"Slow query detected","duration":"1884ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T14:45:02.469Z","level":"WARN","message":"Slow query detected","duration":"1513ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T14:45:08.357Z","level":"WARN","message":"Slow query detected","duration":"1742ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T14:48:21.485Z","level":"WARN","message":"Slow query detected","duration":"1955ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T14:48:27.947Z","level":"WARN","message":"Slow query detected","duration":"2105ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T14:55:08.115Z","level":"WARN","message":"Slow query detected","duration":"2273ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T14:55:15.079Z","level":"WARN","message":"Slow query detected","duration":"1833ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T16:29:55.971Z","level":"WARN","message":"Slow query detected","duration":"2454ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-05T16:35:56.206Z","level":"WARN","message":"Slow query detected","duration":"1755ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T16:36:03.475Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T16:48:11.646Z","level":"WARN","message":"Slow query detected","duration":"1852ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T16:48:17.894Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T17:04:38.586Z","level":"WARN","message":"Slow query detected","duration":"2030ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T17:04:44.628Z","level":"WARN","message":"Slow query detected","duration":"1705ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-05T17:11:18.050Z","level":"WARN","message":"Slow query detected","duration":"1839ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-05T17:11:24.194Z","level":"WARN","message":"Slow query detected","duration":"1628ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T02:46:21.138Z","level":"WARN","message":"Slow query detected","duration":"1823ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-06T02:49:18.133Z","level":"WARN","message":"Slow query detected","duration":"1882ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T02:49:24.844Z","level":"WARN","message":"Slow query detected","duration":"2149ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T02:50:29.563Z","level":"WARN","message":"Slow query detected","duration":"1623ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T03:05:12.662Z","level":"WARN","message":"Slow query detected","duration":"1822ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-11-06T03:05:17.578Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T03:17:15.508Z","level":"WARN","message":"Slow query detected","duration":"1977ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T03:17:21.647Z","level":"WARN","message":"Slow query detected","duration":"1734ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T03:18:05.582Z","level":"WARN","message":"Slow query detected","duration":"1876ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T03:18:40.091Z","level":"WARN","message":"Slow query detected","duration":"1641ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-11-06T03:18:44.744Z","level":"WARN","message":"Slow query detected","duration":"1683ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T03:50:41.947Z","level":"WARN","message":"Slow query detected","duration":"1916ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T03:50:48.706Z","level":"WARN","message":"Slow query detected","duration":"1740ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T03:51:26.798Z","level":"WARN","message":"Slow query detected","duration":"1688ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T03:51:32.840Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T03:51:58.085Z","level":"WARN","message":"Slow query detected","duration":"1936ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T03:52:04.175Z","level":"WARN","message":"Slow query detected","duration":"1843ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T03:53:56.100Z","level":"WARN","message":"Slow query detected","duration":"1819ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T03:54:06.441Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T04:07:21.890Z","level":"WARN","message":"Slow query detected","duration":"2045ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T04:07:28.271Z","level":"WARN","message":"Slow query detected","duration":"1703ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:07:28.309Z","level":"WARN","message":"Slow query detected","duration":"1811ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T04:07:29.877Z","level":"WARN","message":"Slow query detected","duration":"1693ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:07:30.229Z","level":"WARN","message":"Session already completed","sessionId":"d3259571b35bfcbd0fa951d0e80f234a1b8c215b24fdaff04dd3ce9f94ccc3b3"}
+{"timestamp":"2025-11-06T04:07:44.013Z","level":"WARN","message":"Slow query detected","duration":"1628ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:07:44.315Z","level":"WARN","message":"Slow query detected","duration":"1638ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T04:07:47.121Z","level":"WARN","message":"Session already completed","sessionId":"ae4646fb53fc91a386a427499d23fd1f471d2ba5e1221102d6e322809b1874e5"}
+{"timestamp":"2025-11-06T04:07:47.286Z","level":"WARN","message":"Slow query detected","duration":"1742ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T04:13:10.667Z","level":"WARN","message":"Slow query detected","duration":"2175ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-06T04:23:46.927Z","level":"WARN","message":"Slow query detected","duration":"1687ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-06T04:24:08.387Z","level":"WARN","message":"Slow query detected","duration":"1752ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-06T04:26:35.025Z","level":"WARN","message":"Slow query detected","duration":"1864ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-06T04:26:59.600Z","level":"WARN","message":"Slow query detected","duration":"1794ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T04:28:07.594Z","level":"WARN","message":"Slow query detected","duration":"1669ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T04:28:22.441Z","level":"WARN","message":"Slow query detected","duration":"1853ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T04:29:26.441Z","level":"WARN","message":"Slow query detected","duration":"1718ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T04:29:30.026Z","level":"WARN","message":"Slow query detected","duration":"1718ms","query":"SELECT \n        user_id, \n        is_first_time, \n        authentication_status,"}
+{"timestamp":"2025-11-06T04:30:12.655Z","level":"WARN","message":"Slow query detected","duration":"1806ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T04:30:18.871Z","level":"WARN","message":"Slow query detected","duration":"1801ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:30:18.872Z","level":"WARN","message":"Slow query detected","duration":"1713ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T04:30:20.920Z","level":"WARN","message":"Slow query detected","duration":"1744ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:30:21.264Z","level":"WARN","message":"Session already completed","sessionId":"df782efb51f5ad0ab17ce4aa1ca302f37b92136f6ae71b913c070dada683657b"}
+{"timestamp":"2025-11-06T04:34:35.488Z","level":"WARN","message":"Slow query detected","duration":"1836ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T04:34:41.528Z","level":"WARN","message":"Slow query detected","duration":"1847ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:34:42.071Z","level":"WARN","message":"Slow query detected","duration":"1770ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T04:34:43.586Z","level":"WARN","message":"Slow query detected","duration":"1569ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:34:43.933Z","level":"WARN","message":"Session already completed","sessionId":"a3eb6dd9dd736b3df23ff6c9083becad9940204c78e7d913213a24f2a4e65530"}
+{"timestamp":"2025-11-06T04:34:44.806Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T04:35:40.205Z","level":"WARN","message":"Slow query detected","duration":"1817ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T04:35:46.758Z","level":"WARN","message":"Slow query detected","duration":"1786ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T04:35:46.758Z","level":"WARN","message":"Slow query detected","duration":"1790ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:35:50.352Z","level":"WARN","message":"Slow query detected","duration":"1447ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:35:50.752Z","level":"WARN","message":"Session already completed","sessionId":"1dff74d1c67e95881ef50a37d4f193528665d2d34aa9d09cefc1e2d4e34167a1"}
+{"timestamp":"2025-11-06T04:37:41.754Z","level":"WARN","message":"Slow query detected","duration":"1778ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T04:37:47.590Z","level":"WARN","message":"Slow query detected","duration":"1874ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:37:48.141Z","level":"WARN","message":"Slow query detected","duration":"1777ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T04:37:50.560Z","level":"WARN","message":"Slow query detected","duration":"1700ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:37:50.561Z","level":"WARN","message":"Slow query detected","duration":"1608ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T04:37:50.899Z","level":"WARN","message":"Session already completed","sessionId":"5036dec10f01fac9140f4c9c402eb5409cbf40b49d41543c0131410e03718937"}
+{"timestamp":"2025-11-06T04:38:37.050Z","level":"WARN","message":"Slow query detected","duration":"1587ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T04:38:43.168Z","level":"WARN","message":"Slow query detected","duration":"1908ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:38:43.356Z","level":"WARN","message":"Slow query detected","duration":"1800ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T04:38:45.220Z","level":"WARN","message":"Slow query detected","duration":"1736ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:38:45.568Z","level":"WARN","message":"Session already completed","sessionId":"0c0ae704572b5a7908b3bf004186522eb78ab68464f187cd40ecd0d420a29131"}
+{"timestamp":"2025-11-06T04:46:13.174Z","level":"WARN","message":"Slow query detected","duration":"1836ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T04:46:55.536Z","level":"WARN","message":"Slow query detected","duration":"1966ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T04:50:48.603Z","level":"WARN","message":"Slow query detected","duration":"1735ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T04:50:55.187Z","level":"WARN","message":"Slow query detected","duration":"1741ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:50:55.189Z","level":"WARN","message":"Slow query detected","duration":"1642ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T04:50:57.204Z","level":"WARN","message":"Slow query detected","duration":"1645ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T04:50:57.551Z","level":"WARN","message":"Session already completed","sessionId":"b65c9cdb0f7d2e7bc6c6e390e99da11e0e4888ec7a02387c4ac421ff0aeb2d2a"}
+{"timestamp":"2025-11-06T05:49:51.586Z","level":"WARN","message":"Slow query detected","duration":"2684ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-06T05:51:55.942Z","level":"WARN","message":"Slow query detected","duration":"3314ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T05:52:37.651Z","level":"WARN","message":"Slow query detected","duration":"2958ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T05:53:01.198Z","level":"WARN","message":"Slow query detected","duration":"2622ms","query":"SELECT id, question_text, category FROM votteryy_security_question_templates \n  "}
+{"timestamp":"2025-11-06T05:54:26.293Z","level":"WARN","message":"Slow query detected","duration":"2647ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T05:54:29.749Z","level":"WARN","message":"Slow query detected","duration":"2096ms","query":"SELECT \n        user_id, \n        is_first_time, \n        authentication_status,"}
+{"timestamp":"2025-11-06T05:54:33.669Z","level":"WARN","message":"Slow query detected","duration":"2664ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T05:54:35.105Z","level":"WARN","message":"Slow query detected","duration":"2585ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T05:54:35.714Z","level":"WARN","message":"Slow query detected","duration":"2047ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T05:54:36.431Z","level":"WARN","message":"Session already completed","sessionId":"5ffd8c27b1f2d5d8869ba5b94145ec282681ba5aa26301a62dd52c8bdaf2d31e"}
+{"timestamp":"2025-11-06T05:57:39.982Z","level":"WARN","message":"Slow query detected","duration":"2575ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T05:57:46.932Z","level":"WARN","message":"Slow query detected","duration":"2024ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T05:57:47.561Z","level":"WARN","message":"Slow query detected","duration":"1996ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T05:57:49.868Z","level":"WARN","message":"Slow query detected","duration":"2696ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T05:57:50.232Z","level":"WARN","message":"Session already completed","sessionId":"57292f2761d06df0275fbce86cd6bd40f59acf6e8d17554e4211ec820c1df37b"}
+{"timestamp":"2025-11-06T05:57:50.571Z","level":"WARN","message":"Session already completed","sessionId":"57292f2761d06df0275fbce86cd6bd40f59acf6e8d17554e4211ec820c1df37b"}
+{"timestamp":"2025-11-06T05:57:51.197Z","level":"WARN","message":"Slow query detected","duration":"2252ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T05:59:32.369Z","level":"WARN","message":"Slow query detected","duration":"2396ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T05:59:39.409Z","level":"WARN","message":"Slow query detected","duration":"1759ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T05:59:39.695Z","level":"WARN","message":"Slow query detected","duration":"1692ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T05:59:41.482Z","level":"WARN","message":"Slow query detected","duration":"2216ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T05:59:41.839Z","level":"WARN","message":"Session already completed","sessionId":"936c1d159cdcb013ed7576a3d44d526e6982b8628b31fc359781467ee030bb0c"}
+{"timestamp":"2025-11-06T06:00:26.231Z","level":"WARN","message":"Slow query detected","duration":"2401ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T06:01:09.240Z","level":"WARN","message":"Slow query detected","duration":"2301ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:01:40.166Z","level":"WARN","message":"Slow query detected","duration":"2053ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:01:43.340Z","level":"WARN","message":"Slow query detected","duration":"2230ms","query":"SELECT \n        user_id, \n        is_first_time, \n        authentication_status,"}
+{"timestamp":"2025-11-06T06:01:46.598Z","level":"WARN","message":"Slow query detected","duration":"2132ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T06:01:48.664Z","level":"WARN","message":"Slow query detected","duration":"2072ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:01:48.910Z","level":"WARN","message":"Slow query detected","duration":"1677ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T06:01:50.100Z","level":"WARN","message":"Session already completed","sessionId":"9903968e31bf29cb8876a9ffdce2e6cca8b9aab282459742fb6aa9ba6e3e9422"}
+{"timestamp":"2025-11-06T06:02:17.130Z","level":"WARN","message":"Slow query detected","duration":"1976ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T06:02:17.130Z","level":"WARN","message":"User not found in database","email":"8b85275@gmail.com","phone":""}
+{"timestamp":"2025-11-06T06:02:23.584Z","level":"WARN","message":"User not found in database","email":"sb8b85275@gmail.com","phone":""}
+{"timestamp":"2025-11-06T06:02:29.116Z","level":"WARN","message":"User not found in database","email":"sb8b85275@gmail.com","phone":""}
+{"timestamp":"2025-11-06T06:03:05.157Z","level":"WARN","message":"Slow query detected","duration":"2741ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:06:53.919Z","level":"WARN","message":"Slow query detected","duration":"2418ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:06:58.221Z","level":"WARN","message":"Slow query detected","duration":"3152ms","query":"SELECT \n        user_id, \n        is_first_time, \n        authentication_status,"}
+{"timestamp":"2025-11-06T06:07:03.141Z","level":"WARN","message":"Slow query detected","duration":"1856ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:07:04.367Z","level":"WARN","message":"Session already completed","sessionId":"58b1fff27a5c2869947de808bbd1eb187734a68411f22376f727c5e918328746"}
+{"timestamp":"2025-11-06T06:07:31.125Z","level":"WARN","message":"Slow query detected","duration":"1824ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T06:08:00.890Z","level":"WARN","message":"Slow query detected","duration":"2358ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:08:21.945Z","level":"WARN","message":"Slow query detected","duration":"1873ms","query":"SELECT \n        user_id, \n        is_first_time, \n        authentication_status,"}
+{"timestamp":"2025-11-06T06:08:26.182Z","level":"WARN","message":"Slow query detected","duration":"1722ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:08:28.029Z","level":"WARN","message":"Session already completed","sessionId":"17a6c5f67a22b8d4b853114683552cbeea00dd2eb9c6ffc4751d4f037d775e90"}
+{"timestamp":"2025-11-06T06:09:02.023Z","level":"WARN","message":"Slow query detected","duration":"2149ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T06:09:31.617Z","level":"WARN","message":"Slow query detected","duration":"1990ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:09:58.856Z","level":"WARN","message":"Slow query detected","duration":"2245ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:10:02.132Z","level":"WARN","message":"Slow query detected","duration":"2319ms","query":"SELECT \n        user_id, \n        is_first_time, \n        authentication_status,"}
+{"timestamp":"2025-11-06T06:10:05.512Z","level":"WARN","message":"Slow query detected","duration":"2249ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T06:10:08.582Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T06:10:10.324Z","level":"WARN","message":"Session already completed","sessionId":"929b25e166d79dfd044ec88c2e934decb0e461c3d469cb09972ee237d1e21dc2"}
+{"timestamp":"2025-11-06T06:25:02.337Z","level":"WARN","message":"Slow query detected","duration":"2337ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-06T06:25:39.610Z","level":"WARN","message":"Slow query detected","duration":"2346ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-06T06:36:24.017Z","level":"WARN","message":"Slow query detected","duration":"2033ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-06T06:37:46.347Z","level":"WARN","message":"Slow query detected","duration":"2326ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T06:38:32.425Z","level":"WARN","message":"Slow query detected","duration":"1735ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:38:57.821Z","level":"WARN","message":"Slow query detected","duration":"1819ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:39:00.825Z","level":"WARN","message":"Slow query detected","duration":"2040ms","query":"SELECT \n        user_id, \n        is_first_time, \n        authentication_status,"}
+{"timestamp":"2025-11-06T06:39:03.793Z","level":"WARN","message":"Slow query detected","duration":"1730ms","query":"SELECT user_id, is_first_time FROM votteryy_auth_sessions WHERE session_id = $1"}
+{"timestamp":"2025-11-06T06:39:04.944Z","level":"WARN","message":"Session already completed","sessionId":"9f9fbc7f8725be630a80b13cd9e03373d64213ea323f3f413972090648d57739"}
+{"timestamp":"2025-11-06T07:50:25.762Z","level":"WARN","message":"Slow query detected","duration":"2872ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-06T07:50:34.256Z","level":"WARN","message":"Slow query detected","duration":"2656ms","query":"SELECT NOW()"}
+{"timestamp":"2025-11-06T07:51:11.265Z","level":"WARN","message":"Slow query detected","duration":"2165ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T07:55:56.742Z","level":"WARN","message":"Slow query detected","duration":"1876ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2025-11-06T07:56:01.724Z","level":"WARN","message":"Slow query detected","duration":"1944ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T07:56:02.645Z","level":"WARN","message":"Slow query detected","duration":"1763ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T07:56:02.999Z","level":"WARN","message":"Session already completed","sessionId":"a2269d103ddec9c6e0d9eb4bf68a22c8d37ce619e2058c99877c7fa01964d2dc"}

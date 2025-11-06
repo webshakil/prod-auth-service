@@ -27,7 +27,8 @@
     "helmet": "^8.1.0",
     "pg": "^8.11.3",
     "twilio": "^4.19.3",
-    "ua-parser-js": "^2.0.6"
+    "ua-parser-js": "^2.0.6",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"

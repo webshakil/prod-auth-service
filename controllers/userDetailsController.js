@@ -2,7 +2,7 @@ import { query } from '../config/database.js';
 import { validateAge, validateCountry } from '../utils/validators.js';
 import { sendSuccess, sendError } from '../utils/responseFormatter.js';
 import logger from '../utils/logger.js';
-
+import { getClientIP } from '../utils/networkUtils.js';
 export const saveUserDetails = async (req, res) => {
   try {
     const { sessionId, firstName, lastName, age, gender, country, city, timezone, language } = req.body;
@@ -36,14 +36,31 @@ export const saveUserDetails = async (req, res) => {
 
     const userId = sessionResult.rows[0].user_id;
 
+    // ✅ Extract IP address properly
+    const registrationIP = getClientIP(req);
+
+    console.log('📍 User details registration - IP:', registrationIP);
+
     // Save user details
     await query(
       `INSERT INTO votteryy_user_details 
        (user_id, session_id, first_name, last_name, age, gender, country, city, timezone, language, registration_ip)
        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
        ON CONFLICT (user_id) DO UPDATE SET
-       first_name = $3, last_name = $4, age = $5, gender = $6, country = $7, city = $8, timezone = $9, language = $10`,
-      [userId, sessionId, firstName, lastName, age, gender, country, city, timezone || 'UTC', language || 'en_us', req.ip]
+       first_name = $3, last_name = $4, age = $5, gender = $6, country = $7, city = $8, timezone = $9, language = $10, registration_ip = $11`,
+      [
+        userId,
+        sessionId,
+        firstName,
+        lastName,
+        age,
+        gender,
+        country,
+        city,
+        timezone || 'UTC',
+        language || 'en_us',
+        registrationIP, // ✅ Use extracted IP
+      ]
     );
 
     // Update session - CRITICAL: Mark step as completed
@@ -57,13 +74,13 @@ export const saveUserDetails = async (req, res) => {
 
     const sessionFlags = updateResult.rows[0];
 
-    logger.info('User details saved', { userId, sessionId });
+    logger.info('User details saved', { userId, sessionId, ip: registrationIP });
 
     console.log('✅ Backend: User details saved and session updated');
 
     return sendSuccess(res, {
       sessionId,
-      sessionFlags, // Send back all flags
+      sessionFlags,
       message: 'User details saved successfully',
       nextStep: 5,
     });
@@ -72,6 +89,7 @@ export const saveUserDetails = async (req, res) => {
     return sendError(res, 'Failed to save user details', 500);
   }
 };
+
 
 export const getUserDetails = async (req, res) => {
   try {
