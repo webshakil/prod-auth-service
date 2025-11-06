@@ -1650,3 +1650,7 @@
 {"timestamp":"2025-11-06T07:55:58.249Z","level":"DEBUG","message":"[SESSION] POST /complete"}
 {"timestamp":"2025-11-06T07:56:02.339Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
 {"timestamp":"2025-11-06T07:56:02.756Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T07:59:12.717Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T07:59:18.343Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T07:59:22.424Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T07:59:24.384Z","level":"DEBUG","message":"[SESSION] POST /complete"}

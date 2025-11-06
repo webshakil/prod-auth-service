@@ -1338,3 +1338,8 @@
 {"timestamp":"2025-11-06T07:56:01.724Z","level":"WARN","message":"Slow query detected","duration":"1944ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
 {"timestamp":"2025-11-06T07:56:02.645Z","level":"WARN","message":"Slow query detected","duration":"1763ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
 {"timestamp":"2025-11-06T07:56:02.999Z","level":"WARN","message":"Session already completed","sessionId":"a2269d103ddec9c6e0d9eb4bf68a22c8d37ce619e2058c99877c7fa01964d2dc"}
+{"timestamp":"2025-11-06T07:59:14.751Z","level":"WARN","message":"Slow query detected","duration":"2034ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2025-11-06T07:59:21.815Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2025-11-06T07:59:24.273Z","level":"WARN","message":"Slow query detected","duration":"1853ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2025-11-06T07:59:24.618Z","level":"WARN","message":"Session already completed","sessionId":"f73e981b6d7500e63ac39c2147278a850ff0a7f9022fda769c90fb69a8a9fa31"}
+{"timestamp":"2025-11-06T08:06:21.044Z","level":"WARN","message":"Slow query detected","duration":"1821ms","query":"SELECT NOW()"}
