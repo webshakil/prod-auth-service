@@ -1654,3 +1654,496 @@
 {"timestamp":"2025-11-06T07:59:18.343Z","level":"DEBUG","message":"[SESSION] POST /complete"}
 {"timestamp":"2025-11-06T07:59:22.424Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
 {"timestamp":"2025-11-06T07:59:24.384Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:19:25.334Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T09:19:38.133Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:19:40.567Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:19:41.773Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:19:42.251Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:19:44.065Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:27:28.865Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T09:27:34.503Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:27:42.128Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:27:42.132Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:27:42.489Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:27:42.686Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:27:44.476Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:27:45.758Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:27:46.278Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:27:46.473Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:33:00.139Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T09:33:08.099Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:33:11.064Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:33:12.723Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:33:13.143Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:33:15.591Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:40:06.387Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T09:40:11.448Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:40:15.338Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:40:16.663Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:40:17.181Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:40:18.403Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:46:13.098Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T09:46:18.763Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:46:22.342Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:46:23.460Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:46:23.879Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:46:25.611Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:52:50.157Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T09:52:55.724Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:52:58.940Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:52:59.195Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T09:52:59.552Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T09:53:01.798Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T10:09:44.546Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T10:09:49.840Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T10:09:52.911Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T10:09:53.621Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T10:09:55.100Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T10:09:56.507Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T11:22:14.370Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T11:22:19.314Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T11:22:22.003Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T11:22:23.193Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T11:22:24.855Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T11:22:24.903Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T11:22:26.982Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T13:09:43.257Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T13:09:48.368Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:09:51.272Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:09:52.011Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T13:09:53.322Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:09:54.832Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T13:24:25.201Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T13:24:30.260Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:24:34.001Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:24:34.123Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T13:24:35.912Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:24:36.415Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T13:25:35.420Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T13:25:40.327Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:25:43.353Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:25:44.135Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T13:25:45.340Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:25:45.843Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T13:26:18.359Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T13:26:23.330Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:26:26.503Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:26:27.111Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-06T13:26:28.451Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:26:28.954Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-06T13:30:37.923Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T13:30:42.610Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:30:45.408Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:30:46.156Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-06T13:30:47.927Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:30:49.294Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-06T13:41:32.255Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T13:41:37.871Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:41:40.634Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:41:41.601Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-06T13:41:43.023Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T13:41:44.008Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-06T14:08:37.779Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T14:08:42.820Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:08:45.836Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:08:46.548Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-06T14:08:47.784Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:08:49.516Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-06T14:12:15.940Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T14:12:21.356Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:12:24.462Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:12:25.066Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T14:12:26.214Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:12:26.530Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T14:31:38.342Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T14:31:45.276Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:31:48.041Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:31:49.158Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T14:31:51.420Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:31:51.923Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T14:37:16.765Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T14:37:22.067Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:37:24.832Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:37:25.852Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T14:37:27.181Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:37:28.341Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T14:37:58.089Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T14:38:03.231Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:38:05.893Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:38:06.914Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T14:38:08.454Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:38:09.576Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T14:43:51.622Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T14:43:56.706Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:43:59.385Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:44:00.237Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T14:44:01.630Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T14:44:01.741Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:45:13.203Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T14:45:18.130Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:45:20.688Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:45:21.809Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T14:45:23.453Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:45:24.363Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T14:46:04.592Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T14:46:09.738Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:46:12.809Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:46:13.171Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T14:46:14.701Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T14:46:15.021Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T16:29:27.094Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T16:29:32.264Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T16:29:35.211Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T16:29:35.821Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T16:29:37.314Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T16:29:37.779Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T16:55:40.462Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T16:55:48.659Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T16:55:52.320Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T16:55:52.484Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T16:55:54.739Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-06T23:46:34.518Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-06T23:47:07.999Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T23:47:11.321Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T23:47:11.696Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-06T23:47:12.404Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-06T23:47:13.723Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-07T00:08:34.770Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T00:08:40.401Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T00:08:44.594Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T00:08:45.143Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T00:08:45.719Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T00:08:46.941Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T00:48:05.395Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T00:48:11.384Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T00:48:14.670Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T00:48:16.084Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-07T00:48:16.505Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T00:48:17.131Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-07T00:50:11.699Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T00:50:19.490Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T00:50:22.767Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T00:50:23.573Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T00:50:24.617Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T00:50:25.345Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T01:03:44.668Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T01:03:49.782Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T01:03:53.569Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T01:03:53.768Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-07T01:03:54.799Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T01:03:55.816Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-07T01:08:18.119Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T01:08:24.522Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T01:08:27.635Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T01:08:28.716Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T01:08:29.545Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T01:08:31.686Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T02:07:26.288Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T02:07:34.062Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T02:07:38.414Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T02:07:39.865Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T02:07:40.509Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T02:07:43.051Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T03:10:29.001Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T03:10:40.424Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T03:10:44.135Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T03:10:44.821Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T03:10:45.952Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T03:10:46.614Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T04:43:07.124Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T04:43:13.152Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T04:43:16.063Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T04:43:16.944Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T04:43:18.252Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T04:43:19.779Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T08:24:54.564Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T08:24:59.452Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T08:25:02.420Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T08:25:03.265Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T08:25:04.162Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T08:25:05.791Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T09:30:32.579Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T09:30:37.988Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T09:30:41.160Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T09:30:41.811Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T09:30:43.005Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T09:30:43.200Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T09:32:08.535Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T09:32:13.633Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T09:32:16.189Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T09:32:17.615Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T09:32:18.607Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T09:32:19.969Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T09:53:27.313Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T09:53:32.207Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T09:53:35.143Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T09:53:35.866Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T09:53:37.428Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T09:53:38.699Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T09:59:50.558Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T09:59:55.805Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T09:59:58.872Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T09:59:59.578Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-07T10:00:01.140Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T10:00:02.652Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-07T10:00:17.136Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T10:00:22.323Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T10:00:24.884Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T10:00:26.408Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T10:00:27.646Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T10:00:28.865Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T10:14:23.234Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T10:14:28.176Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T10:14:31.016Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T10:14:32.034Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T10:14:33.681Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T10:14:34.696Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T10:45:33.903Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T10:45:39.011Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T10:45:42.285Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T10:45:42.634Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T10:45:42.654Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T10:45:44.841Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T11:16:35.278Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T11:16:40.552Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T11:16:43.784Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T11:16:44.533Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T11:16:45.269Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T11:16:47.401Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T11:44:56.122Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T11:45:04.490Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T11:45:07.766Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T11:45:08.165Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T11:45:09.836Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T11:45:11.333Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T12:02:16.440Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T12:02:21.310Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T12:02:24.987Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T12:02:25.108Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T12:02:25.225Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T13:45:00.767Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T13:45:06.145Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T13:45:09.214Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T13:45:10.230Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T13:45:12.492Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T13:45:12.996Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T14:11:22.486Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T14:11:28.128Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T14:11:30.994Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T14:11:32.012Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-07T14:11:33.180Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T14:11:35.902Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-07T14:45:13.083Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T14:45:21.598Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T14:45:25.513Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T14:45:26.512Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T15:15:46.520Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-07T15:15:51.699Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T15:15:55.124Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T15:15:55.514Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-07T15:15:56.926Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-07T15:15:57.428Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-08T00:09:15.771Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T00:09:22.366Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T00:09:26.854Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T00:09:26.965Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T01:26:52.525Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T01:26:58.633Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T01:27:01.499Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T01:27:03.025Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-08T01:27:03.445Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T01:27:05.522Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-08T02:21:26.436Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T02:21:35.463Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T02:21:38.307Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T02:21:39.341Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T02:21:39.761Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T02:21:40.877Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T02:51:15.281Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T02:51:21.033Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T02:51:24.705Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T02:51:25.511Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T02:51:26.161Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T02:51:28.276Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T03:20:46.241Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T03:20:52.649Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T03:20:56.337Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T03:20:56.768Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T03:20:57.665Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T03:20:58.512Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T03:31:26.624Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T03:31:36.236Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T03:31:40.332Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T03:31:40.458Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T03:31:42.077Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T03:31:44.624Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T04:04:22.623Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T04:04:35.132Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:04:38.406Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:04:38.910Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T04:04:39.882Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:04:40.575Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T04:10:40.688Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T04:10:49.607Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:10:53.430Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T04:10:54.148Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:33:19.097Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T04:33:24.469Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:33:28.352Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T04:33:29.384Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:41:41.583Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T04:41:48.132Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:41:51.958Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T04:41:52.069Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:45:49.147Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T04:45:54.775Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:45:57.556Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:45:58.644Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T04:46:00.395Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:46:02.027Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T04:47:49.205Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T04:47:54.360Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:47:58.021Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:47:58.247Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T04:47:59.889Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:48:00.396Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T04:52:34.394Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T04:52:39.441Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:52:42.741Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:52:43.272Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T04:52:44.569Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T04:52:44.930Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T05:00:14.883Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T05:00:21.173Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T05:00:24.280Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T05:00:26.703Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T05:00:27.201Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T05:00:28.744Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T05:00:28.856Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T05:00:29.048Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T05:02:43.247Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T05:02:57.131Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T05:02:59.786Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T05:03:00.910Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T05:03:01.945Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T05:03:03.685Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T05:04:28.702Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T05:04:52.127Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T05:04:56.007Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T05:04:57.279Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T06:21:08.164Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T06:21:14.148Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T06:21:17.217Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T06:21:17.892Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T06:21:19.268Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T06:21:19.462Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T06:37:21.031Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T06:37:30.217Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T06:37:33.799Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T06:37:34.719Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T06:37:36.038Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T06:37:38.102Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T06:43:04.801Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T06:43:10.366Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T06:43:14.787Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-08T06:43:16.543Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T06:43:37.251Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T06:43:42.877Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T06:43:46.373Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T06:43:46.774Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-08T06:43:48.594Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T06:43:48.788Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-08T07:04:06.204Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T07:04:11.149Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T07:04:14.562Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T07:04:14.928Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-08T07:04:16.269Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T07:04:16.994Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-08T07:08:52.639Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T07:08:58.891Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T07:09:02.597Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T07:09:02.955Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T07:12:32.225Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T07:12:37.621Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T07:12:41.535Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2025-11-08T07:12:43.663Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T08:07:31.265Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T08:07:36.875Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T08:07:39.534Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T08:07:40.551Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T08:07:41.479Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T08:07:43.213Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T09:28:21.152Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T09:28:26.182Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T09:28:28.775Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T09:28:29.889Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T09:28:31.608Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T09:28:32.221Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T09:28:32.417Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T09:36:08.343Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T09:36:13.547Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T09:36:16.515Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T09:36:17.326Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T09:36:18.666Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T09:36:19.270Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T09:53:26.535Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T09:53:31.488Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T09:53:34.352Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T09:53:35.122Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T09:53:37.117Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T09:53:38.160Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T10:12:52.328Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T10:12:57.314Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T10:13:00.179Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T10:13:01.231Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T10:13:02.740Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T10:13:03.857Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T10:29:03.992Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T10:29:15.485Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T10:29:18.866Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T10:29:22.204Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T10:29:22.707Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T10:29:24.449Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T10:29:24.872Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T10:58:00.111Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T10:58:05.398Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T10:58:08.060Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T10:58:08.963Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T10:58:10.317Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T10:58:11.738Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T11:07:39.154Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T11:07:44.067Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T11:07:47.647Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T11:07:48.469Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-08T11:07:49.196Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T11:07:50.096Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-08T11:56:51.328Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T11:56:56.390Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T11:56:59.145Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T11:57:00.143Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-08T11:57:01.464Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T11:57:02.752Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-08T12:31:57.638Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T12:32:04.640Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T12:32:08.326Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T12:32:08.527Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T12:32:09.626Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T12:32:11.906Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2025-11-08T12:50:35.973Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T12:50:41.123Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T12:50:43.989Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T12:50:45.006Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-08T12:50:46.346Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T12:50:47.678Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-08T13:28:31.277Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T13:29:24.919Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T13:29:27.297Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T13:29:30.188Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-08T13:29:30.984Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-08T13:29:32.421Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T13:35:52.374Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2025-11-08T13:36:01.412Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T13:36:03.976Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T13:36:05.619Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
+{"timestamp":"2025-11-08T13:36:06.117Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2025-11-08T13:36:08.047Z","level":"DEBUG","message":"User auth details retrieved","userId":4}
