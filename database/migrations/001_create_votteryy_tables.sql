@@ -80,17 +80,7 @@ CREATE TABLE votteryy_user_roles (
 CREATE INDEX idx_user_roles_user_id ON votteryy_user_roles(user_id);
 CREATE INDEX idx_user_roles_active ON votteryy_user_roles(is_active);
 CREATE INDEX idx_user_roles_expires ON votteryy_user_roles(expires_at);
---old
--- CREATE TABLE votteryy_user_roles (
---   id SERIAL PRIMARY KEY,
---   user_id INT NOT NULL,
---   role_name VARCHAR(100) NOT NULL, -- 'Voter', 'Creator', 'Admin', etc.
---   is_active BOOLEAN DEFAULT TRUE,
---   assigned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
---   assigned_by INT, -- admin_id if assigned by admin
---   FOREIGN KEY (user_id) REFERENCES public.users(user_id),
---   UNIQUE(user_id, role_name)
--- );
+
 
 -- Subscription tracking
 CREATE TABLE votteryy_user_subscriptions (
