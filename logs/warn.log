@@ -3977,3 +3977,20 @@
 {"timestamp":"2026-01-09T10:35:32.233Z","level":"WARN","message":"Slow query detected","duration":"1834ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
 {"timestamp":"2026-01-09T10:35:34.487Z","level":"WARN","message":"Slow query detected","duration":"1998ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
 {"timestamp":"2026-01-09T17:04:06.270Z","level":"WARN","message":"Slow query detected","duration":"1671ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-11T06:35:53.758Z","level":"WARN","message":"Slow query detected","duration":"2035ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-11T06:39:15.692Z","level":"WARN","message":"Slow query detected","duration":"1855ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-11T06:39:35.045Z","level":"WARN","message":"Slow query detected","duration":"1754ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2026-01-11T06:40:00.133Z","level":"WARN","message":"Slow query detected","duration":"1721ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2026-01-11T06:40:03.308Z","level":"WARN","message":"Slow query detected","duration":"1717ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2026-01-11T06:40:03.615Z","level":"WARN","message":"Slow query detected","duration":"1902ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2026-01-11T06:40:06.893Z","level":"WARN","message":"Slow query detected","duration":"1723ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2026-01-11T06:40:07.735Z","level":"WARN","message":"Slow query detected","duration":"1762ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2026-01-11T07:41:51.660Z","level":"WARN","message":"Slow query detected","duration":"1758ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-11T07:45:16.444Z","level":"WARN","message":"Slow query detected","duration":"1877ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2026-01-11T07:45:28.015Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2026-01-11T07:45:30.906Z","level":"WARN","message":"Slow query detected","duration":"1824ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2026-01-11T08:02:22.573Z","level":"WARN","message":"Slow query detected","duration":"1551ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-11T08:16:16.279Z","level":"WARN","message":"Slow query detected","duration":"2107ms","query":"SELECT user_id, user_email, user_phone FROM public.users WHERE user_email = $1"}
+{"timestamp":"2026-01-11T08:16:36.349Z","level":"WARN","message":"Slow query detected","duration":"1857ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
+{"timestamp":"2026-01-11T08:16:41.163Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2026-01-11T18:11:13.486Z","level":"WARN","message":"Slow query detected","duration":"1570ms","query":"SELECT NOW()"}
