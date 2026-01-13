@@ -4006,3 +4006,5 @@
 {"timestamp":"2026-01-13T08:59:44.494Z","level":"WARN","message":"Slow query detected","duration":"1765ms","query":"SELECT NOW()"}
 {"timestamp":"2026-01-13T09:00:09.796Z","level":"WARN","message":"Slow query detected","duration":"1729ms","query":"SELECT NOW()"}
 {"timestamp":"2026-01-13T09:16:15.155Z","level":"WARN","message":"Slow query detected","duration":"1716ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-13T10:13:07.507Z","level":"WARN","message":"Slow query detected","duration":"1798ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-13T10:13:13.082Z","level":"WARN","message":"Slow query detected","duration":"1727ms","query":"SELECT NOW()"}
