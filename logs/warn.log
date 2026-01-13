@@ -4005,3 +4005,4 @@
 {"timestamp":"2026-01-13T08:24:49.051Z","level":"WARN","message":"Slow query detected","duration":"1612ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
 {"timestamp":"2026-01-13T08:59:44.494Z","level":"WARN","message":"Slow query detected","duration":"1765ms","query":"SELECT NOW()"}
 {"timestamp":"2026-01-13T09:00:09.796Z","level":"WARN","message":"Slow query detected","duration":"1729ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-13T09:16:15.155Z","level":"WARN","message":"Slow query detected","duration":"1716ms","query":"SELECT NOW()"}
