@@ -3994,3 +3994,12 @@
 {"timestamp":"2026-01-11T08:16:36.349Z","level":"WARN","message":"Slow query detected","duration":"1857ms","query":"UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE s"}
 {"timestamp":"2026-01-11T08:16:41.163Z","level":"WARN","message":"Slow query detected","duration":"1842ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
 {"timestamp":"2026-01-11T18:11:13.486Z","level":"WARN","message":"Slow query detected","duration":"1570ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-13T03:45:14.100Z","level":"WARN","message":"Slow query detected","duration":"1757ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-13T03:46:53.931Z","level":"WARN","message":"Slow query detected","duration":"2308ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-13T04:15:17.874Z","level":"WARN","message":"Slow query detected","duration":"1592ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-13T08:05:02.673Z","level":"WARN","message":"Slow query detected","duration":"2132ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-13T08:09:48.074Z","level":"WARN","message":"Slow query detected","duration":"1878ms","query":"SELECT NOW()"}
+{"timestamp":"2026-01-13T08:24:40.301Z","level":"WARN","message":"Slow query detected","duration":"1586ms","query":"SELECT user_id, user_email, user_phone, user_name, user_firstname, \n            "}
+{"timestamp":"2026-01-13T08:24:46.752Z","level":"WARN","message":"Slow query detected","duration":"1817ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}
+{"timestamp":"2026-01-13T08:24:47.059Z","level":"WARN","message":"Slow query detected","duration":"1841ms","query":"SELECT first_name, last_name, age, gender, country, city, \n                timez"}
+{"timestamp":"2026-01-13T08:24:49.051Z","level":"WARN","message":"Slow query detected","duration":"1612ms","query":"UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE ses"}

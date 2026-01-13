@@ -1,4 +1,6 @@
 import crypto from 'crypto';
+import { verifySngineTokenAndCreateSession } from '../services/unifiedAuthService.js';
+import logger from '../utils/logger.js';
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // CONFIGURATION
@@ -13,9 +15,6 @@ const FRONTEND_URL = process.env.FRONTEND_URL || 'https://prod-client-omega.verc
 
 /**
  * Verify the token signature using HMAC-SHA256
- * @param {string} payloadBase64 - Base64 encoded payload
- * @param {string} receivedSignature - Signature received from Sngine
- * @returns {boolean} - True if signature is valid
  */
 const verifySignature = (payloadBase64, receivedSignature) => {
   const expectedSignature = crypto
@@ -23,16 +22,15 @@ const verifySignature = (payloadBase64, receivedSignature) => {
     .update(payloadBase64)
     .digest('hex');
 
-  console.log('[SNGINE] Received Signature:', receivedSignature);
-  console.log('[SNGINE] Expected Signature:', expectedSignature);
+  console.log('[SNGINE] Signature verification:', {
+    match: receivedSignature === expectedSignature,
+  });
 
   return receivedSignature === expectedSignature;
 };
 
 /**
  * Decode the base64 payload to JSON object
- * @param {string} payloadBase64 - Base64 encoded payload
- * @returns {object} - Decoded payload object
  */
 const decodePayload = (payloadBase64) => {
   const payloadJson = Buffer.from(payloadBase64, 'base64').toString('utf8');
@@ -41,12 +39,30 @@ const decodePayload = (payloadBase64) => {
 
 /**
  * Check if token is expired
- * @param {number} exp - Expiry timestamp
- * @returns {boolean} - True if token is expired
  */
 const isTokenExpired = (exp) => {
   const currentTime = Math.floor(Date.now() / 1000);
   return exp && exp < currentTime;
+};
+
+/**
+ * Extract Sngine user data from decoded token payload
+ */
+const extractSngineUserData = (payload) => {
+  return {
+    sngine_user_id: payload.user_id?.toString(),
+    username: payload.username,
+    email: payload.user_email,
+    firstname: payload.user_firstname,
+    lastname: payload.user_lastname,
+    org_member: payload.org_member === 'Yes',
+    country: payload.user_country || null,
+    age: payload.user_age || null,
+    gender: payload.user_gender || null,
+    iat: payload.iat,
+    exp: payload.exp,
+    nonce: payload.nonce,
+  };
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -54,23 +70,21 @@ const isTokenExpired = (exp) => {
 // ═══════════════════════════════════════════════════════════════════════════════
 /**
  * Sngine Callback Controller
- * Handles both GET (browser redirect) and POST (form/API) requests
  * 
- * GET  /api/v1/sngine/callback?token=xxx  (Browser redirect from Sngine)
- * POST /api/v1/sngine/callback            (Form submission from Sngine)
+ * Handles both GET (browser redirect) and POST (form/API) requests from Sngine
  * 
- * Sngine Flow:
- * 1. User clicks "Vote Now" on Sngine (vottery.com)
- * 2. Sngine creates token with user data + signature
- * 3. Sngine redirects/posts to this callback with token
- * 4. We verify signature, decode user data, create session
+ * FLOW:
+ * 1. Verify token signature (is it really from Sngine?)
+ * 2. Decode and validate token
+ * 3. Find user in public.users
+ * 4. Create session in votteryy_auth_sessions
+ * 5. Save user details to votteryy_user_details
+ * 6. Return session data (same format as checkUserController)
  */
 export const sngineCallbackController = async (req, res) => {
   console.log('[SNGINE] ═══════════════════════════════════════════════════');
   console.log('[SNGINE] Callback received');
   console.log('[SNGINE] Method:', req.method);
-  console.log('[SNGINE] Query params:', JSON.stringify(req.query));
-  console.log('[SNGINE] Body:', JSON.stringify(req.body));
   console.log('[SNGINE] ═══════════════════════════════════════════════════');
 
   // Get token from URL query parameter (GET) OR from body (POST)
@@ -81,17 +95,16 @@ export const sngineCallbackController = async (req, res) => {
   // ─────────────────────────────────────────────────────────────────────────────
   if (!token) {
     console.log('[SNGINE] ❌ No token provided');
-    
-    // If browser request, redirect to Sngine
+
     if (req.method === 'GET') {
       return res.redirect(`${SNGINE_URL}?error=no_token`);
     }
-    
+
     return res.status(401).json({
       success: false,
       error: 'NO_TOKEN',
       message: 'Please login through Sngine first',
-      redirect: SNGINE_URL
+      redirect: SNGINE_URL,
     });
   }
 
@@ -103,36 +116,36 @@ export const sngineCallbackController = async (req, res) => {
 
     if (parts.length !== 2) {
       console.log('[SNGINE] ❌ Invalid token format');
-      
+
       if (req.method === 'GET') {
         return res.redirect(`${SNGINE_URL}?error=invalid_token`);
       }
-      
+
       return res.status(401).json({
         success: false,
         error: 'INVALID_TOKEN_FORMAT',
         message: 'Invalid token format',
-        redirect: SNGINE_URL
+        redirect: SNGINE_URL,
       });
     }
 
     const [payloadBase64, receivedSignature] = parts;
 
     // ─────────────────────────────────────────────────────────────────────────────
-    // CHECK 3: Valid signature? (Is token really from Sngine?)
+    // CHECK 3: Valid signature?
     // ─────────────────────────────────────────────────────────────────────────────
     if (!verifySignature(payloadBase64, receivedSignature)) {
-      console.log('[SNGINE] ❌ Signature verification failed - Token is NOT from Sngine!');
-      
+      console.log('[SNGINE] ❌ Signature verification failed');
+
       if (req.method === 'GET') {
         return res.redirect(`${SNGINE_URL}?error=invalid_signature`);
       }
-      
+
       return res.status(401).json({
         success: false,
         error: 'INVALID_SIGNATURE',
         message: 'Token verification failed. Please login through Sngine first',
-        redirect: SNGINE_URL
+        redirect: SNGINE_URL,
       });
     }
 
@@ -143,96 +156,124 @@ export const sngineCallbackController = async (req, res) => {
     // ─────────────────────────────────────────────────────────────────────────────
     const payload = decodePayload(payloadBase64);
     console.log('[SNGINE] ✅ Token decoded for user:', payload.username);
-    console.log('[SNGINE] Payload:', JSON.stringify(payload, null, 2));
 
     // ─────────────────────────────────────────────────────────────────────────────
     // CHECK 5: Token expired?
     // ─────────────────────────────────────────────────────────────────────────────
     if (isTokenExpired(payload.exp)) {
       console.log('[SNGINE] ❌ Token expired');
-      
+
       if (req.method === 'GET') {
         return res.redirect(`${SNGINE_URL}?error=token_expired`);
       }
-      
+
       return res.status(401).json({
         success: false,
         error: 'TOKEN_EXPIRED',
         message: 'Your session has expired. Please login through Sngine again',
-        redirect: SNGINE_URL
+        redirect: SNGINE_URL,
       });
     }
 
     // ─────────────────────────────────────────────────────────────────────────────
-    // ✅ SUCCESS - Token is valid and from Sngine!
+    // STEP 6: Extract user data and process with unified auth service
     // ─────────────────────────────────────────────────────────────────────────────
-    const sngineUser = {
-      sngine_user_id: payload.user_id,
-      username: payload.username,
-      email: payload.user_email,
-      firstname: payload.user_firstname,
-      lastname: payload.user_lastname,
-      org_member: payload.org_member === 'Yes',
-      country: payload.user_country || null,
-      age: payload.user_age || null,
-      gender: payload.user_gender || null,
-      iat: payload.iat,
-      exp: payload.exp,
-      nonce: payload.nonce
-    };
+    const sngineUserData = extractSngineUserData(payload);
+    console.log('[SNGINE] Processing user:', sngineUserData.email);
 
-    console.log('[SNGINE] ✅ User verified successfully:', sngineUser.username);
-    console.log('[SNGINE] User data:', JSON.stringify(sngineUser, null, 2));
-
-    // ─────────────────────────────────────────────────────────────────────────────
-    // STEP 6: Handle response based on request method
-    // ─────────────────────────────────────────────────────────────────────────────
-    
-    // TODO: Add your business logic here:
-    // 1. Check if user exists in your database
-    // 2. Create user if not exists
-    // 3. Generate your own JWT token for the user
-    // 4. Create session in your system
-
-    if (req.method === 'GET') {
-      // Browser redirect - send user to frontend with user data
-      // In production, create JWT and pass that instead
-      const userDataBase64 = Buffer.from(JSON.stringify(sngineUser)).toString('base64');
-      return res.redirect(`${FRONTEND_URL}/auth/sngine/callback?user=${userDataBase64}`);
-    }
-
-    // POST request - return JSON response
-    return res.status(200).json({
-      success: true,
-      message: 'User verified successfully from Sngine',
-      user: sngineUser
+    // Use unified auth service - this will:
+    // 1. Find user in public.users
+    // 2. Create session in votteryy_auth_sessions
+    // 3. Save details to votteryy_user_details
+    const authResult = await verifySngineTokenAndCreateSession({
+      sngineUserData,
+      req,
     });
 
+    if (!authResult.success) {
+      console.log('[SNGINE] ❌ Auth failed:', authResult.error);
+
+      if (req.method === 'GET') {
+        return res.redirect(`${SNGINE_URL}?error=${authResult.error}`);
+      }
+
+      return res.status(authResult.error === 'USER_NOT_FOUND' ? 404 : 403).json({
+        success: false,
+        error: authResult.error,
+        message: authResult.message,
+        redirect: SNGINE_URL,
+      });
+    }
+
+    console.log('[SNGINE] ✅ Auth successful:', {
+      sessionId: authResult.sessionId,
+      userId: authResult.userId,
+      isFirstTime: authResult.isFirstTime,
+    });
+
+    logger.info('Sngine callback successful', {
+      userId: authResult.userId,
+      sessionId: authResult.sessionId,
+      sngineUserId: sngineUserData.sngine_user_id,
+    });
+
+    // ─────────────────────────────────────────────────────────────────────────────
+    // RESPONSE - Redirect to frontend for both GET and POST (browser requests)
+    // ─────────────────────────────────────────────────────────────────────────────
+
+    // Encode auth result as base64
+    const authDataBase64 = Buffer.from(JSON.stringify(authResult)).toString('base64');
+
+    // Check if this is a browser request (form submission or direct navigation)
+    // vs an API request (from frontend JavaScript)
+    const acceptHeader = req.headers.accept || '';
+    const isAPIRequest = acceptHeader.includes('application/json') && !acceptHeader.includes('text/html');
+
+    if (isAPIRequest) {
+      // API request from JavaScript - return JSON
+      return res.status(200).json({
+        success: true,
+        message: authResult.message,
+        data: {
+          sessionId: authResult.sessionId,
+          userId: authResult.userId,
+          email: authResult.email,
+          phone: authResult.phone,
+          username: authResult.username,
+          firstName: authResult.firstName,
+          lastName: authResult.lastName,
+          isFirstTime: authResult.isFirstTime,
+          nextStep: authResult.nextStep,
+          authMethod: authResult.authMethod,
+          prefillData: authResult.prefillData,
+        },
+      });
+    }
+
+    // Browser request (GET or POST form submission) - redirect to frontend
+    console.log('[SNGINE] Redirecting to frontend:', `${FRONTEND_URL}/auth/sngine/callback`);
+    return res.redirect(`${FRONTEND_URL}/auth/sngine/callback?data=${authDataBase64}`);
+
   } catch (error) {
-    console.log('[SNGINE] ❌ Error processing token:', error.message);
-    
+    console.log('[SNGINE] ❌ Error:', error.message);
+    logger.error('Sngine callback error', { error: error.message, stack: error.stack });
+
     if (req.method === 'GET') {
       return res.redirect(`${SNGINE_URL}?error=processing_error`);
     }
-    
+
     return res.status(500).json({
       success: false,
       error: 'PROCESSING_ERROR',
       message: 'Failed to process token. Please try again',
-      redirect: SNGINE_URL
+      redirect: SNGINE_URL,
     });
   }
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// VERIFY TOKEN CONTROLLER (API endpoint for checking token validity)
+// VERIFY TOKEN CONTROLLER (Utility - just validates token, no session creation)
 // ═══════════════════════════════════════════════════════════════════════════════
-/**
- * Verify Token Controller
- * POST /api/v1/sngine/verify
- * 
- * Use this to check if a token is valid without processing user
- */
 export const verifyTokenController = async (req, res) => {
   console.log('[SNGINE] Token verification request');
 
@@ -242,7 +283,7 @@ export const verifyTokenController = async (req, res) => {
     return res.status(401).json({
       success: false,
       valid: false,
-      error: 'NO_TOKEN'
+      error: 'NO_TOKEN',
     });
   }
 
@@ -253,56 +294,47 @@ export const verifyTokenController = async (req, res) => {
       return res.status(401).json({
         success: false,
         valid: false,
-        error: 'INVALID_TOKEN_FORMAT'
+        error: 'INVALID_TOKEN_FORMAT',
       });
     }
 
     const [payloadBase64, receivedSignature] = parts;
 
-    // Verify signature
     if (!verifySignature(payloadBase64, receivedSignature)) {
       return res.status(401).json({
         success: false,
         valid: false,
-        error: 'INVALID_SIGNATURE'
+        error: 'INVALID_SIGNATURE',
       });
     }
 
-    // Decode and check expiry
     const payload = decodePayload(payloadBase64);
 
     if (isTokenExpired(payload.exp)) {
       return res.status(401).json({
         success: false,
         valid: false,
-        error: 'TOKEN_EXPIRED'
+        error: 'TOKEN_EXPIRED',
       });
     }
 
-    // Token is valid
+    const sngineUserData = extractSngineUserData(payload);
+
     return res.status(200).json({
       success: true,
       valid: true,
       message: 'Token is valid',
-      user: {
-        sngine_user_id: payload.user_id,
-        username: payload.username,
-        email: payload.user_email,
-        firstname: payload.user_firstname,
-        lastname: payload.user_lastname,
-        org_member: payload.org_member === 'Yes',
-        country: payload.user_country || null,
-        age: payload.user_age || null,
-        gender: payload.user_gender || null
-      }
+      user: sngineUserData,
     });
 
   } catch (error) {
     console.log('[SNGINE] Verification error:', error.message);
+    logger.error('Sngine token verification error', { error: error.message });
+    
     return res.status(500).json({
       success: false,
       valid: false,
-      error: 'VERIFICATION_ERROR'
+      error: 'VERIFICATION_ERROR',
     });
   }
 };
@@ -310,10 +342,6 @@ export const verifyTokenController = async (req, res) => {
 // ═══════════════════════════════════════════════════════════════════════════════
 // HEALTH CHECK CONTROLLER
 // ═══════════════════════════════════════════════════════════════════════════════
-/**
- * Health Check Controller
- * GET /api/v1/sngine/health
- */
 export const healthCheckController = (req, res) => {
   return res.status(200).json({
     success: true,
@@ -323,10 +351,734 @@ export const healthCheckController = (req, res) => {
     endpoints: {
       callback: 'POST|GET /api/v1/sngine/callback',
       verify: 'POST /api/v1/sngine/verify',
-      health: 'GET /api/v1/sngine/health'
-    }
+      health: 'GET /api/v1/sngine/health',
+    },
   });
 };
+
+export default {
+  sngineCallbackController,
+  verifyTokenController,
+  healthCheckController,
+};
+// import crypto from 'crypto';
+// import { verifySngineTokenAndCreateSession } from '../services/unifiedAuthService.js';
+// import logger from '../utils/logger.js';
+
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // CONFIGURATION
+// // ═══════════════════════════════════════════════════════════════════════════════
+// const SNGINE_SECRET_KEY = process.env.SNGINE_SECRET_KEY || '7c9e8773eb83357731fd4b96e7db18419637ddbadc654b0da018b3292c76ba5d';
+// const SNGINE_URL = process.env.SNGINE_URL || 'https://vottery.com';
+// const FRONTEND_URL = process.env.FRONTEND_URL || 'https://prod-client-omega.vercel.app';
+
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // HELPER FUNCTIONS
+// // ═══════════════════════════════════════════════════════════════════════════════
+
+// /**
+//  * Verify the token signature using HMAC-SHA256
+//  */
+// const verifySignature = (payloadBase64, receivedSignature) => {
+//   const expectedSignature = crypto
+//     .createHmac('sha256', SNGINE_SECRET_KEY)
+//     .update(payloadBase64)
+//     .digest('hex');
+
+//   console.log('[SNGINE] Signature verification:', {
+//     match: receivedSignature === expectedSignature,
+//   });
+
+//   return receivedSignature === expectedSignature;
+// };
+
+// /**
+//  * Decode the base64 payload to JSON object
+//  */
+// const decodePayload = (payloadBase64) => {
+//   const payloadJson = Buffer.from(payloadBase64, 'base64').toString('utf8');
+//   return JSON.parse(payloadJson);
+// };
+
+// /**
+//  * Check if token is expired
+//  */
+// const isTokenExpired = (exp) => {
+//   const currentTime = Math.floor(Date.now() / 1000);
+//   return exp && exp < currentTime;
+// };
+
+// /**
+//  * Extract Sngine user data from decoded token payload
+//  */
+// const extractSngineUserData = (payload) => {
+//   return {
+//     sngine_user_id: payload.user_id?.toString(),
+//     username: payload.username,
+//     email: payload.user_email,
+//     firstname: payload.user_firstname,
+//     lastname: payload.user_lastname,
+//     org_member: payload.org_member === 'Yes',
+//     country: payload.user_country || null,
+//     age: payload.user_age || null,
+//     gender: payload.user_gender || null,
+//     iat: payload.iat,
+//     exp: payload.exp,
+//     nonce: payload.nonce,
+//   };
+// };
+
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // MAIN CALLBACK CONTROLLER
+// // ═══════════════════════════════════════════════════════════════════════════════
+// /**
+//  * Sngine Callback Controller
+//  * 
+//  * Handles both GET (browser redirect) and POST (form/API) requests from Sngine
+//  * 
+//  * FLOW:
+//  * 1. Verify token signature (is it really from Sngine?)
+//  * 2. Decode and validate token
+//  * 3. Find user in public.users
+//  * 4. Create session in votteryy_auth_sessions
+//  * 5. Save user details to votteryy_user_details
+//  * 6. Return session data (same format as checkUserController)
+//  */
+// export const sngineCallbackController = async (req, res) => {
+//   console.log('[SNGINE] ═══════════════════════════════════════════════════');
+//   console.log('[SNGINE] Callback received');
+//   console.log('[SNGINE] Method:', req.method);
+//   console.log('[SNGINE] ═══════════════════════════════════════════════════');
+
+//   // Get token from URL query parameter (GET) OR from body (POST)
+//   const token = req.query.token || req.body?.token;
+
+//   // ─────────────────────────────────────────────────────────────────────────────
+//   // CHECK 1: Token exists?
+//   // ─────────────────────────────────────────────────────────────────────────────
+//   if (!token) {
+//     console.log('[SNGINE] ❌ No token provided');
+
+//     if (req.method === 'GET') {
+//       return res.redirect(`${SNGINE_URL}?error=no_token`);
+//     }
+
+//     return res.status(401).json({
+//       success: false,
+//       error: 'NO_TOKEN',
+//       message: 'Please login through Sngine first',
+//       redirect: SNGINE_URL,
+//     });
+//   }
+
+//   try {
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // CHECK 2: Valid token format? (payload.signature)
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     const parts = token.split('.');
+
+//     if (parts.length !== 2) {
+//       console.log('[SNGINE] ❌ Invalid token format');
+
+//       if (req.method === 'GET') {
+//         return res.redirect(`${SNGINE_URL}?error=invalid_token`);
+//       }
+
+//       return res.status(401).json({
+//         success: false,
+//         error: 'INVALID_TOKEN_FORMAT',
+//         message: 'Invalid token format',
+//         redirect: SNGINE_URL,
+//       });
+//     }
+
+//     const [payloadBase64, receivedSignature] = parts;
+
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // CHECK 3: Valid signature?
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     if (!verifySignature(payloadBase64, receivedSignature)) {
+//       console.log('[SNGINE] ❌ Signature verification failed');
+
+//       if (req.method === 'GET') {
+//         return res.redirect(`${SNGINE_URL}?error=invalid_signature`);
+//       }
+
+//       return res.status(401).json({
+//         success: false,
+//         error: 'INVALID_SIGNATURE',
+//         message: 'Token verification failed. Please login through Sngine first',
+//         redirect: SNGINE_URL,
+//       });
+//     }
+
+//     console.log('[SNGINE] ✅ Signature verified!');
+
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // CHECK 4: Decode payload
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     const payload = decodePayload(payloadBase64);
+//     console.log('[SNGINE] ✅ Token decoded for user:', payload.username);
+
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // CHECK 5: Token expired?
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     if (isTokenExpired(payload.exp)) {
+//       console.log('[SNGINE] ❌ Token expired');
+
+//       if (req.method === 'GET') {
+//         return res.redirect(`${SNGINE_URL}?error=token_expired`);
+//       }
+
+//       return res.status(401).json({
+//         success: false,
+//         error: 'TOKEN_EXPIRED',
+//         message: 'Your session has expired. Please login through Sngine again',
+//         redirect: SNGINE_URL,
+//       });
+//     }
+
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // STEP 6: Extract user data and process with unified auth service
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     const sngineUserData = extractSngineUserData(payload);
+//     console.log('[SNGINE] Processing user:', sngineUserData.email);
+
+//     // Use unified auth service - this will:
+//     // 1. Find user in public.users
+//     // 2. Create session in votteryy_auth_sessions
+//     // 3. Save details to votteryy_user_details
+//     const authResult = await verifySngineTokenAndCreateSession({
+//       sngineUserData,
+//       req,
+//     });
+
+//     if (!authResult.success) {
+//       console.log('[SNGINE] ❌ Auth failed:', authResult.error);
+
+//       if (req.method === 'GET') {
+//         return res.redirect(`${SNGINE_URL}?error=${authResult.error}`);
+//       }
+
+//       return res.status(authResult.error === 'USER_NOT_FOUND' ? 404 : 403).json({
+//         success: false,
+//         error: authResult.error,
+//         message: authResult.message,
+//         redirect: SNGINE_URL,
+//       });
+//     }
+
+//     console.log('[SNGINE] ✅ Auth successful:', {
+//       sessionId: authResult.sessionId,
+//       userId: authResult.userId,
+//       isFirstTime: authResult.isFirstTime,
+//     });
+
+//     logger.info('Sngine callback successful', {
+//       userId: authResult.userId,
+//       sessionId: authResult.sessionId,
+//       sngineUserId: sngineUserData.sngine_user_id,
+//     });
+
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // RESPONSE - Redirect to frontend for both GET and POST (browser requests)
+//     // ─────────────────────────────────────────────────────────────────────────────
+
+//     // Encode auth result as base64
+//     const authDataBase64 = Buffer.from(JSON.stringify(authResult)).toString('base64');
+
+//     // Check if this is a browser request (form submission or direct navigation)
+//     // vs an API request (from frontend JavaScript)
+//     const acceptHeader = req.headers.accept || '';
+//     const isAPIRequest = acceptHeader.includes('application/json') && !acceptHeader.includes('text/html');
+
+//     if (isAPIRequest) {
+//       // API request from JavaScript - return JSON
+//       return res.status(200).json({
+//         success: true,
+//         message: authResult.message,
+//         data: {
+//           sessionId: authResult.sessionId,
+//           userId: authResult.userId,
+//           email: authResult.email,
+//           phone: authResult.phone,
+//           username: authResult.username,
+//           firstName: authResult.firstName,
+//           lastName: authResult.lastName,
+//           isFirstTime: authResult.isFirstTime,
+//           nextStep: authResult.nextStep,
+//           authMethod: authResult.authMethod,
+//           prefillData: authResult.prefillData,
+//         },
+//       });
+//     }
+
+//     // Browser request (GET or POST form submission) - redirect to frontend
+//     console.log('[SNGINE] Redirecting to frontend:', `${FRONTEND_URL}/auth/sngine/callback`);
+//     return res.redirect(`${FRONTEND_URL}/auth/sngine/callback?data=${authDataBase64}`);
+
+//   } catch (error) {
+//     console.log('[SNGINE] ❌ Error:', error.message);
+//     logger.error('Sngine callback error', { error: error.message, stack: error.stack });
+
+//     if (req.method === 'GET') {
+//       return res.redirect(`${SNGINE_URL}?error=processing_error`);
+//     }
+
+//     return res.status(500).json({
+//       success: false,
+//       error: 'PROCESSING_ERROR',
+//       message: 'Failed to process token. Please try again',
+//       redirect: SNGINE_URL,
+//     });
+//   }
+// };
+
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // VERIFY TOKEN CONTROLLER (Utility - just validates token, no session creation)
+// // ═══════════════════════════════════════════════════════════════════════════════
+// export const verifyTokenController = async (req, res) => {
+//   console.log('[SNGINE] Token verification request');
+
+//   const { token } = req.body;
+
+//   if (!token) {
+//     return res.status(401).json({
+//       success: false,
+//       valid: false,
+//       error: 'NO_TOKEN',
+//     });
+//   }
+
+//   try {
+//     const parts = token.split('.');
+
+//     if (parts.length !== 2) {
+//       return res.status(401).json({
+//         success: false,
+//         valid: false,
+//         error: 'INVALID_TOKEN_FORMAT',
+//       });
+//     }
+
+//     const [payloadBase64, receivedSignature] = parts;
+
+//     if (!verifySignature(payloadBase64, receivedSignature)) {
+//       return res.status(401).json({
+//         success: false,
+//         valid: false,
+//         error: 'INVALID_SIGNATURE',
+//       });
+//     }
+
+//     const payload = decodePayload(payloadBase64);
+
+//     if (isTokenExpired(payload.exp)) {
+//       return res.status(401).json({
+//         success: false,
+//         valid: false,
+//         error: 'TOKEN_EXPIRED',
+//       });
+//     }
+
+//     const sngineUserData = extractSngineUserData(payload);
+
+//     return res.status(200).json({
+//       success: true,
+//       valid: true,
+//       message: 'Token is valid',
+//       user: sngineUserData,
+//     });
+
+//   } catch (error) {
+//     console.log('[SNGINE] Verification error:', error.message);
+//     logger.error('Sngine token verification error', { error: error.message });
+    
+//     return res.status(500).json({
+//       success: false,
+//       valid: false,
+//       error: 'VERIFICATION_ERROR',
+//     });
+//   }
+// };
+
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // HEALTH CHECK CONTROLLER
+// // ═══════════════════════════════════════════════════════════════════════════════
+// export const healthCheckController = (req, res) => {
+//   return res.status(200).json({
+//     success: true,
+//     service: 'sngine-integration',
+//     status: 'active',
+//     timestamp: new Date().toISOString(),
+//     endpoints: {
+//       callback: 'POST|GET /api/v1/sngine/callback',
+//       verify: 'POST /api/v1/sngine/verify',
+//       health: 'GET /api/v1/sngine/health',
+//     },
+//   });
+// };
+
+// export default {
+//   sngineCallbackController,
+//   verifyTokenController,
+//   healthCheckController,
+// };
+// import crypto from 'crypto';
+// import { verifySngineTokenAndCreateSession } from '../services/unifiedAuthService.js';
+// import logger from '../utils/logger.js';
+
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // CONFIGURATION
+// // ═══════════════════════════════════════════════════════════════════════════════
+// const SNGINE_SECRET_KEY = process.env.SNGINE_SECRET_KEY || '7c9e8773eb83357731fd4b96e7db18419637ddbadc654b0da018b3292c76ba5d';
+// const SNGINE_URL = process.env.SNGINE_URL || 'https://vottery.com';
+// const FRONTEND_URL = process.env.FRONTEND_URL || 'https://prod-client-omega.vercel.app';
+
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // HELPER FUNCTIONS
+// // ═══════════════════════════════════════════════════════════════════════════════
+
+// /**
+//  * Verify the token signature using HMAC-SHA256
+//  */
+// const verifySignature = (payloadBase64, receivedSignature) => {
+//   const expectedSignature = crypto
+//     .createHmac('sha256', SNGINE_SECRET_KEY)
+//     .update(payloadBase64)
+//     .digest('hex');
+
+//   console.log('[SNGINE] Signature verification:', {
+//     match: receivedSignature === expectedSignature,
+//   });
+
+//   return receivedSignature === expectedSignature;
+// };
+
+// /**
+//  * Decode the base64 payload to JSON object
+//  */
+// const decodePayload = (payloadBase64) => {
+//   const payloadJson = Buffer.from(payloadBase64, 'base64').toString('utf8');
+//   return JSON.parse(payloadJson);
+// };
+
+// /**
+//  * Check if token is expired
+//  */
+// const isTokenExpired = (exp) => {
+//   const currentTime = Math.floor(Date.now() / 1000);
+//   return exp && exp < currentTime;
+// };
+
+// /**
+//  * Extract Sngine user data from decoded token payload
+//  */
+// const extractSngineUserData = (payload) => {
+//   return {
+//     sngine_user_id: payload.user_id?.toString(),
+//     username: payload.username,
+//     email: payload.user_email,
+//     firstname: payload.user_firstname,
+//     lastname: payload.user_lastname,
+//     org_member: payload.org_member === 'Yes',
+//     country: payload.user_country || null,
+//     age: payload.user_age || null,
+//     gender: payload.user_gender || null,
+//     iat: payload.iat,
+//     exp: payload.exp,
+//     nonce: payload.nonce,
+//   };
+// };
+
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // MAIN CALLBACK CONTROLLER
+// // ═══════════════════════════════════════════════════════════════════════════════
+// /**
+//  * Sngine Callback Controller
+//  * 
+//  * Handles both GET (browser redirect) and POST (form/API) requests from Sngine
+//  * 
+//  * FLOW:
+//  * 1. Verify token signature (is it really from Sngine?)
+//  * 2. Decode and validate token
+//  * 3. Find user in public.users
+//  * 4. Create session in votteryy_auth_sessions
+//  * 5. Save user details to votteryy_user_details
+//  * 6. Return session data (same format as checkUserController)
+//  */
+// export const sngineCallbackController = async (req, res) => {
+//   console.log('[SNGINE] ═══════════════════════════════════════════════════');
+//   console.log('[SNGINE] Callback received');
+//   console.log('[SNGINE] Method:', req.method);
+//   console.log('[SNGINE] ═══════════════════════════════════════════════════');
+
+//   // Get token from URL query parameter (GET) OR from body (POST)
+//   const token = req.query.token || req.body?.token;
+
+//   // ─────────────────────────────────────────────────────────────────────────────
+//   // CHECK 1: Token exists?
+//   // ─────────────────────────────────────────────────────────────────────────────
+//   if (!token) {
+//     console.log('[SNGINE] ❌ No token provided');
+
+//     if (req.method === 'GET') {
+//       return res.redirect(`${SNGINE_URL}?error=no_token`);
+//     }
+
+//     return res.status(401).json({
+//       success: false,
+//       error: 'NO_TOKEN',
+//       message: 'Please login through Sngine first',
+//       redirect: SNGINE_URL,
+//     });
+//   }
+
+//   try {
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // CHECK 2: Valid token format? (payload.signature)
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     const parts = token.split('.');
+
+//     if (parts.length !== 2) {
+//       console.log('[SNGINE] ❌ Invalid token format');
+
+//       if (req.method === 'GET') {
+//         return res.redirect(`${SNGINE_URL}?error=invalid_token`);
+//       }
+
+//       return res.status(401).json({
+//         success: false,
+//         error: 'INVALID_TOKEN_FORMAT',
+//         message: 'Invalid token format',
+//         redirect: SNGINE_URL,
+//       });
+//     }
+
+//     const [payloadBase64, receivedSignature] = parts;
+
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // CHECK 3: Valid signature?
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     if (!verifySignature(payloadBase64, receivedSignature)) {
+//       console.log('[SNGINE] ❌ Signature verification failed');
+
+//       if (req.method === 'GET') {
+//         return res.redirect(`${SNGINE_URL}?error=invalid_signature`);
+//       }
+
+//       return res.status(401).json({
+//         success: false,
+//         error: 'INVALID_SIGNATURE',
+//         message: 'Token verification failed. Please login through Sngine first',
+//         redirect: SNGINE_URL,
+//       });
+//     }
+
+//     console.log('[SNGINE] ✅ Signature verified!');
+
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // CHECK 4: Decode payload
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     const payload = decodePayload(payloadBase64);
+//     console.log('[SNGINE] ✅ Token decoded for user:', payload.username);
+
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // CHECK 5: Token expired?
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     if (isTokenExpired(payload.exp)) {
+//       console.log('[SNGINE] ❌ Token expired');
+
+//       if (req.method === 'GET') {
+//         return res.redirect(`${SNGINE_URL}?error=token_expired`);
+//       }
+
+//       return res.status(401).json({
+//         success: false,
+//         error: 'TOKEN_EXPIRED',
+//         message: 'Your session has expired. Please login through Sngine again',
+//         redirect: SNGINE_URL,
+//       });
+//     }
+
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // STEP 6: Extract user data and process with unified auth service
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     const sngineUserData = extractSngineUserData(payload);
+//     console.log('[SNGINE] Processing user:', sngineUserData.email);
+
+//     // Use unified auth service - this will:
+//     // 1. Find user in public.users
+//     // 2. Create session in votteryy_auth_sessions
+//     // 3. Save details to votteryy_user_details
+//     const authResult = await verifySngineTokenAndCreateSession({
+//       sngineUserData,
+//       req,
+//     });
+
+//     if (!authResult.success) {
+//       console.log('[SNGINE] ❌ Auth failed:', authResult.error);
+
+//       if (req.method === 'GET') {
+//         return res.redirect(`${SNGINE_URL}?error=${authResult.error}`);
+//       }
+
+//       return res.status(authResult.error === 'USER_NOT_FOUND' ? 404 : 403).json({
+//         success: false,
+//         error: authResult.error,
+//         message: authResult.message,
+//         redirect: SNGINE_URL,
+//       });
+//     }
+
+//     console.log('[SNGINE] ✅ Auth successful:', {
+//       sessionId: authResult.sessionId,
+//       userId: authResult.userId,
+//       isFirstTime: authResult.isFirstTime,
+//     });
+
+//     logger.info('Sngine callback successful', {
+//       userId: authResult.userId,
+//       sessionId: authResult.sessionId,
+//       sngineUserId: sngineUserData.sngine_user_id,
+//     });
+
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // RESPONSE
+//     // ─────────────────────────────────────────────────────────────────────────────
+
+//     if (req.method === 'GET') {
+//       // Browser redirect - encode auth result and redirect to frontend
+//       const authDataBase64 = Buffer.from(JSON.stringify(authResult)).toString('base64');
+//       return res.redirect(`${FRONTEND_URL}/auth/sngine/callback?data=${authDataBase64}`);
+//     }
+
+//     // POST request - return JSON response (SAME FORMAT as checkUserController)
+//     return res.status(200).json({
+//       success: true,
+//       message: authResult.message,
+//       data: {
+//         sessionId: authResult.sessionId,
+//         userId: authResult.userId,
+//         email: authResult.email,
+//         phone: authResult.phone,
+//         username: authResult.username,
+//         firstName: authResult.firstName,
+//         lastName: authResult.lastName,
+//         isFirstTime: authResult.isFirstTime,
+//         nextStep: authResult.nextStep,
+//         authMethod: authResult.authMethod,
+//         prefillData: authResult.prefillData,
+//       },
+//     });
+
+//   } catch (error) {
+//     console.log('[SNGINE] ❌ Error:', error.message);
+//     logger.error('Sngine callback error', { error: error.message, stack: error.stack });
+
+//     if (req.method === 'GET') {
+//       return res.redirect(`${SNGINE_URL}?error=processing_error`);
+//     }
+
+//     return res.status(500).json({
+//       success: false,
+//       error: 'PROCESSING_ERROR',
+//       message: 'Failed to process token. Please try again',
+//       redirect: SNGINE_URL,
+//     });
+//   }
+// };
+
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // VERIFY TOKEN CONTROLLER (Utility - just validates token, no session creation)
+// // ═══════════════════════════════════════════════════════════════════════════════
+// export const verifyTokenController = async (req, res) => {
+//   console.log('[SNGINE] Token verification request');
+
+//   const { token } = req.body;
+
+//   if (!token) {
+//     return res.status(401).json({
+//       success: false,
+//       valid: false,
+//       error: 'NO_TOKEN',
+//     });
+//   }
+
+//   try {
+//     const parts = token.split('.');
+
+//     if (parts.length !== 2) {
+//       return res.status(401).json({
+//         success: false,
+//         valid: false,
+//         error: 'INVALID_TOKEN_FORMAT',
+//       });
+//     }
+
+//     const [payloadBase64, receivedSignature] = parts;
+
+//     if (!verifySignature(payloadBase64, receivedSignature)) {
+//       return res.status(401).json({
+//         success: false,
+//         valid: false,
+//         error: 'INVALID_SIGNATURE',
+//       });
+//     }
+
+//     const payload = decodePayload(payloadBase64);
+
+//     if (isTokenExpired(payload.exp)) {
+//       return res.status(401).json({
+//         success: false,
+//         valid: false,
+//         error: 'TOKEN_EXPIRED',
+//       });
+//     }
+
+//     const sngineUserData = extractSngineUserData(payload);
+
+//     return res.status(200).json({
+//       success: true,
+//       valid: true,
+//       message: 'Token is valid',
+//       user: sngineUserData,
+//     });
+
+//   } catch (error) {
+//     console.log('[SNGINE] Verification error:', error.message);
+//     logger.error('Sngine token verification error', { error: error.message });
+    
+//     return res.status(500).json({
+//       success: false,
+//       valid: false,
+//       error: 'VERIFICATION_ERROR',
+//     });
+//   }
+// };
+
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // HEALTH CHECK CONTROLLER
+// // ═══════════════════════════════════════════════════════════════════════════════
+// export const healthCheckController = (req, res) => {
+//   return res.status(200).json({
+//     success: true,
+//     service: 'sngine-integration',
+//     status: 'active',
+//     timestamp: new Date().toISOString(),
+//     endpoints: {
+//       callback: 'POST|GET /api/v1/sngine/callback',
+//       verify: 'POST /api/v1/sngine/verify',
+//       health: 'GET /api/v1/sngine/health',
+//     },
+//   });
+// };
+
+// export default {
+//   sngineCallbackController,
+//   verifyTokenController,
+//   healthCheckController,
+// };
 // import crypto from 'crypto';
 
 // // ═══════════════════════════════════════════════════════════════════════════════
@@ -334,11 +1086,18 @@ export const healthCheckController = (req, res) => {
 // // ═══════════════════════════════════════════════════════════════════════════════
 // const SNGINE_SECRET_KEY = process.env.SNGINE_SECRET_KEY || '7c9e8773eb83357731fd4b96e7db18419637ddbadc654b0da018b3292c76ba5d';
 // const SNGINE_URL = process.env.SNGINE_URL || 'https://vottery.com';
+// const FRONTEND_URL = process.env.FRONTEND_URL || 'https://prod-client-omega.vercel.app';
 
 // // ═══════════════════════════════════════════════════════════════════════════════
 // // HELPER FUNCTIONS
 // // ═══════════════════════════════════════════════════════════════════════════════
 
+// /**
+//  * Verify the token signature using HMAC-SHA256
+//  * @param {string} payloadBase64 - Base64 encoded payload
+//  * @param {string} receivedSignature - Signature received from Sngine
+//  * @returns {boolean} - True if signature is valid
+//  */
 // const verifySignature = (payloadBase64, receivedSignature) => {
 //   const expectedSignature = crypto
 //     .createHmac('sha256', SNGINE_SECRET_KEY)
@@ -351,205 +1110,8 @@ export const healthCheckController = (req, res) => {
 //   return receivedSignature === expectedSignature;
 // };
 
-// const decodePayload = (payloadBase64) => {
-//   const payloadJson = Buffer.from(payloadBase64, 'base64').toString('utf8');
-//   return JSON.parse(payloadJson);
-// };
-
-// const isTokenExpired = (exp) => {
-//   const currentTime = Math.floor(Date.now() / 1000);
-//   return exp && exp < currentTime;
-// };
-
-// // ═══════════════════════════════════════════════════════════════════════════════
-// // CONTROLLERS
-// // ═══════════════════════════════════════════════════════════════════════════════
-
-// export const sngineCallbackController = async (req, res) => {
-//   console.log('[SNGINE] Callback received');
-
-//   const { token } = req.body;
-
-//   if (!token) {
-//     console.log('[SNGINE] No token provided');
-//     return res.status(401).json({
-//       success: false,
-//       error: 'NO_TOKEN',
-//       message: 'Please login through Sngine first',
-//       redirect: SNGINE_URL
-//     });
-//   }
-
-//   try {
-//     const parts = token.split('.');
-
-//     if (parts.length !== 2) {
-//       console.log('[SNGINE] Invalid token format');
-//       return res.status(401).json({
-//         success: false,
-//         error: 'INVALID_TOKEN_FORMAT',
-//         message: 'Invalid token format',
-//         redirect: SNGINE_URL
-//       });
-//     }
-
-//     const [payloadBase64, receivedSignature] = parts;
-
-//     if (!verifySignature(payloadBase64, receivedSignature)) {
-//       console.log('[SNGINE] Signature verification failed');
-//       return res.status(401).json({
-//         success: false,
-//         error: 'INVALID_SIGNATURE',
-//         message: 'Token verification failed. Please login through Sngine first',
-//         redirect: SNGINE_URL
-//       });
-//     }
-
-//     const payload = decodePayload(payloadBase64);
-//     console.log('[SNGINE] Token verified for user:', payload.username);
-
-//     if (isTokenExpired(payload.exp)) {
-//       console.log('[SNGINE] Token expired');
-//       return res.status(401).json({
-//         success: false,
-//         error: 'TOKEN_EXPIRED',
-//         message: 'Your session has expired. Please login through Sngine again',
-//         redirect: SNGINE_URL
-//       });
-//     }
-
-//     const sngineUser = {
-//       sngine_user_id: payload.user_id,
-//       username: payload.username,
-//       email: payload.user_email,
-//       firstname: payload.user_firstname,
-//       lastname: payload.user_lastname,
-//       org_member: payload.org_member === 'Yes',
-//       iat: payload.iat,
-//       exp: payload.exp,
-//       nonce: payload.nonce
-//     };
-
-//     console.log('[SNGINE] User verified successfully:', sngineUser.username);
-
-//     return res.status(200).json({
-//       success: true,
-//       message: 'User verified successfully from Sngine',
-//       user: sngineUser
-//     });
-
-//   } catch (error) {
-//     console.log('[SNGINE] Error:', error.message);
-//     return res.status(500).json({
-//       success: false,
-//       error: 'PROCESSING_ERROR',
-//       message: 'Failed to process token. Please try again',
-//       redirect: SNGINE_URL
-//     });
-//   }
-// };
-
-// export const verifyTokenController = async (req, res) => {
-//   const { token } = req.body;
-
-//   if (!token) {
-//     return res.status(401).json({
-//       success: false,
-//       valid: false,
-//       error: 'NO_TOKEN'
-//     });
-//   }
-
-//   try {
-//     const parts = token.split('.');
-
-//     if (parts.length !== 2) {
-//       return res.status(401).json({
-//         success: false,
-//         valid: false,
-//         error: 'INVALID_TOKEN_FORMAT'
-//       });
-//     }
-
-//     const [payloadBase64, receivedSignature] = parts;
-
-//     if (!verifySignature(payloadBase64, receivedSignature)) {
-//       return res.status(401).json({
-//         success: false,
-//         valid: false,
-//         error: 'INVALID_SIGNATURE'
-//       });
-//     }
-
-//     const payload = decodePayload(payloadBase64);
-
-//     if (isTokenExpired(payload.exp)) {
-//       return res.status(401).json({
-//         success: false,
-//         valid: false,
-//         error: 'TOKEN_EXPIRED'
-//       });
-//     }
-
-//     return res.status(200).json({
-//       success: true,
-//       valid: true,
-//       message: 'Token is valid'
-//     });
-
-//   } catch (error) {
-//     return res.status(500).json({
-//       success: false,
-//       valid: false,
-//       error: 'VERIFICATION_ERROR'
-//     });
-//   }
-// };
-
-// export const healthCheckController = (req, res) => {
-//   return res.status(200).json({
-//     success: true,
-//     service: 'sngine-integration',
-//     status: 'active',
-//     timestamp: new Date().toISOString()
-//   });
-// };
-//without logger
-// import crypto from 'crypto';
-// import logger from '../utils/logger';
-// //import logger from '../utils/logger';
-// //import logger from '../../utils/logger.js';
-
-// // ═══════════════════════════════════════════════════════════════════════════════
-// // CONFIGURATION
-// // ═══════════════════════════════════════════════════════════════════════════════
-// const SNGINE_SECRET_KEY = process.env.SNGINE_SECRET_KEY || '7c9e8773eb83357731fd4b96e7db18419637ddbadc654b0da018b3292c76ba5d';
-// const SNGINE_URL = process.env.SNGINE_URL || 'https://vottery.com';
-
-// // ═══════════════════════════════════════════════════════════════════════════════
-// // HELPER FUNCTIONS
-// // ═══════════════════════════════════════════════════════════════════════════════
-
 // /**
-//  * Verify the token signature
-//  * @param {string} payloadBase64 - Base64 encoded payload
-//  * @param {string} receivedSignature - Signature received from Sngine
-//  * @returns {boolean} - True if signature is valid
-//  */
-// const verifySignature = (payloadBase64, receivedSignature) => {
-//   const expectedSignature = crypto
-//     .createHmac('sha256', SNGINE_SECRET_KEY)
-//     .update(payloadBase64)
-//     .digest('hex');
-
-//   logger.debug(`[SNGINE] Received Signature: ${receivedSignature}`);
-//   logger.debug(`[SNGINE] Expected Signature: ${expectedSignature}`);
-
-//   return receivedSignature === expectedSignature;
-// };
-
-// /**
-//  * Decode the base64 payload
+//  * Decode the base64 payload to JSON object
 //  * @param {string} payloadBase64 - Base64 encoded payload
 //  * @returns {object} - Decoded payload object
 //  */
@@ -569,24 +1131,43 @@ export const healthCheckController = (req, res) => {
 // };
 
 // // ═══════════════════════════════════════════════════════════════════════════════
-// // CONTROLLERS
+// // MAIN CALLBACK CONTROLLER
 // // ═══════════════════════════════════════════════════════════════════════════════
-
 // /**
 //  * Sngine Callback Controller
-//  * Receives and verifies token from Sngine
-//  * POST /api/v1/sngine/callback
+//  * Handles both GET (browser redirect) and POST (form/API) requests
+//  * 
+//  * GET  /api/v1/sngine/callback?token=xxx  (Browser redirect from Sngine)
+//  * POST /api/v1/sngine/callback            (Form submission from Sngine)
+//  * 
+//  * Sngine Flow:
+//  * 1. User clicks "Vote Now" on Sngine (vottery.com)
+//  * 2. Sngine creates token with user data + signature
+//  * 3. Sngine redirects/posts to this callback with token
+//  * 4. We verify signature, decode user data, create session
 //  */
 // export const sngineCallbackController = async (req, res) => {
-//   logger.info('[SNGINE] Callback received');
+//   console.log('[SNGINE] ═══════════════════════════════════════════════════');
+//   console.log('[SNGINE] Callback received');
+//   console.log('[SNGINE] Method:', req.method);
+//   console.log('[SNGINE] Query params:', JSON.stringify(req.query));
+//   console.log('[SNGINE] Body:', JSON.stringify(req.body));
+//   console.log('[SNGINE] ═══════════════════════════════════════════════════');
 
-//   const { token } = req.body;
+//   // Get token from URL query parameter (GET) OR from body (POST)
+//   const token = req.query.token || req.body?.token;
 
 //   // ─────────────────────────────────────────────────────────────────────────────
 //   // CHECK 1: Token exists?
 //   // ─────────────────────────────────────────────────────────────────────────────
 //   if (!token) {
-//     logger.warn('[SNGINE] No token provided');
+//     console.log('[SNGINE] ❌ No token provided');
+    
+//     // If browser request, redirect to Sngine
+//     if (req.method === 'GET') {
+//       return res.redirect(`${SNGINE_URL}?error=no_token`);
+//     }
+    
 //     return res.status(401).json({
 //       success: false,
 //       error: 'NO_TOKEN',
@@ -602,7 +1183,12 @@ export const healthCheckController = (req, res) => {
 //     const parts = token.split('.');
 
 //     if (parts.length !== 2) {
-//       logger.warn('[SNGINE] Invalid token format');
+//       console.log('[SNGINE] ❌ Invalid token format');
+      
+//       if (req.method === 'GET') {
+//         return res.redirect(`${SNGINE_URL}?error=invalid_token`);
+//       }
+      
 //       return res.status(401).json({
 //         success: false,
 //         error: 'INVALID_TOKEN_FORMAT',
@@ -617,7 +1203,12 @@ export const healthCheckController = (req, res) => {
 //     // CHECK 3: Valid signature? (Is token really from Sngine?)
 //     // ─────────────────────────────────────────────────────────────────────────────
 //     if (!verifySignature(payloadBase64, receivedSignature)) {
-//       logger.warn('[SNGINE] Signature verification failed - Token is NOT from Sngine!');
+//       console.log('[SNGINE] ❌ Signature verification failed - Token is NOT from Sngine!');
+      
+//       if (req.method === 'GET') {
+//         return res.redirect(`${SNGINE_URL}?error=invalid_signature`);
+//       }
+      
 //       return res.status(401).json({
 //         success: false,
 //         error: 'INVALID_SIGNATURE',
@@ -626,17 +1217,25 @@ export const healthCheckController = (req, res) => {
 //       });
 //     }
 
+//     console.log('[SNGINE] ✅ Signature verified!');
+
 //     // ─────────────────────────────────────────────────────────────────────────────
 //     // CHECK 4: Decode payload
 //     // ─────────────────────────────────────────────────────────────────────────────
 //     const payload = decodePayload(payloadBase64);
-//     logger.info(`[SNGINE] Token verified for user: ${payload.username}`);
+//     console.log('[SNGINE] ✅ Token decoded for user:', payload.username);
+//     console.log('[SNGINE] Payload:', JSON.stringify(payload, null, 2));
 
 //     // ─────────────────────────────────────────────────────────────────────────────
 //     // CHECK 5: Token expired?
 //     // ─────────────────────────────────────────────────────────────────────────────
 //     if (isTokenExpired(payload.exp)) {
-//       logger.warn('[SNGINE] Token expired');
+//       console.log('[SNGINE] ❌ Token expired');
+      
+//       if (req.method === 'GET') {
+//         return res.redirect(`${SNGINE_URL}?error=token_expired`);
+//       }
+      
 //       return res.status(401).json({
 //         success: false,
 //         error: 'TOKEN_EXPIRED',
@@ -655,19 +1254,35 @@ export const healthCheckController = (req, res) => {
 //       firstname: payload.user_firstname,
 //       lastname: payload.user_lastname,
 //       org_member: payload.org_member === 'Yes',
+//       country: payload.user_country || null,
+//       age: payload.user_age || null,
+//       gender: payload.user_gender || null,
 //       iat: payload.iat,
 //       exp: payload.exp,
 //       nonce: payload.nonce
 //     };
 
-//     logger.info(`[SNGINE] User verified successfully: ${sngineUser.username}`);
+//     console.log('[SNGINE] ✅ User verified successfully:', sngineUser.username);
+//     console.log('[SNGINE] User data:', JSON.stringify(sngineUser, null, 2));
 
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // STEP 6: Handle response based on request method
+//     // ─────────────────────────────────────────────────────────────────────────────
+    
 //     // TODO: Add your business logic here:
 //     // 1. Check if user exists in your database
 //     // 2. Create user if not exists
-//     // 3. Generate your own JWT token
-//     // 4. Create session
+//     // 3. Generate your own JWT token for the user
+//     // 4. Create session in your system
 
+//     if (req.method === 'GET') {
+//       // Browser redirect - send user to frontend with user data
+//       // In production, create JWT and pass that instead
+//       const userDataBase64 = Buffer.from(JSON.stringify(sngineUser)).toString('base64');
+//       return res.redirect(`${FRONTEND_URL}/auth/sngine/callback?user=${userDataBase64}`);
+//     }
+
+//     // POST request - return JSON response
 //     return res.status(200).json({
 //       success: true,
 //       message: 'User verified successfully from Sngine',
@@ -675,7 +1290,12 @@ export const healthCheckController = (req, res) => {
 //     });
 
 //   } catch (error) {
-//     logger.error(`[SNGINE] Error processing token: ${error.message}`);
+//     console.log('[SNGINE] ❌ Error processing token:', error.message);
+    
+//     if (req.method === 'GET') {
+//       return res.redirect(`${SNGINE_URL}?error=processing_error`);
+//     }
+    
 //     return res.status(500).json({
 //       success: false,
 //       error: 'PROCESSING_ERROR',
@@ -685,13 +1305,17 @@ export const healthCheckController = (req, res) => {
 //   }
 // };
 
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // VERIFY TOKEN CONTROLLER (API endpoint for checking token validity)
+// // ═══════════════════════════════════════════════════════════════════════════════
 // /**
 //  * Verify Token Controller
-//  * Verifies if a token is valid without processing user
 //  * POST /api/v1/sngine/verify
+//  * 
+//  * Use this to check if a token is valid without processing user
 //  */
 // export const verifyTokenController = async (req, res) => {
-//   logger.info('[SNGINE] Token verification request');
+//   console.log('[SNGINE] Token verification request');
 
 //   const { token } = req.body;
 
@@ -740,11 +1364,22 @@ export const healthCheckController = (req, res) => {
 //     return res.status(200).json({
 //       success: true,
 //       valid: true,
-//       message: 'Token is valid'
+//       message: 'Token is valid',
+//       user: {
+//         sngine_user_id: payload.user_id,
+//         username: payload.username,
+//         email: payload.user_email,
+//         firstname: payload.user_firstname,
+//         lastname: payload.user_lastname,
+//         org_member: payload.org_member === 'Yes',
+//         country: payload.user_country || null,
+//         age: payload.user_age || null,
+//         gender: payload.user_gender || null
+//       }
 //     });
 
 //   } catch (error) {
-//     logger.error(`[SNGINE] Verification error: ${error.message}`);
+//     console.log('[SNGINE] Verification error:', error.message);
 //     return res.status(500).json({
 //       success: false,
 //       valid: false,
@@ -753,6 +1388,9 @@ export const healthCheckController = (req, res) => {
 //   }
 // };
 
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // HEALTH CHECK CONTROLLER
+// // ═══════════════════════════════════════════════════════════════════════════════
 // /**
 //  * Health Check Controller
 //  * GET /api/v1/sngine/health
@@ -762,6 +1400,449 @@ export const healthCheckController = (req, res) => {
 //     success: true,
 //     service: 'sngine-integration',
 //     status: 'active',
-//     timestamp: new Date().toISOString()
+//     timestamp: new Date().toISOString(),
+//     endpoints: {
+//       callback: 'POST|GET /api/v1/sngine/callback',
+//       verify: 'POST /api/v1/sngine/verify',
+//       health: 'GET /api/v1/sngine/health'
+//     }
 //   });
 // };
+// // import crypto from 'crypto';
+
+// // // ═══════════════════════════════════════════════════════════════════════════════
+// // // CONFIGURATION
+// // // ═══════════════════════════════════════════════════════════════════════════════
+// // const SNGINE_SECRET_KEY = process.env.SNGINE_SECRET_KEY || '7c9e8773eb83357731fd4b96e7db18419637ddbadc654b0da018b3292c76ba5d';
+// // const SNGINE_URL = process.env.SNGINE_URL || 'https://vottery.com';
+
+// // // ═══════════════════════════════════════════════════════════════════════════════
+// // // HELPER FUNCTIONS
+// // // ═══════════════════════════════════════════════════════════════════════════════
+
+// // const verifySignature = (payloadBase64, receivedSignature) => {
+// //   const expectedSignature = crypto
+// //     .createHmac('sha256', SNGINE_SECRET_KEY)
+// //     .update(payloadBase64)
+// //     .digest('hex');
+
+// //   console.log('[SNGINE] Received Signature:', receivedSignature);
+// //   console.log('[SNGINE] Expected Signature:', expectedSignature);
+
+// //   return receivedSignature === expectedSignature;
+// // };
+
+// // const decodePayload = (payloadBase64) => {
+// //   const payloadJson = Buffer.from(payloadBase64, 'base64').toString('utf8');
+// //   return JSON.parse(payloadJson);
+// // };
+
+// // const isTokenExpired = (exp) => {
+// //   const currentTime = Math.floor(Date.now() / 1000);
+// //   return exp && exp < currentTime;
+// // };
+
+// // // ═══════════════════════════════════════════════════════════════════════════════
+// // // CONTROLLERS
+// // // ═══════════════════════════════════════════════════════════════════════════════
+
+// // export const sngineCallbackController = async (req, res) => {
+// //   console.log('[SNGINE] Callback received');
+
+// //   const { token } = req.body;
+
+// //   if (!token) {
+// //     console.log('[SNGINE] No token provided');
+// //     return res.status(401).json({
+// //       success: false,
+// //       error: 'NO_TOKEN',
+// //       message: 'Please login through Sngine first',
+// //       redirect: SNGINE_URL
+// //     });
+// //   }
+
+// //   try {
+// //     const parts = token.split('.');
+
+// //     if (parts.length !== 2) {
+// //       console.log('[SNGINE] Invalid token format');
+// //       return res.status(401).json({
+// //         success: false,
+// //         error: 'INVALID_TOKEN_FORMAT',
+// //         message: 'Invalid token format',
+// //         redirect: SNGINE_URL
+// //       });
+// //     }
+
+// //     const [payloadBase64, receivedSignature] = parts;
+
+// //     if (!verifySignature(payloadBase64, receivedSignature)) {
+// //       console.log('[SNGINE] Signature verification failed');
+// //       return res.status(401).json({
+// //         success: false,
+// //         error: 'INVALID_SIGNATURE',
+// //         message: 'Token verification failed. Please login through Sngine first',
+// //         redirect: SNGINE_URL
+// //       });
+// //     }
+
+// //     const payload = decodePayload(payloadBase64);
+// //     console.log('[SNGINE] Token verified for user:', payload.username);
+
+// //     if (isTokenExpired(payload.exp)) {
+// //       console.log('[SNGINE] Token expired');
+// //       return res.status(401).json({
+// //         success: false,
+// //         error: 'TOKEN_EXPIRED',
+// //         message: 'Your session has expired. Please login through Sngine again',
+// //         redirect: SNGINE_URL
+// //       });
+// //     }
+
+// //     const sngineUser = {
+// //       sngine_user_id: payload.user_id,
+// //       username: payload.username,
+// //       email: payload.user_email,
+// //       firstname: payload.user_firstname,
+// //       lastname: payload.user_lastname,
+// //       org_member: payload.org_member === 'Yes',
+// //       iat: payload.iat,
+// //       exp: payload.exp,
+// //       nonce: payload.nonce
+// //     };
+
+// //     console.log('[SNGINE] User verified successfully:', sngineUser.username);
+
+// //     return res.status(200).json({
+// //       success: true,
+// //       message: 'User verified successfully from Sngine',
+// //       user: sngineUser
+// //     });
+
+// //   } catch (error) {
+// //     console.log('[SNGINE] Error:', error.message);
+// //     return res.status(500).json({
+// //       success: false,
+// //       error: 'PROCESSING_ERROR',
+// //       message: 'Failed to process token. Please try again',
+// //       redirect: SNGINE_URL
+// //     });
+// //   }
+// // };
+
+// // export const verifyTokenController = async (req, res) => {
+// //   const { token } = req.body;
+
+// //   if (!token) {
+// //     return res.status(401).json({
+// //       success: false,
+// //       valid: false,
+// //       error: 'NO_TOKEN'
+// //     });
+// //   }
+
+// //   try {
+// //     const parts = token.split('.');
+
+// //     if (parts.length !== 2) {
+// //       return res.status(401).json({
+// //         success: false,
+// //         valid: false,
+// //         error: 'INVALID_TOKEN_FORMAT'
+// //       });
+// //     }
+
+// //     const [payloadBase64, receivedSignature] = parts;
+
+// //     if (!verifySignature(payloadBase64, receivedSignature)) {
+// //       return res.status(401).json({
+// //         success: false,
+// //         valid: false,
+// //         error: 'INVALID_SIGNATURE'
+// //       });
+// //     }
+
+// //     const payload = decodePayload(payloadBase64);
+
+// //     if (isTokenExpired(payload.exp)) {
+// //       return res.status(401).json({
+// //         success: false,
+// //         valid: false,
+// //         error: 'TOKEN_EXPIRED'
+// //       });
+// //     }
+
+// //     return res.status(200).json({
+// //       success: true,
+// //       valid: true,
+// //       message: 'Token is valid'
+// //     });
+
+// //   } catch (error) {
+// //     return res.status(500).json({
+// //       success: false,
+// //       valid: false,
+// //       error: 'VERIFICATION_ERROR'
+// //     });
+// //   }
+// // };
+
+// // export const healthCheckController = (req, res) => {
+// //   return res.status(200).json({
+// //     success: true,
+// //     service: 'sngine-integration',
+// //     status: 'active',
+// //     timestamp: new Date().toISOString()
+// //   });
+// // };
+// //without logger
+// // import crypto from 'crypto';
+// // import logger from '../utils/logger';
+// // //import logger from '../utils/logger';
+// // //import logger from '../../utils/logger.js';
+
+// // // ═══════════════════════════════════════════════════════════════════════════════
+// // // CONFIGURATION
+// // // ═══════════════════════════════════════════════════════════════════════════════
+// // const SNGINE_SECRET_KEY = process.env.SNGINE_SECRET_KEY || '7c9e8773eb83357731fd4b96e7db18419637ddbadc654b0da018b3292c76ba5d';
+// // const SNGINE_URL = process.env.SNGINE_URL || 'https://vottery.com';
+
+// // // ═══════════════════════════════════════════════════════════════════════════════
+// // // HELPER FUNCTIONS
+// // // ═══════════════════════════════════════════════════════════════════════════════
+
+// // /**
+// //  * Verify the token signature
+// //  * @param {string} payloadBase64 - Base64 encoded payload
+// //  * @param {string} receivedSignature - Signature received from Sngine
+// //  * @returns {boolean} - True if signature is valid
+// //  */
+// // const verifySignature = (payloadBase64, receivedSignature) => {
+// //   const expectedSignature = crypto
+// //     .createHmac('sha256', SNGINE_SECRET_KEY)
+// //     .update(payloadBase64)
+// //     .digest('hex');
+
+// //   logger.debug(`[SNGINE] Received Signature: ${receivedSignature}`);
+// //   logger.debug(`[SNGINE] Expected Signature: ${expectedSignature}`);
+
+// //   return receivedSignature === expectedSignature;
+// // };
+
+// // /**
+// //  * Decode the base64 payload
+// //  * @param {string} payloadBase64 - Base64 encoded payload
+// //  * @returns {object} - Decoded payload object
+// //  */
+// // const decodePayload = (payloadBase64) => {
+// //   const payloadJson = Buffer.from(payloadBase64, 'base64').toString('utf8');
+// //   return JSON.parse(payloadJson);
+// // };
+
+// // /**
+// //  * Check if token is expired
+// //  * @param {number} exp - Expiry timestamp
+// //  * @returns {boolean} - True if token is expired
+// //  */
+// // const isTokenExpired = (exp) => {
+// //   const currentTime = Math.floor(Date.now() / 1000);
+// //   return exp && exp < currentTime;
+// // };
+
+// // // ═══════════════════════════════════════════════════════════════════════════════
+// // // CONTROLLERS
+// // // ═══════════════════════════════════════════════════════════════════════════════
+
+// // /**
+// //  * Sngine Callback Controller
+// //  * Receives and verifies token from Sngine
+// //  * POST /api/v1/sngine/callback
+// //  */
+// // export const sngineCallbackController = async (req, res) => {
+// //   logger.info('[SNGINE] Callback received');
+
+// //   const { token } = req.body;
+
+// //   // ─────────────────────────────────────────────────────────────────────────────
+// //   // CHECK 1: Token exists?
+// //   // ─────────────────────────────────────────────────────────────────────────────
+// //   if (!token) {
+// //     logger.warn('[SNGINE] No token provided');
+// //     return res.status(401).json({
+// //       success: false,
+// //       error: 'NO_TOKEN',
+// //       message: 'Please login through Sngine first',
+// //       redirect: SNGINE_URL
+// //     });
+// //   }
+
+// //   try {
+// //     // ─────────────────────────────────────────────────────────────────────────────
+// //     // CHECK 2: Valid token format? (payload.signature)
+// //     // ─────────────────────────────────────────────────────────────────────────────
+// //     const parts = token.split('.');
+
+// //     if (parts.length !== 2) {
+// //       logger.warn('[SNGINE] Invalid token format');
+// //       return res.status(401).json({
+// //         success: false,
+// //         error: 'INVALID_TOKEN_FORMAT',
+// //         message: 'Invalid token format',
+// //         redirect: SNGINE_URL
+// //       });
+// //     }
+
+// //     const [payloadBase64, receivedSignature] = parts;
+
+// //     // ─────────────────────────────────────────────────────────────────────────────
+// //     // CHECK 3: Valid signature? (Is token really from Sngine?)
+// //     // ─────────────────────────────────────────────────────────────────────────────
+// //     if (!verifySignature(payloadBase64, receivedSignature)) {
+// //       logger.warn('[SNGINE] Signature verification failed - Token is NOT from Sngine!');
+// //       return res.status(401).json({
+// //         success: false,
+// //         error: 'INVALID_SIGNATURE',
+// //         message: 'Token verification failed. Please login through Sngine first',
+// //         redirect: SNGINE_URL
+// //       });
+// //     }
+
+// //     // ─────────────────────────────────────────────────────────────────────────────
+// //     // CHECK 4: Decode payload
+// //     // ─────────────────────────────────────────────────────────────────────────────
+// //     const payload = decodePayload(payloadBase64);
+// //     logger.info(`[SNGINE] Token verified for user: ${payload.username}`);
+
+// //     // ─────────────────────────────────────────────────────────────────────────────
+// //     // CHECK 5: Token expired?
+// //     // ─────────────────────────────────────────────────────────────────────────────
+// //     if (isTokenExpired(payload.exp)) {
+// //       logger.warn('[SNGINE] Token expired');
+// //       return res.status(401).json({
+// //         success: false,
+// //         error: 'TOKEN_EXPIRED',
+// //         message: 'Your session has expired. Please login through Sngine again',
+// //         redirect: SNGINE_URL
+// //       });
+// //     }
+
+// //     // ─────────────────────────────────────────────────────────────────────────────
+// //     // ✅ SUCCESS - Token is valid and from Sngine!
+// //     // ─────────────────────────────────────────────────────────────────────────────
+// //     const sngineUser = {
+// //       sngine_user_id: payload.user_id,
+// //       username: payload.username,
+// //       email: payload.user_email,
+// //       firstname: payload.user_firstname,
+// //       lastname: payload.user_lastname,
+// //       org_member: payload.org_member === 'Yes',
+// //       iat: payload.iat,
+// //       exp: payload.exp,
+// //       nonce: payload.nonce
+// //     };
+
+// //     logger.info(`[SNGINE] User verified successfully: ${sngineUser.username}`);
+
+// //     // TODO: Add your business logic here:
+// //     // 1. Check if user exists in your database
+// //     // 2. Create user if not exists
+// //     // 3. Generate your own JWT token
+// //     // 4. Create session
+
+// //     return res.status(200).json({
+// //       success: true,
+// //       message: 'User verified successfully from Sngine',
+// //       user: sngineUser
+// //     });
+
+// //   } catch (error) {
+// //     logger.error(`[SNGINE] Error processing token: ${error.message}`);
+// //     return res.status(500).json({
+// //       success: false,
+// //       error: 'PROCESSING_ERROR',
+// //       message: 'Failed to process token. Please try again',
+// //       redirect: SNGINE_URL
+// //     });
+// //   }
+// // };
+
+// // /**
+// //  * Verify Token Controller
+// //  * Verifies if a token is valid without processing user
+// //  * POST /api/v1/sngine/verify
+// //  */
+// // export const verifyTokenController = async (req, res) => {
+// //   logger.info('[SNGINE] Token verification request');
+
+// //   const { token } = req.body;
+
+// //   if (!token) {
+// //     return res.status(401).json({
+// //       success: false,
+// //       valid: false,
+// //       error: 'NO_TOKEN'
+// //     });
+// //   }
+
+// //   try {
+// //     const parts = token.split('.');
+
+// //     if (parts.length !== 2) {
+// //       return res.status(401).json({
+// //         success: false,
+// //         valid: false,
+// //         error: 'INVALID_TOKEN_FORMAT'
+// //       });
+// //     }
+
+// //     const [payloadBase64, receivedSignature] = parts;
+
+// //     // Verify signature
+// //     if (!verifySignature(payloadBase64, receivedSignature)) {
+// //       return res.status(401).json({
+// //         success: false,
+// //         valid: false,
+// //         error: 'INVALID_SIGNATURE'
+// //       });
+// //     }
+
+// //     // Decode and check expiry
+// //     const payload = decodePayload(payloadBase64);
+
+// //     if (isTokenExpired(payload.exp)) {
+// //       return res.status(401).json({
+// //         success: false,
+// //         valid: false,
+// //         error: 'TOKEN_EXPIRED'
+// //       });
+// //     }
+
+// //     // Token is valid
+// //     return res.status(200).json({
+// //       success: true,
+// //       valid: true,
+// //       message: 'Token is valid'
+// //     });
+
+// //   } catch (error) {
+// //     logger.error(`[SNGINE] Verification error: ${error.message}`);
+// //     return res.status(500).json({
+// //       success: false,
+// //       valid: false,
+// //       error: 'VERIFICATION_ERROR'
+// //     });
+// //   }
+// // };
+
+// // /**
+// //  * Health Check Controller
+// //  * GET /api/v1/sngine/health
+// //  */
+// // export const healthCheckController = (req, res) => {
+// //   return res.status(200).json({
+// //     success: true,
+// //     service: 'sngine-integration',
+// //     status: 'active',
+// //     timestamp: new Date().toISOString()
+// //   });
+// // };

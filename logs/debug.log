@@ -4817,3 +4817,10 @@
 {"timestamp":"2026-01-11T08:16:14.169Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
 {"timestamp":"2026-01-11T08:16:37.812Z","level":"DEBUG","message":"[SESSION] POST /complete"}
 {"timestamp":"2026-01-11T08:16:41.777Z","level":"DEBUG","message":"User auth details retrieved","userId":5}
+{"timestamp":"2026-01-13T08:24:38.712Z","level":"DEBUG","message":"[AUTH] POST /check-user"}
+{"timestamp":"2026-01-13T08:24:43.909Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2026-01-13T08:24:46.861Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2026-01-13T08:24:47.673Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2026-01-13T08:24:49.072Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
+{"timestamp":"2026-01-13T08:24:49.161Z","level":"DEBUG","message":"[SESSION] POST /complete"}
+{"timestamp":"2026-01-13T08:24:50.895Z","level":"DEBUG","message":"User auth details retrieved","userId":1}
