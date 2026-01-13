@@ -67,12 +67,13 @@ export const checkUserController = async (req, res) => {
     }
 
     // ─────────────────────────────────────────────────────────────────────────────
-    // SUCCESS RESPONSE (EXACT SAME FORMAT AS YOUR EXISTING CODE)
+    // SUCCESS RESPONSE (NOW INCLUDES sessionFlags!)
     // ─────────────────────────────────────────────────────────────────────────────
     logger.info('User check successful', {
       userId: authResult.userId,
       sessionId: authResult.sessionId,
       isFirstTime: authResult.isFirstTime,
+      sessionFlags: authResult.sessionFlags,
     });
 
     return sendSuccess(
@@ -87,6 +88,12 @@ export const checkUserController = async (req, res) => {
         lastName: authResult.lastName,
         isFirstTime: authResult.isFirstTime,
         nextStep: authResult.nextStep,
+        // ✅ NEW: Include sessionFlags for mobile/web to check what's already done
+        sessionFlags: authResult.sessionFlags || {
+          userDetailsCollected: false,
+          biometricCollected: false,
+          securityQuestionsAnswered: false,
+        },
         message: authResult.message,
       },
       'User verified successfully'
@@ -288,22 +295,32 @@ export default {
   refreshTokenController,
   getCurrentUserController,
 };
-
-//last workable code only to sync sngine api above code
-// import { checkUserInDatabase, getUserAuthDetails } from '../services/userService.js';
+//last workig code, only to biometirc once above code
+// import { verifyDatabaseAndCreateSession } from '../services/unifiedAuthService.js';
+// import { getUserAuthDetails } from '../services/userService.js';
 // import { query } from '../config/database.js';
-// import { generateSessionId } from '../utils/cryptoUtils.js';
 // import { createAuthTokens, verifyToken } from '../services/tokenService.js';
 // import { sendSuccess, sendError } from '../utils/responseFormatter.js';
 // import { validateEmail, validatePhoneNumber } from '../utils/validators.js';
 // import logger from '../utils/logger.js';
 
-// // ✅ CHECK USER ENDPOINT
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // CHECK USER ENDPOINT
+// // ═══════════════════════════════════════════════════════════════════════════════
+// /**
+//  * Check User Controller
+//  * POST /api/v1/auth/check-user
+//  * 
+//  * This is the DATABASE-BASED verification method (existing flow - UNCHANGED)
+//  * Now uses unified auth service internally but behavior is EXACTLY THE SAME
+//  */
 // export const checkUserController = async (req, res) => {
 //   try {
 //     const { email, phone } = req.body;
 
-//     // Validate input
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // VALIDATION (UNCHANGED)
+//     // ─────────────────────────────────────────────────────────────────────────────
 //     if (!email && !phone) {
 //       return sendError(res, 'Email or phone number required', 400);
 //     }
@@ -316,111 +333,71 @@ export default {
 //       return sendError(res, 'Invalid phone number format', 400);
 //     }
 
-//     // Check if user exists in Sngine database (only checks user_email and user_phone)
-//     const user = await checkUserInDatabase(email, phone);
-
-//     if (!user) {
-//       logger.warn('User not found in database', { email, phone });
-//       return sendError(
-//         res,
-//         'User not found. Please register on Sngine first.',
-//         404,
-//         { code: 'USER_NOT_FOUND' }
-//       );
-//     }
-
-//     // Get additional user info from Sngine database for session creation
-//     const userDetailResult = await query(
-//       `SELECT user_id, user_activated, user_banned, user_name, user_firstname, user_lastname 
-//        FROM public.users WHERE user_id = $1`,
-//       [user.user_id]
-//     );
-
-//     if (userDetailResult.rows.length === 0) {
-//       logger.error('User detail fetch failed', { userId: user.user_id });
-//       return sendError(res, 'User details not found', 404);
-//     }
-
-//     const userDetails = userDetailResult.rows[0];
-
-//     // Check if user is banned
-//     if (userDetails.user_banned) {
-//       logger.warn('Banned user attempted login', { userId: userDetails.user_id });
-//       return sendError(res, 'Your account has been banned', 403, { code: 'USER_BANNED' });
-//     }
-
-//     // ✅ MODIFIED: Determine if first-time user by checking votteryy_user_details table
-//     const userDetailsCheck = await query(
-//       `SELECT id FROM votteryy_user_details WHERE user_id = $1`,
-//       [userDetails.user_id]
-//     );
-
-//     // ✅ If no record in votteryy_user_details, then first-time user
-//     const isFirstTime = userDetailsCheck.rows.length === 0;
-
-//     console.log('🔍 First-time user check:', {
-//       userId: userDetails.user_id,
-//       hasUserDetails: userDetailsCheck.rows.length > 0,
-//       isFirstTime,
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // USE UNIFIED AUTH SERVICE (Same logic as before, just refactored)
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     const authResult = await verifyDatabaseAndCreateSession({
+//       email,
+//       phone,
+//       req,
 //     });
 
-//     // Create authentication session
-//     const sessionId = generateSessionId();
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // HANDLE ERRORS (SAME AS BEFORE)
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     if (!authResult.success) {
+//       logger.warn('User check failed', { email, phone, error: authResult.error });
 
-//     const sessionResult = await query(
-//       `INSERT INTO votteryy_auth_sessions 
-//        (user_id, session_id, is_first_time, step_number, ip_address, user_agent, device_id)
-//        VALUES ($1, $2, $3, $4, $5, $6, $7)
-//        RETURNING id, session_id`,
-//       [
-//         userDetails.user_id,
-//         sessionId,
-//         isFirstTime,
-//         1,
-//         req.ip,
-//         req.headers['user-agent'],
-//         req.headers['x-device-id'] || 'unknown',
-//       ]
-//     );
+//       if (authResult.error === 'USER_NOT_FOUND') {
+//         return sendError(
+//           res,
+//           'User not found. Please register on Sngine first.',
+//           404,
+//           { code: 'USER_NOT_FOUND' }
+//         );
+//       }
 
-//     if (sessionResult.rows.length === 0) {
-//       logger.error('Session creation failed', { userId: userDetails.user_id });
-//       return sendError(res, 'Failed to create session', 500);
+//       if (authResult.error === 'USER_BANNED') {
+//         return sendError(res, 'Your account has been banned', 403, { code: 'USER_BANNED' });
+//       }
+
+//       return sendError(res, authResult.message || 'Verification failed', 400);
 //     }
 
-//     console.log('✅ Backend: Session created:', sessionId);
-
+//     // ─────────────────────────────────────────────────────────────────────────────
+//     // SUCCESS RESPONSE (EXACT SAME FORMAT AS YOUR EXISTING CODE)
+//     // ─────────────────────────────────────────────────────────────────────────────
 //     logger.info('User check successful', {
-//       userId: userDetails.user_id,
-//       sessionId,
-//       isFirstTime,
+//       userId: authResult.userId,
+//       sessionId: authResult.sessionId,
+//       isFirstTime: authResult.isFirstTime,
 //     });
 
 //     return sendSuccess(
 //       res,
 //       {
-//         sessionId,
-//         userId: userDetails.user_id,
-//         email: user.user_email,
-//         phone: user.user_phone,
-//         username: userDetails.user_name,
-//         firstName: userDetails.user_firstname,
-//         lastName: userDetails.user_lastname,
-//         isFirstTime,
-//         nextStep: 2,
-//         message: isFirstTime
-//           ? 'Welcome! First-time setup required.'
-//           : 'Welcome back! Please verify your identity.',
+//         sessionId: authResult.sessionId,
+//         userId: authResult.userId,
+//         email: authResult.email,
+//         phone: authResult.phone,
+//         username: authResult.username,
+//         firstName: authResult.firstName,
+//         lastName: authResult.lastName,
+//         isFirstTime: authResult.isFirstTime,
+//         nextStep: authResult.nextStep,
+//         message: authResult.message,
 //       },
 //       'User verified successfully'
 //     );
 //   } catch (error) {
-//     logger.error('Error in user check controller', { error: error.message });
+//     logger.error('Error in user check controller', { error: error.message, stack: error.stack });
 //     return sendError(res, 'Internal server error', 500);
 //   }
 // };
 
-// // ✅ VERIFY TOKEN ENDPOINT
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // VERIFY TOKEN ENDPOINT (COMPLETELY UNCHANGED)
+// // ═══════════════════════════════════════════════════════════════════════════════
 // export const verifyTokenController = async (req, res) => {
 //   try {
 //     const token = req.headers.authorization?.split(' ')[1];
@@ -429,14 +406,12 @@ export default {
 //       return sendError(res, 'No token provided', 401);
 //     }
 
-//     // Verify JWT token
 //     const decoded = verifyToken(token, 'access');
 
 //     if (!decoded) {
 //       return sendError(res, 'Invalid or expired token', 401);
 //     }
 
-//     // Get user details from database
 //     const userDetails = await getUserAuthDetails(decoded.userId);
 
 //     if (!userDetails) {
@@ -464,7 +439,9 @@ export default {
 //   }
 // };
 
-// // ✅ REFRESH TOKEN ENDPOINT
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // REFRESH TOKEN ENDPOINT (COMPLETELY UNCHANGED)
+// // ═══════════════════════════════════════════════════════════════════════════════
 // export const refreshTokenController = async (req, res) => {
 //   try {
 //     const { refreshToken } = req.body;
@@ -473,31 +450,27 @@ export default {
 //       return sendError(res, 'Refresh token required', 400);
 //     }
 
-//     // Verify refresh token
 //     const decoded = verifyToken(refreshToken, 'refresh');
 
 //     if (!decoded) {
 //       return sendError(res, 'Invalid or expired refresh token', 401);
 //     }
 
-//     // Get user details
 //     const userDetails = await getUserAuthDetails(decoded.userId);
 
 //     if (!userDetails) {
 //       return sendError(res, 'User not found', 404);
 //     }
 
-//     // Create new access token
 //     const tokens = await createAuthTokens(decoded.userId, decoded.sessionId);
 
 //     logger.info('Token refreshed successfully', { userId: decoded.userId });
 
-//     // ✅ SET NEW ACCESS TOKEN IN HTTP-ONLY COOKIE
 //     res.cookie('accessToken', tokens.accessToken, {
 //       httpOnly: true,
 //       secure: process.env.NODE_ENV === 'production',
 //       sameSite: 'Strict',
-//       maxAge: 60 * 60 * 1000, // 1 hour
+//       maxAge: 60 * 60 * 1000,
 //       path: '/',
 //     });
 
@@ -515,7 +488,9 @@ export default {
 //   }
 // };
 
-// // ✅ GET CURRENT USER ENDPOINT
+// // ═══════════════════════════════════════════════════════════════════════════════
+// // GET CURRENT USER ENDPOINT (COMPLETELY UNCHANGED)
+// // ═══════════════════════════════════════════════════════════════════════════════
 // export const getCurrentUserController = async (req, res) => {
 //   try {
 //     const token = req.headers.authorization?.split(' ')[1];
@@ -524,14 +499,12 @@ export default {
 //       return sendError(res, 'No token provided', 401);
 //     }
 
-//     // Verify token
 //     const decoded = verifyToken(token, 'access');
 
 //     if (!decoded) {
 //       return sendError(res, 'Invalid token', 401);
 //     }
 
-//     // Get complete user details
 //     const result = await query(
 //       `SELECT 
 //         u.user_id,
@@ -613,3 +586,4 @@ export default {
 //   refreshTokenController,
 //   getCurrentUserController,
 // };
+
