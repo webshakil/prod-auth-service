@@ -138,33 +138,17 @@ export const verifyOTP = async (req, res) => {
 
     // ============ SMS OTP - Use Twilio Verify ============
     if (otpType === 'sms') {
-      // Get phone number from session or request
-      let phoneNumber = phone;
-      
-      if (!phoneNumber) {
-        const sessionResult = await query(
-          'SELECT phone_number FROM votteryy_auth_sessions WHERE session_id = $1',
-          [sessionId]
-        );
-        
-        if (sessionResult.rows.length > 0) {
-          phoneNumber = sessionResult.rows[0].phone_number;
-        }
+      if (!phone) {
+        return sendError(res, 'Phone number required for SMS verification', 400);
       }
 
-      if (!phoneNumber) {
-        return sendError(res, 'Phone number not found', 400);
-      }
-
-      // Verify with Twilio Verify
-      const result = await verifyTwilioOTP(phoneNumber, otp);
+      const result = await verifySMSOTP(phone, otp);
 
       if (!result.success) {
         logger.warn('SMS OTP verification failed', { sessionId, status: result.status });
         return sendError(res, 'Invalid OTP', 400);
       }
 
-      // Update session
       await query(
         'UPDATE votteryy_auth_sessions SET sms_verified = true, step_number = 3 WHERE session_id = $1',
         [sessionId]
@@ -179,7 +163,7 @@ export const verifyOTP = async (req, res) => {
       });
     }
 
-    // ============ Email OTP - Use Database (existing logic) ============
+    // ============ Email OTP - Existing Database Logic ============
     const otpResult = await query(
       `SELECT id, user_id, otp_code, is_used, attempt_count, expires_at 
        FROM votteryy_otps 
@@ -194,28 +178,23 @@ export const verifyOTP = async (req, res) => {
 
     const otpRecord = otpResult.rows[0];
 
-    // Check if OTP expired
     if (new Date(otpRecord.expires_at) < new Date()) {
       return sendError(res, 'OTP has expired', 400);
     }
 
-    // Check attempts
     const MAX_OTP_ATTEMPTS = 5;
     if (otpRecord.attempt_count >= MAX_OTP_ATTEMPTS) {
       return sendError(res, 'Too many OTP attempts. Please request a new one.', 429);
     }
 
-    // Verify OTP
     if (otpRecord.otp_code !== otp) {
       await query(
         'UPDATE votteryy_otps SET attempt_count = attempt_count + 1 WHERE id = $1',
         [otpRecord.id]
       );
-
       return sendError(res, 'Invalid OTP', 400);
     }
 
-    // Mark OTP as used
     await query(
       `UPDATE votteryy_otps 
        SET is_used = true, verified_at = CURRENT_TIMESTAMP 
@@ -223,7 +202,6 @@ export const verifyOTP = async (req, res) => {
       [otpRecord.id]
     );
 
-    // Update session step
     await query(
       'UPDATE votteryy_auth_sessions SET email_verified = true, step_number = 3 WHERE session_id = $1',
       [sessionId]
