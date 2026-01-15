@@ -1,7 +1,9 @@
 import { query } from '../config/database.js';
 import { generateOTP } from '../utils/cryptoUtils.js';
 import { sendOTPEmail } from '../services/emailService.js';
-import { sendOTPSMS, verifyOTP as verifyTwilioOTP } from '../services/smsService.js';
+//import { sendOTPSMS, verifyOTP as verifyTwilioOTP } from '../services/smsService.js';
+import { sendOTPSMS, verifyOTP as verifySMSOTP } from '../services/smsService.js';
+//import { sendOTPSMS, verifySMSOTP } from '../services/smsService.js';
 import { validateOTP } from '../utils/validators.js';
 import { sendSuccess, sendError } from '../utils/responseFormatter.js';
 import logger from '../utils/logger.js';
